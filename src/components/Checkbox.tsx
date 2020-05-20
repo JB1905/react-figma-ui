@@ -1,10 +1,9 @@
 import React, { HTMLProps } from 'react';
 
-interface Props {
+interface Props extends Readonly<HTMLProps<HTMLLabelElement>> {
   readonly id: string;
   readonly checkboxProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly inputProps?: Readonly<HTMLProps<HTMLInputElement>>;
-  readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Checkbox: React.FC<Props> = ({
@@ -12,11 +11,11 @@ export const Checkbox: React.FC<Props> = ({
   id,
   checkboxProps = {},
   inputProps = {},
-  labelProps = {},
+  className,
+  ...props
 }) => {
   const { className: checkboxClassName = '', ...checboxRest } = checkboxProps;
   const { className: inputClassName = '', ...inputRest } = inputProps;
-  const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
     <div {...checboxRest} className={`checkbox ${checkboxClassName}`}>
@@ -27,11 +26,7 @@ export const Checkbox: React.FC<Props> = ({
         className={`checkbox__box ${inputClassName}`}
       />
 
-      <label
-        {...labelRest}
-        htmlFor={id}
-        className={`checkbox__label ${labelClassName}`}
-      >
+      <label {...props} htmlFor={id} className={`checkbox__label ${className}`}>
         {children}
       </label>
     </div>

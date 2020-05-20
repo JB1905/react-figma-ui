@@ -5,7 +5,7 @@ import { Checkbox } from '../src';
 
 describe('Checkbox', () => {
   it('should render component matching snapshot', () => {
-    const { container } = render(<Checkbox />);
+    const { container } = render(<Checkbox onClick={}>Choose Me!</Checkbox>);
 
     expect(container).toMatchSnapshot();
   });

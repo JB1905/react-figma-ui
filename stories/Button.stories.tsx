@@ -8,4 +8,4 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Button title="Hello" />;
+export const normal = () => <Button>Hello</Button>;

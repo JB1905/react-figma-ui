@@ -11,4 +11,4 @@ export { SectionTitle } from './SectionTitle';
 export * from './SelectMenu';
 export { Switch } from './Switch';
 export { Textarea } from './Textarea';
-// export { Type } from './Type';
+export { Type } from './Type';
