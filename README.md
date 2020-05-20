@@ -7,7 +7,7 @@
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
 ## Demo
-[**Playground – play with library in Storybook**](https://react-figma-ui.github.io/react-figma-ui/)
+[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
 First, install the library in your project by npm:
