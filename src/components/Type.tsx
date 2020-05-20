@@ -1,17 +1,8 @@
 import React, { HTMLProps } from 'react';
 
-enum Size {
-  Small = 'small',
-  Large = 'large',
-  Xlarge = 'xlarge',
-}
+import { Size, Weight } from '../enums';
 
-enum Weight {
-  Medium = 'medium',
-  Bold = 'bold',
-}
-
-interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
+interface Props extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'size'>> {
   readonly size?: Size;
   readonly weight?: Weight;
   readonly inverse?: boolean;
