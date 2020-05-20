@@ -10,11 +10,13 @@ enum Tint {
 }
 
 interface Props
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
+  extends Readonly<
+    DetailedHTMLProps<
+      ButtonHTMLAttributes<HTMLButtonElement>,
+      HTMLButtonElement
+    >
   > {
-  tint?: Tint;
+  readonly tint?: Tint;
 }
 
 export const Button: React.FC<Props> = ({

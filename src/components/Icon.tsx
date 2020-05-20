@@ -104,9 +104,9 @@ type ColorName =
   | 'white4';
 
 export interface Props extends HTMLProps<HTMLDivElement> {
-  iconName: IconName;
-  spin?: boolean;
-  colorName?: ColorName;
+  readonly iconName: Readonly<IconName>;
+  readonly spin?: boolean;
+  readonly colorName?: Readonly<ColorName>;
 }
 
 export const Icon: React.FC<Props> = ({

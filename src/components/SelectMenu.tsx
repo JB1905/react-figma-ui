@@ -2,15 +2,15 @@ import React, { HTMLProps, useEffect } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 
 type Option = {
-  value: string;
+  readonly value: string;
 };
 
-interface SelectMenuProps extends HTMLProps<HTMLSelectElement> {
-  options: Option[];
+interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
+  readonly options: Option[];
   render(option: any): void;
 }
 
-interface SelectMenuItemProps extends HTMLProps<HTMLOptionElement> {}
+interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
 
 export const SelectMenu: React.FC<SelectMenuProps> = ({
   options,

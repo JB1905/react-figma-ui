@@ -1,10 +1,10 @@
 import React, { HTMLProps } from 'react';
 
 interface Props {
-  id: string;
-  switchProps?: HTMLProps<HTMLDivElement>;
-  toggleProps?: HTMLProps<HTMLInputElement>;
-  labelProps?: HTMLProps<HTMLLabelElement>;
+  readonly id: string;
+  readonly switchProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly toggleProps?: Readonly<HTMLProps<HTMLInputElement>>;
+  readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Switch: React.FC<Props> = ({

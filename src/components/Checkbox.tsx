@@ -1,10 +1,10 @@
 import React, { HTMLProps } from 'react';
 
 interface Props {
-  id: string;
-  checkboxProps?: HTMLProps<HTMLDivElement>;
-  inputProps?: HTMLProps<HTMLInputElement>;
-  labelProps?: HTMLProps<HTMLLabelElement>;
+  readonly id: string;
+  readonly checkboxProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly inputProps?: Readonly<HTMLProps<HTMLInputElement>>;
+  readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Checkbox: React.FC<Props> = ({

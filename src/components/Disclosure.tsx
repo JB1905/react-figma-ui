@@ -1,20 +1,22 @@
 import React, { HTMLProps, useEffect } from 'react';
 import { disclosure } from 'figma-plugin-ds';
 
-interface DisclosureProps extends HTMLProps<HTMLUListElement> {
-  items: any[];
+interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
+  readonly items: any[];
   render(item: any): void;
 }
 
 interface DisclosureItemProps {
-  section?: boolean;
-  expanded?: boolean;
-  itemProps?: React.DetailedHTMLProps<
-    React.LiHTMLAttributes<HTMLLIElement>,
-    HTMLLIElement
+  readonly section?: boolean;
+  readonly expanded?: boolean;
+  readonly itemProps?: Readonly<
+    React.DetailedHTMLProps<
+      React.LiHTMLAttributes<HTMLLIElement>,
+      HTMLLIElement
+    >
   >;
-  labelProps?: HTMLProps<HTMLDivElement>;
-  contentProps?: HTMLProps<HTMLDivElement>;
+  readonly labelProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly contentProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
 export const Disclosure: React.FC<DisclosureProps> = ({
@@ -60,14 +62,14 @@ export const DisclosureItem: React.FC<DisclosureItemProps> = ({
           section ? 'disclosure--section' : ''
         } ${labelClassName}`}
       >
-        Disclosure heading
+        {/* {heading} */}
       </div>
 
       <div
         {...contentRest}
         className={`disclosure__content ${contentClassName}`}
       >
-        Panel content here
+        {/* {content} */}
       </div>
     </li>
   );

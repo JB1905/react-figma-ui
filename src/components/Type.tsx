@@ -11,10 +11,10 @@ enum Weight {
   Bold = 'bold',
 }
 
-interface Props extends HTMLProps<HTMLDivElement> {
-  size?: Size;
-  weight?: Weight;
-  inverse?: boolean;
+interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
+  readonly size?: Size;
+  readonly weight?: Weight;
+  readonly inverse?: boolean;
 }
 
 export const Type: React.FC<Props> = ({

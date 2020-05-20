@@ -3,9 +3,9 @@ import React, { HTMLProps } from 'react';
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
-  inputProps?: HTMLProps<HTMLDivElement>;
-  iconProps?: IconProps;
-  fieldProps?: HTMLProps<HTMLInputElement>;
+  readonly inputProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly iconProps?: IconProps;
+  readonly fieldProps?: Readonly<HTMLProps<HTMLInputElement>>;
 }
 
 export const Input: React.FC<Props> = ({

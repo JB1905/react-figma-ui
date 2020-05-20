@@ -3,9 +3,9 @@ import React, { HTMLProps } from 'react';
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
-  selected?: boolean;
-  buttonProps?: HTMLProps<HTMLDivElement>;
-  iconProps?: IconProps;
+  readonly selected?: boolean;
+  readonly buttonProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly iconProps?: IconProps;
 }
 
 export const IconButton: React.FC<Props> = ({

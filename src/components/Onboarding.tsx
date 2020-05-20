@@ -3,10 +3,10 @@ import React, { HTMLProps } from 'react';
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
-  value: string;
-  onboardingTipProps?: HTMLProps<HTMLDivElement>;
-  iconProps?: IconProps;
-  messageProps?: HTMLProps<HTMLDivElement>;
+  readonly value: string;
+  readonly onboardingTipProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly iconProps?: IconProps;
+  readonly messageProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
 export const Onboarding: React.FC<Props> = ({

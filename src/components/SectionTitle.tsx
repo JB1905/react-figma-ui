@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-interface Props extends HTMLProps<HTMLDivElement> {}
+interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
 
 export const SectionTitle: React.FC<Props> = ({
   children,
