@@ -10,9 +10,9 @@ interface Props {
 export const Checkbox: React.FC<Props> = ({
   children,
   id,
-  checkboxProps,
-  inputProps,
-  labelProps,
+  checkboxProps = {},
+  inputProps = {},
+  labelProps = {},
 }) => {
   const { className: checkboxClassName = '', ...checboxRest } = checkboxProps;
   const { className: inputClassName = '', ...inputRest } = inputProps;

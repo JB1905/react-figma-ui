@@ -10,11 +10,11 @@ interface Props {
 
 export const IconButton: React.FC<Props> = ({
   selected,
-  buttonProps,
-  iconProps,
+  buttonProps = {},
+  iconProps = {} as IconProps,
 }) => {
   const { className: buttonClassName = '', ...buttonRest } = buttonProps;
-  const { icon } = iconProps;
+  const { iconName } = iconProps;
 
   return (
     <div
@@ -23,7 +23,7 @@ export const IconButton: React.FC<Props> = ({
         selected ? 'icon-button--selected' : ''
       } ${buttonClassName}`}
     >
-      {icon && <Icon {...iconProps} />}
+      {iconName && <Icon {...iconProps} />}
     </div>
   );
 };

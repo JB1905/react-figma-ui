@@ -9,20 +9,22 @@ interface Props {
 }
 
 export const Input: React.FC<Props> = ({
-  inputProps,
-  iconProps,
-  fieldProps,
+  inputProps = {},
+  iconProps = {} as IconProps,
+  fieldProps = {},
 }) => {
   const { className: inputClassName = '', ...inputRest } = inputProps;
-  const { icon } = iconProps;
+  const { iconName } = iconProps;
   const { className: fieldClassName = '', ...fieldRest } = fieldProps;
 
   return (
     <div
       {...inputRest}
-      className={`input ${icon ? 'input--with-icon' : ''} ${inputClassName}`}
+      className={`input ${
+        iconName ? 'input--with-icon' : ''
+      } ${inputClassName}`}
     >
-      {icon && <Icon {...iconProps} />}
+      {iconName && <Icon {...iconProps} />}
 
       <input
         {...fieldRest}

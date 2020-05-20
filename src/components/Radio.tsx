@@ -10,9 +10,9 @@ interface Props {
 export const Radio: React.FC<Props> = ({
   children,
   id,
-  radioProps,
-  inputProps,
-  labelProps,
+  radioProps = {},
+  inputProps = {},
+  labelProps = {},
 }) => {
   const { className: radioClassName, ...radioRest } = radioProps;
   const { className: inputClassName, ...inputRest } = inputProps;

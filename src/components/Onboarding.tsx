@@ -11,15 +11,15 @@ interface Props {
 
 export const Onboarding: React.FC<Props> = ({
   value,
-  onboardingTipProps,
-  iconProps,
-  messageProps,
+  onboardingTipProps = {},
+  iconProps = {} as IconProps,
+  messageProps = {},
 }) => {
   const {
     className: onboardingTipClassName = '',
     ...onboardingTipRest
   } = onboardingTipProps;
-  const { icon } = iconProps;
+  const { iconName } = iconProps;
   const { className: messageClassName = '', ...messageRest } = messageProps;
 
   return (
@@ -27,7 +27,7 @@ export const Onboarding: React.FC<Props> = ({
       {...onboardingTipRest}
       className={`onboarding-tip ${onboardingTipClassName}`}
     >
-      {icon && <Icon {...iconProps} />}
+      {iconName && <Icon {...iconProps} />}
 
       <div
         {...messageRest}

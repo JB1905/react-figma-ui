@@ -15,10 +15,10 @@ export const Disclosure: React.FC<Props> = ({
   items,
   section,
   expanded,
-  disclosureProps,
-  itemProps,
-  labelProps,
-  contentProps,
+  disclosureProps = {},
+  itemProps = {},
+  labelProps = {},
+  contentProps = {},
 }) => {
   useEffect(() => {
     disclosure.init();

@@ -13,8 +13,8 @@ interface Props {
 
 export const SelectMenu: React.FC<Props> = ({
   options,
-  selectProps,
-  optionProps,
+  selectProps = {},
+  optionProps = {},
 }) => {
   useEffect(() => {
     selectMenu.init();

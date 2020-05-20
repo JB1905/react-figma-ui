@@ -10,9 +10,9 @@ interface Props {
 export const Switch: React.FC<Props> = ({
   children,
   id,
-  switchProps,
-  toggleProps,
-  labelProps,
+  switchProps = {},
+  toggleProps = {},
+  labelProps = {},
 }) => {
   const { className: switchClassName = '', ...switchRest } = switchProps;
   const { className: toggleClassName = '', ...toggleRest } = toggleProps;
