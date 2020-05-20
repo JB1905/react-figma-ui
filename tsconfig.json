@@ -10,5 +10,5 @@
     "moduleResolution": "node",
     "esModuleInterop": true
   },
-  "exclude": ["test"]
+  "exclude": ["test", "stories"]
 }
