@@ -1,15 +1,14 @@
 import React, { HTMLProps } from 'react';
 
 interface Props {
-  value: string;
   id: string;
-  checkboxProps: HTMLProps<HTMLDivElement>;
-  inputProps: HTMLProps<HTMLInputElement>;
-  labelProps: HTMLProps<HTMLLabelElement>;
+  checkboxProps?: HTMLProps<HTMLDivElement>;
+  inputProps?: HTMLProps<HTMLInputElement>;
+  labelProps?: HTMLProps<HTMLLabelElement>;
 }
 
 export const Checkbox: React.FC<Props> = ({
-  value,
+  children,
   id,
   checkboxProps,
   inputProps,
@@ -33,7 +32,7 @@ export const Checkbox: React.FC<Props> = ({
         htmlFor={id}
         className={`checkbox__label ${labelClassName}`}
       >
-        {value}
+        {children}
       </label>
     </div>
   );

@@ -1,15 +1,14 @@
 import React, { HTMLProps } from 'react';
 
 interface Props {
-  value: string;
   id: string;
-  radioProps: HTMLProps<HTMLDivElement>;
-  inputProps: HTMLProps<HTMLInputElement>;
-  labelProps: HTMLProps<HTMLLabelElement>;
+  radioProps?: HTMLProps<HTMLDivElement>;
+  inputProps?: HTMLProps<HTMLInputElement>;
+  labelProps?: HTMLProps<HTMLLabelElement>;
 }
 
 export const Radio: React.FC<Props> = ({
-  value,
+  children,
   id,
   radioProps,
   inputProps,
@@ -33,7 +32,7 @@ export const Radio: React.FC<Props> = ({
         htmlFor={id}
         className={`radio__label ${labelClassName}`}
       >
-        {value}
+        {children}
       </label>
     </div>
   );

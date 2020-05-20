@@ -1,15 +1,13 @@
 import React, { HTMLProps } from 'react';
 
-interface Props extends HTMLProps<HTMLDivElement> {
-  value: string;
-}
+interface Props extends HTMLProps<HTMLDivElement> {}
 
 export const SectionTitle: React.FC<Props> = ({
-  value,
+  children,
   className = '',
   ...props
 }) => (
   <div {...props} className={`section-title ${className}`}>
-    {value}
+    {children}
   </div>
 );

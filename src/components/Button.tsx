@@ -14,12 +14,11 @@ interface Props
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  label: string;
-  tint: Tint;
+  tint?: Tint;
 }
 
 export const Button: React.FC<Props> = ({
-  label,
+  children,
   tint,
   className = '',
   ...props
@@ -28,6 +27,6 @@ export const Button: React.FC<Props> = ({
     {...props}
     className={`button ${tint ? `button--${tint}` : ''} ${className}`}
   >
-    {label}
+    {children}
   </button>
 );

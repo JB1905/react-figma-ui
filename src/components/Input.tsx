@@ -3,9 +3,9 @@ import React, { HTMLProps } from 'react';
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
-  inputProps: HTMLProps<HTMLDivElement>;
-  iconProps: IconProps;
-  fieldProps: HTMLProps<HTMLInputElement>;
+  inputProps?: HTMLProps<HTMLDivElement>;
+  iconProps?: IconProps;
+  fieldProps?: HTMLProps<HTMLInputElement>;
 }
 
 export const Input: React.FC<Props> = ({
@@ -18,7 +18,10 @@ export const Input: React.FC<Props> = ({
   const { className: fieldClassName = '', ...fieldRest } = fieldProps;
 
   return (
-    <div {...inputRest} className={`input input--with-icon ${inputClassName}`}>
+    <div
+      {...inputRest}
+      className={`input ${icon ? 'input--with-icon' : ''} ${inputClassName}`}
+    >
       {icon && <Icon {...iconProps} />}
 
       <input

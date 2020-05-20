@@ -4,9 +4,9 @@ import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
   value: string;
-  onboardingTipProps: HTMLProps<HTMLDivElement>;
-  iconProps: IconProps;
-  messageProps: HTMLProps<HTMLDivElement>;
+  onboardingTipProps?: HTMLProps<HTMLDivElement>;
+  iconProps?: IconProps;
+  messageProps?: HTMLProps<HTMLDivElement>;
 }
 
 export const Onboarding: React.FC<Props> = ({

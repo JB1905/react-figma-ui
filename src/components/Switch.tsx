@@ -1,15 +1,14 @@
 import React, { HTMLProps } from 'react';
 
 interface Props {
-  value: string;
   id: string;
-  switchProps: HTMLProps<HTMLDivElement>;
-  toggleProps: HTMLProps<HTMLInputElement>;
-  labelProps: HTMLProps<HTMLLabelElement>;
+  switchProps?: HTMLProps<HTMLDivElement>;
+  toggleProps?: HTMLProps<HTMLInputElement>;
+  labelProps?: HTMLProps<HTMLLabelElement>;
 }
 
 export const Switch: React.FC<Props> = ({
-  value,
+  children,
   id,
   switchProps,
   toggleProps,
@@ -33,7 +32,7 @@ export const Switch: React.FC<Props> = ({
         className={`switch__label ${labelClassName}`}
         htmlFor={id}
       >
-        {value}
+        {children}
       </label>
     </div>
   );

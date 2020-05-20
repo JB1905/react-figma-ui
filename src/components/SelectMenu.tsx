@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { HTMLProps, useEffect } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 
 type Option = {
@@ -7,9 +7,15 @@ type Option = {
 
 interface Props {
   options: Option[];
+  selectProps?: HTMLProps<HTMLSelectElement>;
+  optionProps?: HTMLProps<HTMLOptionElement>;
 }
 
-export const SelectMenu: React.FC<Props> = () => {
+export const SelectMenu: React.FC<Props> = ({
+  options,
+  selectProps,
+  optionProps,
+}) => {
   useEffect(() => {
     selectMenu.init();
 
@@ -18,9 +24,11 @@ export const SelectMenu: React.FC<Props> = () => {
 
   return (
     <select id="uniqueId" className="select-menu">
-      <option value="1">Item 1</option>
-      <option value="2">Item 2</option>
-      <option value="3">Item 3</option>
+      {options.map((option) => (
+        <option value="1" key={null}>
+          Item 1
+        </option>
+      ))}
     </select>
   );
 };

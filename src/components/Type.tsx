@@ -12,14 +12,13 @@ enum Weight {
 }
 
 interface Props extends HTMLProps<HTMLDivElement> {
-  value: string;
-  size: Size;
-  weight: Weight;
-  inverse: boolean;
+  size?: Size;
+  weight?: Weight;
+  inverse?: boolean;
 }
 
 export const Type: React.FC<Props> = ({
-  value,
+  children,
   size,
   weight,
   inverse,
@@ -32,6 +31,6 @@ export const Type: React.FC<Props> = ({
       weight ? `type--weight` : ''
     } ${inverse ? 'type--inverse' : ''}`}
   >
-    {value}
+    {children}
   </div>
 );
