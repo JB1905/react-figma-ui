@@ -4,6 +4,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/react-figma-ui.svg?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
 
 ## About
+React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
 ## Demo
 [**Playground – play with library in Storybook**](https://react-figma-ui.github.io/react-figma-ui/)
