@@ -2,23 +2,39 @@ import React, { HTMLProps } from 'react';
 
 interface Props {
   value: string;
-  radioProps: HTMLProps<HTMLInputElement>;
-  buttonProps: HTMLProps<HTMLButtonElement>;
+  id: string;
+  radioProps: HTMLProps<HTMLDivElement>;
+  inputProps: HTMLProps<HTMLInputElement>;
   labelProps: HTMLProps<HTMLLabelElement>;
 }
 
-export const Radio: React.FC<Props | any> = ({ value }) => (
-  <div className="radio">
-    <input
-      id="radioButton1"
-      type="radio"
-      className="radio__button"
-      value="Value"
-      name="radioGroup"
-    />
+export const Radio: React.FC<Props> = ({
+  value,
+  id,
+  radioProps,
+  inputProps,
+  labelProps,
+}) => {
+  const { className: radioClassName, ...radioRest } = radioProps;
+  const { className: inputClassName, ...inputRest } = inputProps;
+  const { className: labelClassName, ...labelRest } = labelProps;
 
-    <label htmlFor="radioButton1" className="radio__label">
-      {value}
-    </label>
-  </div>
-);
+  return (
+    <div {...radioRest} className={`radio ${radioClassName}`}>
+      <input
+        {...inputRest}
+        id={id}
+        type="radio"
+        className={`radio__button ${inputClassName}`}
+      />
+
+      <label
+        {...labelRest}
+        htmlFor={id}
+        className={`radio__label ${labelClassName}`}
+      >
+        {value}
+      </label>
+    </div>
+  );
+};

@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-import { Icon } from './Icon';
+import { Icon, Props as IconProps } from './Icon';
 
-interface Props {}
+interface Props {
+  inputProps: HTMLProps<HTMLDivElement>;
+  iconProps: IconProps;
+  fieldProps: HTMLProps<HTMLInputElement>;
+}
 
-export const Input: React.FC<Props> = () => (
-  <div className="input input--with-icon">
-    <Icon />
+export const Input: React.FC<Props> = ({
+  inputProps,
+  iconProps,
+  fieldProps,
+}) => {
+  const { className: inputClassName = '', ...inputRest } = inputProps;
+  const { icon } = iconProps;
+  const { className: fieldClassName = '', ...fieldRest } = fieldProps;
 
-    <input type="input" className="input__field" value="Value" />
-  </div>
-);
+  return (
+    <div {...inputRest} className={`input input--with-icon ${inputClassName}`}>
+      {icon && <Icon {...iconProps} />}
+
+      <input
+        {...fieldRest}
+        type="input"
+        className={`input__field ${fieldClassName}`}
+      />
+    </div>
+  );
+};

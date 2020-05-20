@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 
-interface Props {}
+type Option = {
+  value: string;
+};
+
+interface Props {
+  options: Option[];
+}
 
 export const SelectMenu: React.FC<Props> = () => {
   useEffect(() => {

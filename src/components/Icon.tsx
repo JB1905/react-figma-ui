@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-interface Props {}
+export interface Props extends HTMLProps<HTMLDivElement> {
+  icon: string;
+}
 
-export const Icon: React.FC<Props> = () => <div className="icon icon--theme" />;
+export const Icon: React.FC<Props> = ({ icon, className = '', ...props }) => (
+  <div {...props} className={`icon icon--${icon} ${className}`} />
+);

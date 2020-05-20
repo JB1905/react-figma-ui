@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-import { Icon } from './Icon';
+import { Icon, Props as IconProps } from './Icon';
 
 interface Props {
   value: string;
+  onboardingTipProps: HTMLProps<HTMLDivElement>;
+  iconProps: IconProps;
+  messageProps: HTMLProps<HTMLDivElement>;
 }
 
-export const Onboarding: React.FC<Props> = ({ value }) => (
-  <div className="onboarding-tip">
-    <Icon />
+export const Onboarding: React.FC<Props> = ({
+  value,
+  onboardingTipProps,
+  iconProps,
+  messageProps,
+}) => {
+  const {
+    className: onboardingTipClassName = '',
+    ...onboardingTipRest
+  } = onboardingTipProps;
+  const { icon } = iconProps;
+  const { className: messageClassName = '', ...messageRest } = messageProps;
 
-    <div className="onboarding-tip__msg">{value}</div>
-  </div>
-);
+  return (
+    <div
+      {...onboardingTipRest}
+      className={`onboarding-tip ${onboardingTipClassName}`}
+    >
+      {icon && <Icon {...iconProps} />}
+
+      <div
+        {...messageRest}
+        className={`onboarding-tip__msg ${messageClassName}`}
+      >
+        {value}
+      </div>
+    </div>
+  );
+};

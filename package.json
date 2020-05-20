@@ -1,7 +1,7 @@
 {
   "name": "react-figma-ui",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0-beta.0",
+  "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/react-figma-ui.cjs.js",
@@ -10,7 +10,9 @@
   "scripts": {
     "release": "rimraf lib/* && npm run prettier && npm run lint && npm run build",
     "build": "rollup -c",
+    "test": "jest --coverage",
     "watch": "npm run build -- --watch",
+    "watch:test": "npm run test -- --watch",
     "lint": "eslint 'src/**/*.{tsx,ts}' --fix",
     "prettier": "prettier --write 'src/**/*.{tsx,ts}'",
     "storybook": "start-storybook -p 6006",
@@ -21,7 +23,13 @@
     "type": "git",
     "url": "https://github.com/jb1905/react-figma-ui.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Figma",
+    "ui",
+    "React",
+    "components",
+    "library"
+  ],
   "bugs": {
     "url": "https://github.com/jb1905/react-figma-ui/issues"
   },
