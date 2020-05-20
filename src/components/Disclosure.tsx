@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { disclosure } from 'figma-plugin-ds';
 
-export const Disclosure: React.FC = () => {
+interface Props {}
+
+export const Disclosure: React.FC<Props> = () => {
   useEffect(() => {
     disclosure.init();
 

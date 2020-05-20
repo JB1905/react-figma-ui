@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const Icon: React.FC = () => <div className="icon icon--theme"></div>;
+interface Props {}
+
+export const Icon: React.FC<Props> = () => <div className="icon icon--theme" />;

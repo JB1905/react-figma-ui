@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 
-export const SelectMenu: React.FC = () => {
+interface Props {}
+
+export const SelectMenu: React.FC<Props> = () => {
   useEffect(() => {
     selectMenu.init();
 

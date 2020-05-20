@@ -1,4 +1,4 @@
-import React, { HTMLProps } from 'react';
+import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
 enum Tint {
   Primary = 'primary',
@@ -9,21 +9,24 @@ enum Tint {
   TertiaryDestructive = 'tertiary-destructive',
 }
 
-interface Props extends HTMLProps<HTMLButtonElement> {
+interface Props
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  label: string;
   tint: Tint;
 }
 
-export const Button: React.FC<Props | any> = ({
+export const Button: React.FC<Props> = ({
   label,
   tint,
-  className,
+  className = '',
   ...props
 }) => (
   <button
     {...props}
-    className={`button ${tint ? `button--${tint}` : ''} ${
-      className ? className : ''
-    }`}
+    className={`button ${tint ? `button--${tint}` : ''} ${className}`}
   >
     {label}
   </button>

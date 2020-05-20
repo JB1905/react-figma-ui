@@ -1,8 +1,13 @@
 import React, { HTMLProps } from 'react';
 
-interface Props {}
+interface Props {
+  value: string;
+  radioProps: HTMLProps<HTMLInputElement>;
+  buttonProps: HTMLProps<HTMLButtonElement>;
+  labelProps: HTMLProps<HTMLLabelElement>;
+}
 
-export const Radio: React.FC<Props | any> = ({ label }) => (
+export const Radio: React.FC<Props | any> = ({ value }) => (
   <div className="radio">
     <input
       id="radioButton1"
@@ -13,7 +18,7 @@ export const Radio: React.FC<Props | any> = ({ label }) => (
     />
 
     <label htmlFor="radioButton1" className="radio__label">
-      Radio button
+      {value}
     </label>
   </div>
 );

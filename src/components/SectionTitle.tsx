@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-export const SectionTitle: React.FC = () => (
-  <div className="section-title">Section title</div>
+interface Props extends HTMLProps<HTMLDivElement> {
+  value: string;
+}
+
+export const SectionTitle: React.FC<Props> = ({
+  value,
+  className = '',
+  ...props
+}) => (
+  <div {...props} className={`section-title ${className}`}>
+    {value}
+  </div>
 );

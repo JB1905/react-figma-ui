@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-export const Textarea: React.FC = () => (
-  <textarea className="textarea" rows={2}>
-    Initial value
-  </textarea>
+interface Props extends HTMLProps<HTMLTextAreaElement> {}
+
+export const Textarea: React.FC<Props> = ({ className = '', ...props }) => (
+  <textarea {...props} className={`textarea ${className}`} />
 );

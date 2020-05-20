@@ -1,3 +1,9 @@
 import React from 'react';
 
-export const Label: React.FC = () => <div className="label">Label</div>;
+interface Props {
+  value: string;
+}
+
+export const Label: React.FC<Props> = ({ value }) => (
+  <div className="label">{value}</div>
+);

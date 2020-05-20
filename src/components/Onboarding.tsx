@@ -1,8 +1,15 @@
 import React from 'react';
 
-export const Onboarding: React.FC = () => (
+import { Icon } from './Icon';
+
+interface Props {
+  value: string;
+}
+
+export const Onboarding: React.FC<Props> = ({ value }) => (
   <div className="onboarding-tip">
-    <div className="icon icon--styles"></div>
-    <div className="onboarding-tip__msg">Onboarding tip goes here.</div>
+    <Icon />
+
+    <div className="onboarding-tip__msg">{value}</div>
   </div>
 );

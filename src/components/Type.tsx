@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-export const Type: React.FC = () => (
-  <div className="type">
-    UI11, size: xsmall (default) weight: normal, positive
+interface Props extends HTMLProps<HTMLDivElement> {
+  value: string;
+}
+
+export const Type: React.FC<Props> = ({ value, className = '', ...props }) => (
+  <div {...props} className={`type ${className}`}>
+    {value}
   </div>
 );
