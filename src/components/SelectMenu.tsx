@@ -5,16 +5,18 @@ type Option = {
   value: string;
 };
 
-interface Props {
+interface SelectMenuProps extends HTMLProps<HTMLSelectElement> {
   options: Option[];
-  selectProps?: HTMLProps<HTMLSelectElement>;
-  optionProps?: HTMLProps<HTMLOptionElement>;
+  render(option: any): void;
 }
 
-export const SelectMenu: React.FC<Props> = ({
+interface SelectMenuItemProps extends HTMLProps<HTMLOptionElement> {}
+
+export const SelectMenu: React.FC<SelectMenuProps> = ({
   options,
-  selectProps = {},
-  optionProps = {},
+  render,
+  className = '',
+  ...props
 }) => {
   useEffect(() => {
     selectMenu.init();
@@ -23,12 +25,15 @@ export const SelectMenu: React.FC<Props> = ({
   }, []);
 
   return (
-    <select id="uniqueId" className="select-menu">
-      {options.map((option) => (
-        <option value="1" key={null}>
-          Item 1
-        </option>
-      ))}
+    <select {...props} className={`select-menu ${className}`}>
+      {options.map((option) => render(option))}
     </select>
   );
+};
+
+export const SelectMenuOption: React.FC<SelectMenuItemProps> = ({
+  children,
+  ...props
+}) => {
+  return <option {...props}>{children}</option>;
 };
