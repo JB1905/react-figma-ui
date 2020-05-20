@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -26,6 +26,9 @@
     "url": "https://github.com/jb1905/react-figma-ui/issues"
   },
   "homepage": "https://github.com/jb1905/react-figma-ui#readme",
+  "dependencies": {
+    "figma-plugin-ds": "^0.1.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@rollup/plugin-node-resolve": "^7.1.3",
@@ -66,8 +69,5 @@
       "npm run prettier",
       "npm run lint"
     ]
-  },
-  "dependencies": {
-    "figma-plugin-ds": "^0.1.8"
   }
 }
