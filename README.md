@@ -52,6 +52,8 @@ Param | Description
 `tint` |
 `destructive` |
 
+---
+
 ### Checkbox
 
 To use the checkbox, use the following HTML markup. Remember each checkbox should get a unique ID that is referenced in the label. This ensures the checkbox and the entire label are clickable.
@@ -68,6 +70,8 @@ import { Checkbox } from 'react-figma-ui';
 // Checkbox disabled
 <Checkbox disabled>Label</Checkbox>
 ```
+
+---
 
 ### Disclosure
 
@@ -103,6 +107,8 @@ Param | Description
 `section` |
 `expanded` |
 
+---
+
 ### Icon
 
 To use the icon component, use the following markup. Apply the appropriate modifier class to select the item you wish to use, you can also add additional modifiers to change the color, or even spin the icon. You can also specify no icon name to use a text character as an icon (for example, like found in the width + height icon inputs in Figma)
@@ -133,6 +139,8 @@ Param | Description
 
 [Preview available icons here](https://github.com/thomas-lowry/figma-plugin-ds/#icon)
 
+---
+
 ### Icon button
 
 The icon button is essentially a wrapper for the icon component. Refer to the icon component above for its usage.
@@ -146,6 +154,8 @@ import { IconButton } from 'react-figma-ui';
 // Icon button with selected
 <IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
+
+---
 
 ### Input
 
@@ -167,6 +177,8 @@ import { Input } from 'react-figma-ui';
 <Input value="Value" iconProps={{ iconName: 'angle' }} />
 ```
 
+---
+
 ### Labels and sections
 
 To use a label or section, use the following markup.
@@ -181,6 +193,8 @@ import { Label } from 'react-figma-ui';
 <SectionTitle>Section title</SectionTitle>
 ```
 
+---
+
 ### Onboarding tip
 
 To create an onboarding tip, use the following markup. The tip also makes use of the icon component (see Icon component for usage).
@@ -192,6 +206,8 @@ import { Onboarding } from 'react-figma-ui';
   Onboarding tip goes here.
 </Onboarding>
 ```
+
+---
 
 ### Radio button
 
@@ -209,6 +225,8 @@ import { Radio } from 'react-figma-ui';
 // Radio button disabled
 <Radio disabled>Radio button</Radio>
 ```
+
+---
 
 ### Select menu
 
@@ -233,6 +251,8 @@ const options = [
 />
 ```
 
+---
+
 ### Switch
 
 To use the switch, use the following HTML markup. Remember each switch should get a unique ID that is referenced in the label. This ensures the switch and the entire label are clickable.
@@ -253,6 +273,8 @@ import { Switch } from 'react-figma-ui';
 </Switch>
 ```
 
+---
+
 ### Textarea
 
 To use the textarea, use the following HTML markup.
@@ -266,6 +288,8 @@ import { Textarea } from 'react-figma-ui';
 // Textarea disabled
 <Textarea value="Initial value" rows={2} disabled />
 ```
+
+---
 
 ### Type
 
