@@ -229,5 +229,11 @@ import { Type } from 'react-figma-ui';
 <Type size="large" weight="medium" inverse>UI12, size: large, weight: medium, negative</Type>
 ```
 
+Option | Description
+-|-
+size |
+weight |
+inverse |
+
 ## License
 This project is licensed under the MIT License © 2020-present Jakub Biesiada
