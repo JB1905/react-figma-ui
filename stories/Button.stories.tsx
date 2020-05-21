@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { Button } from '../src';
 
@@ -8,4 +8,12 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Button>Hello</Button>;
+export const normal = () => (
+  <Button
+    tint={text('Tint', 'primary') as any}
+    disabled={boolean('Disabled', false)}
+    destructive={boolean('Destructive', false)}
+  >
+    Hello
+  </Button>
+);

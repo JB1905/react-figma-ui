@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { Radio } from '../src';
 
@@ -8,4 +8,6 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Radio></Radio>;
+export const normal = () => (
+  <Radio checked={boolean('Checked', false)}>{text('Value', '')}</Radio>
+);

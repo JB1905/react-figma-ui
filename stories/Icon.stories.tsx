@@ -8,4 +8,6 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Icon />;
+export const normal = () => (
+  <Icon iconName={text('Icon Name', 'blend') as any} />
+);

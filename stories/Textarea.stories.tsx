@@ -8,4 +8,4 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Textarea value={text()} />;
+export const normal = () => <Textarea value={text('Value', '')} />;

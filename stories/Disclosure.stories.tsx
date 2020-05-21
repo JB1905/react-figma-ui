@@ -1,11 +1,23 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import { Disclosure } from '../src';
+import { Disclosure, DisclosureItem } from '../src';
 
 export default {
   title: 'Disclosure',
   decorators: [withKnobs],
 };
 
-export const normal = () => <Disclosure />;
+export const normal = () => (
+  <Disclosure
+    items={[]}
+    render={(item) => (
+      <DisclosureItem
+        renderHeading={() => <p>Hello</p>}
+        renderContent={() => <p>Hello</p>}
+        section={boolean('Section', false)}
+        expanded={boolean('Expanded', false)}
+      />
+    )}
+  />
+);

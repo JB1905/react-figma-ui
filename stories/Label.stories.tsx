@@ -8,4 +8,4 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Label></Label>;
+export const normal = () => <Label>{text('Label', '')}</Label>;

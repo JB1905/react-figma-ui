@@ -8,4 +8,8 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Onboarding></Onboarding>;
+export const normal = () => (
+  <Onboarding iconProps={{ iconName: text('Icon Name', 'warning') as any }}>
+    {text('Message', '')}
+  </Onboarding>
+);

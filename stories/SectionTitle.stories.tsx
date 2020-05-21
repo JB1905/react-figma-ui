@@ -8,4 +8,6 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <SectionTitle></SectionTitle>;
+export const normal = () => (
+  <SectionTitle>{text('Section Title', '')}</SectionTitle>
+);

@@ -8,4 +8,10 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => <Input></Input>;
+export const normal = () => (
+  <Input
+    value={text('Value', '')}
+    placeholder={text('Placeholder', 'afdsf')}
+    iconProps={{ iconName: text('Icon Name', 'search') as any }}
+  />
+);
