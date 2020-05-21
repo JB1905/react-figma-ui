@@ -10,6 +10,6 @@ export default {
 
 export const normal = () => (
   <Onboarding iconProps={{ iconName: text('Icon Name', 'warning') as any }}>
-    {text('Message', '')}
+    {text('Message', 'Message Text')}
   </Onboarding>
 );

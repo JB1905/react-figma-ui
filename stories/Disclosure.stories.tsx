@@ -10,7 +10,7 @@ export default {
 
 export const normal = () => (
   <Disclosure
-    items={[]}
+    items={[1, 2, 3, 4]}
     render={(item) => (
       <DisclosureItem
         renderHeading={() => <p>Hello</p>}

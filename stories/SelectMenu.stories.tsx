@@ -8,9 +8,9 @@ export default {
   decorators: [withKnobs],
 };
 
-// export const normal = () => (
-//   <SelectMenu
-//     // items={null}
-//     render={(item) => <SelectMenuOption>aaaa</SelectMenuOption>}
-//   />
-// );
+export const normal = () => (
+  <SelectMenu
+    options={[1, 2, 3]}
+    render={(item) => <SelectMenuOption>Lorem ipsum dolor</SelectMenuOption>}
+  />
+);

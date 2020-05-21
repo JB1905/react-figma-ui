@@ -9,5 +9,5 @@ export default {
 };
 
 export const normal = () => (
-  <SectionTitle>{text('Section Title', '')}</SectionTitle>
+  <SectionTitle>{text('Section Title', 'Section Title')}</SectionTitle>
 );
