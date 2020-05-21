@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.2",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -74,6 +74,9 @@
     "react-dom": ">=16.8.0"
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }
