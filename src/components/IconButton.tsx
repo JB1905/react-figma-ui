@@ -2,26 +2,25 @@ import React, { HTMLProps } from 'react';
 
 import { Icon, Props as IconProps } from './Icon';
 
-interface Props {
+interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly selected?: boolean;
-  readonly buttonProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly iconProps?: IconProps;
 }
 
 export const IconButton: React.FC<Props> = ({
   selected,
-  buttonProps = {},
+  className = '',
   iconProps = {} as IconProps,
+  ...props
 }) => {
-  const { className: buttonClassName = '', ...buttonRest } = buttonProps;
   const { iconName } = iconProps;
 
   return (
     <div
-      {...buttonRest}
+      {...props}
       className={`icon-button ${
         selected ? 'icon-button--selected' : ''
-      } ${buttonClassName}`}
+      } ${className}`}
     >
       {iconName && <Icon {...iconProps} />}
     </div>

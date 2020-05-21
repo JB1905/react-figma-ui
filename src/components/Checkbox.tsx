@@ -1,32 +1,38 @@
 import React, { HTMLProps } from 'react';
 
-interface Props extends Readonly<HTMLProps<HTMLLabelElement>> {
-  readonly id: string;
-  readonly checkboxProps?: Readonly<HTMLProps<HTMLDivElement>>;
-  readonly inputProps?: Readonly<HTMLProps<HTMLInputElement>>;
+interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+  readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
+  readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Checkbox: React.FC<Props> = ({
   children,
   id,
-  checkboxProps = {},
-  inputProps = {},
   className,
+  containerProps = {},
+  labelProps = {},
   ...props
 }) => {
-  const { className: checkboxClassName = '', ...checboxRest } = checkboxProps;
-  const { className: inputClassName = '', ...inputRest } = inputProps;
+  const {
+    className: containerClassName = '',
+    ...containerRest
+  } = containerProps;
+  const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...checboxRest} className={`checkbox ${checkboxClassName}`}>
+    <div {...containerRest} className={`checkbox ${containerClassName}`}>
       <input
-        {...inputRest}
+        {...props}
         id={id}
         type="checkbox"
-        className={`checkbox__box ${inputClassName}`}
+        className={`checkbox__box ${className}`}
       />
 
-      <label {...props} htmlFor={id} className={`checkbox__label ${className}`}>
+      <label
+        {...labelRest}
+        htmlFor={id}
+        className={`checkbox__label ${labelClassName}`}
+      >
         {children}
       </label>
     </div>

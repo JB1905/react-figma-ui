@@ -1,28 +1,29 @@
 import React, { HTMLProps } from 'react';
 
-interface Props {
-  readonly id: string;
-  readonly switchProps?: Readonly<HTMLProps<HTMLDivElement>>;
-  readonly toggleProps?: Readonly<HTMLProps<HTMLInputElement>>;
+interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+  readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Switch: React.FC<Props> = ({
   children,
   id,
-  switchProps = {},
-  toggleProps = {},
+  className = '',
+  containerProps = {},
   labelProps = {},
+  ...props
 }) => {
-  const { className: switchClassName = '', ...switchRest } = switchProps;
-  const { className: toggleClassName = '', ...toggleRest } = toggleProps;
+  const {
+    className: containerClassName = '',
+    ...containerRest
+  } = containerProps;
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...switchRest} className={`switch ${switchClassName}`}>
+    <div {...containerRest} className={`switch ${containerClassName}`}>
       <input
-        {...toggleRest}
-        className={`switch__toggle ${toggleClassName}`}
+        {...props}
+        className={`switch__toggle ${className}`}
         type="checkbox"
         id={id}
       />

@@ -2,35 +2,33 @@ import React, { HTMLProps } from 'react';
 
 import { Icon, Props as IconProps } from './Icon';
 
-interface Props {
-  readonly inputProps?: Readonly<HTMLProps<HTMLDivElement>>;
+interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+  readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly iconProps?: IconProps;
-  readonly fieldProps?: Readonly<HTMLProps<HTMLInputElement>>;
 }
 
 export const Input: React.FC<Props> = ({
-  inputProps = {},
+  className,
+  containerProps = {},
   iconProps = {} as IconProps,
-  fieldProps = {},
+  ...props
 }) => {
-  const { className: inputClassName = '', ...inputRest } = inputProps;
+  const {
+    className: containerClassName = '',
+    ...containerRest
+  } = containerProps;
   const { iconName } = iconProps;
-  const { className: fieldClassName = '', ...fieldRest } = fieldProps;
 
   return (
     <div
-      {...inputRest}
+      {...containerRest}
       className={`input ${
         iconName ? 'input--with-icon' : ''
-      } ${inputClassName}`}
+      } ${containerClassName}`}
     >
       {iconName && <Icon {...iconProps} />}
 
-      <input
-        {...fieldRest}
-        type="input"
-        className={`input__field ${fieldClassName}`}
-      />
+      <input {...props} type="input" className={`input__field ${className}`} />
     </div>
   );
 };

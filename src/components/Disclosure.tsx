@@ -12,14 +12,14 @@ interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
   render(item: any): ReactElement;
 }
 
-interface DisclosureItemProps {
+interface DisclosureItemProps
+  extends Readonly<
+    DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
+  > {
   renderHeading(): ReactElement;
   renderContent(): ReactElement;
   readonly section?: boolean;
   readonly expanded?: boolean;
-  readonly itemProps?: Readonly<
-    DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
-  >;
   readonly labelProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly contentProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
@@ -48,20 +48,20 @@ export const DisclosureItem: React.FC<DisclosureItemProps> = ({
   expanded,
   renderHeading,
   renderContent,
-  itemProps = {},
+  className = '',
   labelProps = {},
   contentProps = {},
+  ...props
 }) => {
-  const { className: itemClassName = '', ...itemRest } = itemProps;
   const { className: labelClassName = '', ...labelRest } = labelProps;
   const { className: contentClassName = '', ...contentRest } = contentProps;
 
   return (
     <li
-      {...itemRest}
+      {...props}
       className={`disclosure__item ${
         expanded ? 'disclosure--expanded' : ''
-      } ${itemClassName}`}
+      } ${className}`}
     >
       <div
         {...labelRest}

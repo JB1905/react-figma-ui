@@ -1,30 +1,28 @@
 import React, { HTMLProps } from 'react';
 
-interface Props {
-  readonly id: string;
-  readonly radioProps?: Readonly<HTMLProps<HTMLDivElement>>;
-  readonly inputProps?: Readonly<HTMLProps<HTMLInputElement>>;
+interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+  readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
 export const Radio: React.FC<Props> = ({
   children,
   id,
-  radioProps = {},
-  inputProps = {},
+  className = '',
+  containerProps = {},
   labelProps = {},
+  ...props
 }) => {
-  const { className: radioClassName, ...radioRest } = radioProps;
-  const { className: inputClassName, ...inputRest } = inputProps;
+  const { className: containerClassName, ...containerRest } = containerProps;
   const { className: labelClassName, ...labelRest } = labelProps;
 
   return (
-    <div {...radioRest} className={`radio ${radioClassName}`}>
+    <div {...containerRest} className={`radio ${containerClassName}`}>
       <input
-        {...inputRest}
+        {...props}
         id={id}
         type="radio"
-        className={`radio__button ${inputClassName}`}
+        className={`radio__button ${className}`}
       />
 
       <label

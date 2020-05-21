@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
-import { Tint } from '../enums/Tint';
+import type { Tint } from '../types';
 
 interface Props
   extends Readonly<
@@ -10,17 +10,21 @@ interface Props
     >
   > {
   readonly tint?: Tint;
+  readonly destructive?: boolean;
 }
 
 export const Button: React.FC<Props> = ({
   children,
   tint,
+  destructive,
   className = '',
   ...props
 }) => (
   <button
     {...props}
-    className={`button ${tint ? `button--${tint}` : ''} ${className}`}
+    className={`button ${
+      tint ? `button--${tint}${destructive ? `-${destructive}` : ''}` : ''
+    } ${className}`}
   >
     {children}
   </button>
