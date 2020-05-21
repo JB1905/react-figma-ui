@@ -27,29 +27,30 @@ $ yarn add react-figma-ui
 ### Button
 
 ```jsx
-import React from 'react';
 import { Button } from 'react-figma-ui';
 
 // Primary
-<Button tint={}>Label</Button>
-<Button tint={}>Label</Button>
-<Button tint={} disabled>Label</Button>
+<Button tint="primary">Label</Button>
+<Button tint="primary" destructive>Label</Button>
+<Button tint="primary" disabled>Label</Button>
 
 // Secondary
-<Button tint={}>Label</Button>
-<Button tint={}>Label</Button>
-<Button tint={} disabled>Label</Button>
+<Button tint="secondary">Label</Button>
+<Button tint="secondary" destructive>Label</Button>
+<Button tint="secondary" disabled>Label</Button>
 
 
 // Tertirary (Hyperlink style button)
-<Button tint={}>Label</Button>
-<Button tint={}>Label</Button>
-<Button tint={} disabled>Label</Button>
+<Button tint="tertirary">Label</Button>
+<Button tint="tertirary" destructive>Label</Button>
+<Button tint="tertirary" disabled>Label</Button>
 ```
 
 ### Checkbox
 
 ```jsx
+import { Checkbox } from 'react-figma-ui';
+
 // Checkbox unchecked
 <Checkbox>Label</Checkbox>
 
@@ -63,20 +64,34 @@ import { Button } from 'react-figma-ui';
 ### Disclosure
 
 ```jsx
+import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
+<Disclosure
+  items={}
+  render={({}) => (
+    <DisclosureItem
+      heading={}
+      content={}
+      section
+      expanded
+    />
+  )}
+/>
 ```
 
 ### Icon
 
 ```jsx
+import { Icon } from 'react-figma-ui';
+
 // Icon
-<Icon iconName="" />
+<Icon iconName="theme" />
 
 // 
-<Icon iconName="" colorName="" />
+<Icon iconName="theme" colorName="blue" />
 
 // 
-<Icon iconName="" spin />
+<Icon iconName="spinner" spin />
 
 // 
 <Icon>W</Icon>
@@ -85,63 +100,122 @@ import { Button } from 'react-figma-ui';
 ### Icon button
 
 ```jsx
+import { IconButton } from 'react-figma-ui';
 
+//
+<IconButton />
+
+// Icon button with selected
+<IconButton selected />
 ```
 
 ### Input
 
 ```jsx
+import { Input } from 'react-figma-ui';
+
 // Input with placeholder
+<Input placeholder="" />
 
 // Input with initial value
+<Input value="" />
 
 // Disabled input
+<Input disabled />
 
 // Input with icon
+<Input />
 ```
 
 ### Labels and sections
 
 ```jsx
+import { Label } from 'react-figma-ui';
+
 // Label
+<Label>Label</Label>
 
 // Section title
+<SectionTitle>Section title</SectionTitle>
 ```
 
 ### Onboarding tip
 
 ```jsx
+import { Onboarding } from 'react-figma-ui';
 
+<Onboarding iconProps={{ iconName: 'styles' }}>
+  Onboarding tip goes here.
+</Onboarding>
 ```
 
 ### Radio button
 
 ```jsx
+import { Radio } from 'react-figma-ui';
 
+// Radio button
+<Radio />
+
+// Radio button checked
+<Radio />
+
+// Radio button disabled
+<Radio />
 ```
 
 ### Select menu
 
 ```jsx
+import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 
+<SelectMenu
+  options={}
+  render={() => (
+    <SelectMenuOption></SelectMenuOption>
+  )}
+/>
 ```
 
 ### Switch
 
 ```jsx
+import { Switch } from 'react-figma-ui';
 
+// Switch
+<Switch
+  id={}
+>
+
+</Switch>
+
+// Switch checked
+
+// Switch disabled
 ```
 
 ### Textarea
 
 ```jsx
+import { Textarea } from 'react-figma-ui';
 
+// Textarea
+<Textarea value="Initial value" rows={2} />
+
+// Textarea disabled
+<Textarea value="Initial value" rows={2} disabled />
 ```
 
 ### Type
 
 ```jsx
+import { Type } from 'react-figma-ui';
 
+<Type>UI11, size: xsmall (default) weight: normal, positive</Type>
+
+<Type>UI13, size: large, weight: bold, positive</Type>
+
+<Type size="large" weight="medium" inverse>UI12, size: large, weight: medium, negative</Type>
 ```
 
 ## License
