@@ -26,7 +26,7 @@ $ yarn add react-figma-ui
 ## Components
 ### Button
 
-```js
+```jsx
 import React from 'react';
 import { Button } from 'react-figma-ui';
 
@@ -49,7 +49,7 @@ import { Button } from 'react-figma-ui';
 
 ### Checkbox
 
-```js
+```jsx
 // Checkbox unchecked
 <Checkbox>Label</Checkbox>
 
@@ -62,13 +62,13 @@ import { Button } from 'react-figma-ui';
 
 ### Disclosure
 
-```js
+```jsx
 
 ```
 
 ### Icon
 
-```js
+```jsx
 // Icon
 <Icon iconName="" />
 
@@ -84,13 +84,13 @@ import { Button } from 'react-figma-ui';
 
 ### Icon button
 
-```js
+```jsx
 
 ```
 
 ### Input
 
-```js
+```jsx
 // Input with placeholder
 
 // Input with initial value
@@ -102,7 +102,7 @@ import { Button } from 'react-figma-ui';
 
 ### Labels and sections
 
-```js
+```jsx
 // Label
 
 // Section title
@@ -110,37 +110,37 @@ import { Button } from 'react-figma-ui';
 
 ### Onboarding tip
 
-```js
+```jsx
 
 ```
 
 ### Radio button
 
-```js
+```jsx
 
 ```
 
 ### Select menu
 
-```js
+```jsx
 
 ```
 
 ### Switch
 
-```js
+```jsx
 
 ```
 
 ### Textarea
 
-```js
+```jsx
 
 ```
 
 ### Type
 
-```js
+```jsx
 
 ```
 
