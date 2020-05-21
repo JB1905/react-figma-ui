@@ -20,9 +20,6 @@ Or Yarn:
 $ yarn add react-figma-ui
 ```
 
-## Getting Started
-
-
 ## Components
 ### Button
 
@@ -66,14 +63,21 @@ import { Checkbox } from 'react-figma-ui';
 ```jsx
 import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
+const items = [
+  {
+    heading: "",
+    content: "",
+  }
+];
+
 <Disclosure
-  items={}
-  render={({}) => (
+  items={items}
+  render={({ heading, content }) => (
     <DisclosureItem
-      heading={}
-      content={}
-      section
-      expanded
+      heading={heading}
+      content={content}
+      section={}
+      expanded={}
     />
   )}
 />
@@ -87,13 +91,13 @@ import { Icon } from 'react-figma-ui';
 // Icon
 <Icon iconName="theme" />
 
-// 
+// Icon with blue colorName to change color
 <Icon iconName="theme" colorName="blue" />
 
-// 
+// Spinner icon with spinning animation
 <Icon iconName="spinner" spin />
 
-// 
+// Text icon
 <Icon>W</Icon>
 ```
 
@@ -103,10 +107,10 @@ import { Icon } from 'react-figma-ui';
 import { IconButton } from 'react-figma-ui';
 
 //
-<IconButton />
+<IconButton iconProps={{ iconName: 'blend' }} />
 
 // Icon button with selected
-<IconButton selected />
+<IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
 
 ### Input
@@ -115,16 +119,16 @@ import { IconButton } from 'react-figma-ui';
 import { Input } from 'react-figma-ui';
 
 // Input with placeholder
-<Input placeholder="" />
+<Input placeholder="Placeholder" />
 
 // Input with initial value
-<Input value="" />
+<Input value="Initial value" />
 
 // Disabled input
-<Input disabled />
+<Input value="Initial value" disabled />
 
 // Input with icon
-<Input />
+<Input value="Value" iconProps={{ iconName: 'angle' }} />
 ```
 
 ### Labels and sections
@@ -155,13 +159,13 @@ import { Onboarding } from 'react-figma-ui';
 import { Radio } from 'react-figma-ui';
 
 // Radio button
-<Radio />
+<Radio>Radio button</Radio>
 
 // Radio button checked
-<Radio />
+<Radio checked>Radio button</Radio>
 
 // Radio button disabled
-<Radio />
+<Radio disabled>Radio button</Radio>
 ```
 
 ### Select menu
@@ -169,9 +173,15 @@ import { Radio } from 'react-figma-ui';
 ```jsx
 import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 
+const options = [
+  {
+    value: ""
+  }
+];
+
 <SelectMenu
-  options={}
-  render={() => (
+  options={options}
+  render={({}) => (
     <SelectMenuOption></SelectMenuOption>
   )}
 />
@@ -183,15 +193,16 @@ import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 import { Switch } from 'react-figma-ui';
 
 // Switch
-<Switch
-  id={}
->
-
+<Switch id={}>
 </Switch>
 
 // Switch checked
+<Switch id={}>
+</Switch>
 
 // Switch disabled
+<Switch id={}>
+</Switch>
 ```
 
 ### Textarea
