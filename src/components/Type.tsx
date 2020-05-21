@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { Size, Weight } from '../types';
+import type { Size, Weight } from '../types';
 
 interface Props extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'size'>> {
   readonly size?: Size;
