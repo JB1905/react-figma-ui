@@ -8,6 +8,7 @@ module.exports = {
   plugins: ['prettier', 'react-hooks'],
   env: {
     browser: true,
+    node: true,
     jest: true,
   },
   parserOptions: {
@@ -18,6 +19,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/display-name': 'off',
