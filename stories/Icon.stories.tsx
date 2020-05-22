@@ -11,7 +11,7 @@ export default {
 export const normal = () => (
   <Icon
     iconName={text('Icon Name', 'blend') as any}
-    colorName={text('Icon Color', 'blue') as any}
+    colorName={text('Icon Color', '') as any}
     spin={boolean('Spin', false)}
   >
     {text('Value', '')}
