@@ -85,6 +85,7 @@ To use a disclosure panel, you must use the following component.
 ```jsx
 import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
+// Example items
 const items = [
   { heading: "Heading 1", content: "Content 1", id: 1 },
   { heading: "Heading 2", content: "Content 2", id: 2 },
@@ -155,10 +156,10 @@ The icon button is essentially a wrapper for the icon component.
 ```jsx
 import { IconButton } from 'react-figma-ui';
 
-//
+// Icon button with a blend icon
 <IconButton iconProps={{ iconName: 'blend' }} />
 
-// Icon button with selected
+// Icon button with selected option
 <IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
 
@@ -244,6 +245,7 @@ The select menu will open and position the menu to the selected object. If there
 ```jsx
 import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 
+// Example options
 const options = [
   { value: 1, label: "Option 1" },
   { value: 2, label: "Option 2" },
