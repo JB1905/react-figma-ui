@@ -9,5 +9,11 @@ export default {
 };
 
 export const normal = () => (
-  <Switch checked={boolean('Checked', false)}>{text('Value', 'Label')}</Switch>
+  <Switch
+    id="uniqueId"
+    checked={boolean('Checked', false)}
+    disabled={boolean('Disabled', false)}
+  >
+    {text('Value', 'Label')}
+  </Switch>
 );

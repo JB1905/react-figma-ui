@@ -9,5 +9,11 @@ export default {
 };
 
 export const normal = () => (
-  <Radio checked={boolean('Checked', false)}>{text('Value', 'Label')}</Radio>
+  <Radio
+    id="radioButton"
+    checked={boolean('Checked', false)}
+    disabled={boolean('Disabled', false)}
+  >
+    {text('Value', 'Radio button')}
+  </Radio>
 );

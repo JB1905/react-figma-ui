@@ -5,7 +5,7 @@ import { Button } from '../src';
 
 describe('Button', () => {
   it('should render primary Button', () => {
-    const { container } = render(<Button tint="primary">Hello World!</Button>);
+    const { container } = render(<Button tint="primary">Label</Button>);
 
     expect(container).toMatchSnapshot();
   });
@@ -13,7 +13,7 @@ describe('Button', () => {
   it('should render secondary Button with destructive style', () => {
     const { container } = render(
       <Button tint="secondary" destructive>
-        Hello World!
+        Label
       </Button>
     );
 
@@ -23,7 +23,7 @@ describe('Button', () => {
   it('should render disabled tertirary Button', () => {
     const { container } = render(
       <Button tint="tertirary" disabled>
-        Hello World!
+        Label
       </Button>
     );
 

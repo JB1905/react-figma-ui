@@ -21,9 +21,9 @@ export const normal = () => (
         'primary'
       ) as any
     }
-    disabled={boolean('Disabled', false)}
     destructive={boolean('Destructive', false)}
+    disabled={boolean('Disabled', false)}
   >
-    {text('Text', 'Button Text')}
+    {text('Label', 'Label')}
   </Button>
 );

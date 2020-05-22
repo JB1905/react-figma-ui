@@ -6,7 +6,7 @@ import { Radio } from '../src';
 describe('Radio', () => {
   it('should render Radio button', () => {
     const { container } = render(
-      <Radio value="Value" name="radioGroup">
+      <Radio value="Value" id="radioButton1" name="radioGroup">
         Radio button
       </Radio>
     );
@@ -16,7 +16,7 @@ describe('Radio', () => {
 
   it('should render checked Radio button', () => {
     const { container } = render(
-      <Radio value="Value" name="radioGroup" checked>
+      <Radio value="Value" id="radioButton2" name="radioGroup" checked>
         Radio button
       </Radio>
     );
@@ -26,7 +26,7 @@ describe('Radio', () => {
 
   it('should render disabled Radio button', () => {
     const { container } = render(
-      <Radio value="Value" name="radioGroup" disabled>
+      <Radio value="Value" id="radioButton3" name="radioGroup" disabled>
         Radio button
       </Radio>
     );

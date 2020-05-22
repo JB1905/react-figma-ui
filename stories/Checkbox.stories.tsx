@@ -10,10 +10,10 @@ export default {
 
 export const normal = () => (
   <Checkbox
+    id="uniqueId"
     checked={boolean('Checked', false)}
     disabled={boolean('Disabled', false)}
-    id="unique-id"
   >
-    {text('Label', 'Checkbox Label')}
+    {text('Label', 'Label')}
   </Checkbox>
 );

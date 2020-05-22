@@ -5,17 +5,15 @@ import { Checkbox } from '../src';
 
 describe('Checkbox', () => {
   it('should render unchecked Checkbox', () => {
-    const { container } = render(
-      <Checkbox id="rick-astley">Never gonna give you up...</Checkbox>
-    );
+    const { container } = render(<Checkbox id="uniqueId">Label</Checkbox>);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render checked Checkbox', () => {
     const { container } = render(
-      <Checkbox id="rick-astley" checked>
-        Never gonna give you up...
+      <Checkbox id="uniqueId" checked>
+        Label
       </Checkbox>
     );
 
@@ -24,8 +22,8 @@ describe('Checkbox', () => {
 
   it('should render disabled Checkbox', () => {
     const { container } = render(
-      <Checkbox id="rick-astley" disabled>
-        Never gonna give you up...
+      <Checkbox id="uniqueId" disabled>
+        Label
       </Checkbox>
     );
 

@@ -231,13 +231,13 @@ To create an radio button, use the following component. Remember each group of r
 import { Radio } from 'react-figma-ui';
 
 // Radio button
-<Radio value="Value" name="radioGroup">Radio button</Radio>
+<Radio value="Value" id="radioButton1" name="radioGroup">Radio button</Radio>
 
 // Radio button checked
-<Radio value="Value" name="radioGroup" checked>Radio button</Radio>
+<Radio value="Value" id="radioButton2" name="radioGroup" checked>Radio button</Radio>
 
 // Radio button disabled
-<Radio value="Value" name="radioGroup" disabled>Radio button</Radio>
+<Radio value="Value" id="radioButton3" name="radioGroup" disabled>Radio button</Radio>
 ```
 
 ---

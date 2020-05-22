@@ -10,8 +10,8 @@ export default {
 
 export const normal = () => (
   <Input
-    value={text('Value', 'Input Value')}
-    placeholder={text('Placeholder', 'Placeholder Text')}
+    value={text('Value', 'Value')}
+    placeholder={text('Placeholder', 'Placeholder')}
     iconProps={{ iconName: text('Icon Name', 'search') as any }}
   />
 );

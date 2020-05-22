@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 
 import { Textarea } from '../src';
 
@@ -9,5 +9,10 @@ export default {
 };
 
 export const normal = () => (
-  <Textarea placeholder={text('Placeholder', '')} value={text('Value', '')} />
+  <Textarea
+    placeholder={text('Placeholder', 'Placeholder')}
+    value={text('Value', 'Initial value')}
+    rows={number('Rows', 2)}
+    disabled={boolean('Disabled', false)}
+  />
 );
