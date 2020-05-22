@@ -49,8 +49,8 @@ import { Button } from 'react-figma-ui';
 
 Param | Description
 -|-
-`tint` | 
-`destructive` | 
+`tint` | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink)
+`destructive` | Add red destructive variant for actions such as deleting something
 
 ---
 
@@ -73,8 +73,8 @@ import { Checkbox } from 'react-figma-ui';
 
 Param | Description
 -|-
-`containerProps` | 
-`labelProps` | 
+`containerProps` | Props for checkbox container
+`labelProps` | Props for label element
 
 ---
 
@@ -109,8 +109,8 @@ const items = [
 
 Param | Description
 -|-
-`section` | 
-`expanded` | 
+`section` | Style label like a heading
+`expanded` | Add this option to have item expanded on load
 
 ---
 
@@ -138,9 +138,11 @@ import { Icon } from 'react-figma-ui';
 
 Param | Description
 -|-
-`iconName` | 
-`spin` | 
-`colorName` | 
+`iconName` | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)
+`spin` | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon)
+`colorName`* | Pass the name of any Figma color var to this prop (e.g.: `blue`, `black3`)
+
+*Colors accepted: `blue`, `purple`, `purple4`, `hot-pink`, `green`, `red`, `yellow`, `black`, `black8`, `black3`, `white`, `white8`, `white4`
 
 [Preview available icons here](https://github.com/thomas-lowry/figma-plugin-ds/#icon)
 
@@ -314,9 +316,9 @@ import { Type } from 'react-figma-ui';
 
 Param | Description
 -|-
-`size` | 
-`weight` | 
-`inverse` | 
+`size` | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px
+`weight` | Font weight: medium, bold
+`inverse` | Inversed (negative) application where light text is on dark background with increased letterspacing
 
 *Defaults: Font size 11px, normal weight, positive application*
 
