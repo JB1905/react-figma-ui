@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-beta.1",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -57,7 +57,7 @@
     "eslint-plugin-react-hooks": "^4.0.2",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.4",
+    "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
