@@ -62,13 +62,13 @@ To use the checkbox, use the following component. Remember each checkbox should 
 import { Checkbox } from 'react-figma-ui';
 
 // Checkbox unchecked
-<Checkbox>Label</Checkbox>
+<Checkbox id="uniqueId">Label</Checkbox>
 
 // Checkbox checked
-<Checkbox checked>Label</Checkbox>
+<Checkbox id="uniqueId" checked>Label</Checkbox>
 
 // Checkbox disabled
-<Checkbox disabled>Label</Checkbox>
+<Checkbox id="uniqueId" disabled>Label</Checkbox>
 ```
 
 Param | Description
@@ -86,20 +86,20 @@ To use a disclosure panel, you must use the following component.
 import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
 const items = [
-  {
-    heading: "",
-    content: "",
-  }
+  { heading: "Heading 1", content: "Content 1", id: 1 },
+  { heading: "Heading 2", content: "Content 2", id: 2 },
+  { heading: "Heading 3", content: "Content 3", id: 3 }
 ];
 
 <Disclosure
   items={items}
-  render={({ heading, content }) => (
+  render={({ heading, content, id }, index) => (
     <DisclosureItem
       heading={heading}
       content={content}
-      section={}
-      expanded={}
+      section={index % 2 === 0}
+      expanded={index % 2 === 1}
+      key={id}
     />
   )}
 />
@@ -224,13 +224,13 @@ To create an radio button, use the following component. Remember each group of r
 import { Radio } from 'react-figma-ui';
 
 // Radio button
-<Radio>Radio button</Radio>
+<Radio value="Value" name="radioGroup">Radio button</Radio>
 
 // Radio button checked
-<Radio checked>Radio button</Radio>
+<Radio value="Value" name="radioGroup" checked>Radio button</Radio>
 
 // Radio button disabled
-<Radio disabled>Radio button</Radio>
+<Radio value="Value" name="radioGroup" disabled>Radio button</Radio>
 ```
 
 ---
@@ -245,15 +245,15 @@ The select menu will open and position the menu to the selected object. If there
 import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 
 const options = [
-  {
-    value: ""
-  }
+  { value: 1, label: "Option 1" },
+  { value: 2, label: "Option 2" },
+  { value: 3, label: "Option 3" },
 ];
 
 <SelectMenu
   options={options}
-  render={({}) => (
-    <SelectMenuOption></SelectMenuOption>
+  render={({ value, label }) => (
+    <SelectMenuOption value={value} key={value}>{label}</SelectMenuOption>
   )}
 />
 ```
@@ -268,16 +268,13 @@ To use the switch, use the following HTML markup. Remember each switch should ge
 import { Switch } from 'react-figma-ui';
 
 // Switch
-<Switch id={}>
-</Switch>
+<Switch id="uniqueId">Label</Switch>
 
 // Switch checked
-<Switch id={}>
-</Switch>
+<Switch id="uniqueId" checked>Label</Switch>
 
 // Switch disabled
-<Switch id={}>
-</Switch>
+<Switch id="uniqueId" disabled>Label</Switch>
 ```
 
 ---
