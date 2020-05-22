@@ -19,7 +19,7 @@ export const Type: React.FC<Props> = ({
   <div
     {...props}
     className={`type ${size ? `type--${size}` : ''} ${className} ${
-      weight ? `type--weight` : ''
+      weight ? 'type--weight' : ''
     } ${inverse ? 'type--inverse' : ''}`}
   >
     {children}
