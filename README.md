@@ -109,7 +109,7 @@ const items = [
       key={id}
     />
   )}
-/>;
+/>
 ```
 
 #### Available options
@@ -134,10 +134,10 @@ import { Icon } from 'react-figma-ui';
 // Icon with blue colorName to change color
 <Icon iconName="theme" colorName="blue" />
 
-// Spinner icon with spinning animation
+// Spinner Icon with spinning animation
 <Icon iconName="spinner" spin />
 
-// Text icon
+// Text Icon
 <Icon>W</Icon>
 ```
 
@@ -218,7 +218,7 @@ import { Onboarding } from 'react-figma-ui';
 
 <Onboarding iconProps={{ iconName: 'styles' }}>
   Onboarding tip goes here.
-</Onboarding>;
+</Onboarding>
 ```
 
 ---
@@ -265,7 +265,7 @@ const options = [
       {label}
     </SelectMenuOption>
   )}
-/>;
+/>
 ```
 
 ---

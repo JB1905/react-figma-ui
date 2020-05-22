@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Onboarding should render Onboarding 1`] = `
+<div>
+  <div
+    class="onboarding-tip "
+  >
+    <div
+      class="icon icon--styles   "
+    />
+    <div
+      class="onboarding-tip__msg "
+    >
+      Onboarding tip goes here.
+    </div>
+  </div>
+</div>
+`;

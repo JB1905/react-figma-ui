@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render checked Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox "
+  >
+    <input
+      checked=""
+      class="checkbox__box undefined"
+      id="rick-astley"
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label "
+      for="rick-astley"
+    >
+      Never gonna give you up...
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox should render disabled Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox "
+  >
+    <input
+      class="checkbox__box undefined"
+      disabled=""
+      id="rick-astley"
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label "
+      for="rick-astley"
+    >
+      Never gonna give you up...
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox should render unchecked Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox "
+  >
+    <input
+      class="checkbox__box undefined"
+      id="rick-astley"
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label "
+      for="rick-astley"
+    >
+      Never gonna give you up...
+    </label>
+  </div>
+</div>
+`;

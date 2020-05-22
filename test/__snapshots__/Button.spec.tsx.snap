@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render disabled tertirary Button 1`] = `
+<div>
+  <button
+    class="button button--tertirary "
+    disabled=""
+  >
+    Hello World!
+  </button>
+</div>
+`;
+
+exports[`Button should render primary Button 1`] = `
+<div>
+  <button
+    class="button button--primary "
+  >
+    Hello World!
+  </button>
+</div>
+`;
+
+exports[`Button should render secondary Button with destructive style 1`] = `
+<div>
+  <button
+    class="button button--secondary-destructive "
+  >
+    Hello World!
+  </button>
+</div>
+`;

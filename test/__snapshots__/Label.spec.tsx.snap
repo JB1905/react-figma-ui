@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should render Label 1`] = `
+<div>
+  <div
+    class="label "
+  >
+    Label
+  </div>
+</div>
+`;

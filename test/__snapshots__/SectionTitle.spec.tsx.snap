@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionTitle should render Section title 1`] = `
+<div>
+  <div
+    class="section-title "
+  >
+    Section title
+  </div>
+</div>
+`;

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio should render Radio button 1`] = `
+<div>
+  <div
+    class="radio undefined"
+  >
+    <input
+      class="radio__button "
+      name="radioGroup"
+      type="radio"
+      value="Value"
+    />
+    <label
+      class="radio__label undefined"
+    >
+      Radio button
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Radio should render checked Radio button 1`] = `
+<div>
+  <div
+    class="radio undefined"
+  >
+    <input
+      checked=""
+      class="radio__button "
+      name="radioGroup"
+      type="radio"
+      value="Value"
+    />
+    <label
+      class="radio__label undefined"
+    >
+      Radio button
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Radio should render disabled Radio button 1`] = `
+<div>
+  <div
+    class="radio undefined"
+  >
+    <input
+      class="radio__button "
+      disabled=""
+      name="radioGroup"
+      type="radio"
+      value="Value"
+    />
+    <label
+      class="radio__label undefined"
+    >
+      Radio button
+    </label>
+  </div>
+</div>
+`;

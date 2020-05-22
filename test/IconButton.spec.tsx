@@ -4,8 +4,18 @@ import { render } from '@testing-library/react';
 import { IconButton } from '../src';
 
 describe('IconButton', () => {
-  it('should render component matching snapshot', () => {
-    const { container } = render(<IconButton />);
+  it('should render Icon Button with a blend icon', () => {
+    const { container } = render(
+      <IconButton iconProps={{ iconName: 'blend' }} />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render Icon Button with selected option', () => {
+    const { container } = render(
+      <IconButton iconProps={{ iconName: 'blend' }} selected />
+    );
 
     expect(container).toMatchSnapshot();
   });
