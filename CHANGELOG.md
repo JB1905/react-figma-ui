@@ -1,8 +1,11 @@
 # React Figma UI Changelog
 
 ## 1.0.0 (2020-)
+
 #### New Feature
+
 ##### Components
+
 - Button
 - Checkbox
 - Disclosure
@@ -19,5 +22,6 @@
 - Type
 
 ##### Repository
+
 - added Storybook preview
 - added snapshot tests with Jest

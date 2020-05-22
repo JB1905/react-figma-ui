@@ -4,23 +4,29 @@
 [![NPM downloads](http://img.shields.io/npm/dm/react-figma-ui.svg?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
 
 ## About
+
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
 ## Demo
+
 [**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
+
 First, install the library in your project by npm:
+
 ```sh
 $ npm install react-figma-ui
 ```
 
 Or Yarn:
+
 ```sh
 $ yarn add react-figma-ui
 ```
 
 ## Components
+
 ### Button
 
 To use the button, use the following component. Each button has a destructive option. Teritary buttons are styled like hyperlinks.
@@ -47,10 +53,10 @@ import { Button } from 'react-figma-ui';
 
 #### Available options
 
-Param | Description
--|-
-`tint` | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink)
-`destructive` | Add red destructive variant for actions such as deleting something
+| Param         | Description                                                                            |
+| ------------- | -------------------------------------------------------------------------------------- |
+| `tint`        | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink) |
+| `destructive` | Add red destructive variant for actions such as deleting something                     |
 
 ---
 
@@ -71,10 +77,10 @@ import { Checkbox } from 'react-figma-ui';
 <Checkbox id="uniqueId" disabled>Label</Checkbox>
 ```
 
-Param | Description
--|-
-`containerProps` | Props for checkbox container
-`labelProps` | Props for label element
+| Param            | Description                  |
+| ---------------- | ---------------------------- |
+| `containerProps` | Props for checkbox container |
+| `labelProps`     | Props for label element      |
 
 ---
 
@@ -87,9 +93,9 @@ import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
 // Example items
 const items = [
-  { heading: "Heading 1", content: "Content 1", id: 1 },
-  { heading: "Heading 2", content: "Content 2", id: 2 },
-  { heading: "Heading 3", content: "Content 3", id: 3 }
+  { heading: 'Heading 1', content: 'Content 1', id: 1 },
+  { heading: 'Heading 2', content: 'Content 2', id: 2 },
+  { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
 <Disclosure
@@ -103,15 +109,15 @@ const items = [
       key={id}
     />
   )}
-/>
+/>;
 ```
 
 #### Available options
 
-Param | Description
--|-
-`section` | Style label like a heading
-`expanded` | Add this option to have item expanded on load
+| Param      | Description                                   |
+| ---------- | --------------------------------------------- |
+| `section`  | Style label like a heading                    |
+| `expanded` | Add this option to have item expanded on load |
 
 ---
 
@@ -137,13 +143,13 @@ import { Icon } from 'react-figma-ui';
 
 #### Available options
 
-Param | Description
--|-
-`iconName` | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)
-`spin` | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon)
-`colorName`* | Pass the name of any Figma color var to this prop (e.g.: `blue`, `black3`)
+| Param         | Description                                                                        |
+| ------------- | ---------------------------------------------------------------------------------- |
+| `iconName`    | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
+| `spin`        | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon) |
+| `colorName`\* | Pass the name of any Figma color var to this prop (e.g.: `blue`, `black3`)         |
 
-*Colors accepted: `blue`, `purple`, `purple4`, `hot-pink`, `green`, `red`, `yellow`, `black`, `black8`, `black3`, `white`, `white8`, `white4`
+\*Colors accepted: `blue`, `purple`, `purple4`, `hot-pink`, `green`, `red`, `yellow`, `black`, `black8`, `black3`, `white`, `white8`, `white4`
 
 [Preview available icons here](https://github.com/thomas-lowry/figma-plugin-ds/#icon)
 
@@ -212,7 +218,7 @@ import { Onboarding } from 'react-figma-ui';
 
 <Onboarding iconProps={{ iconName: 'styles' }}>
   Onboarding tip goes here.
-</Onboarding>
+</Onboarding>;
 ```
 
 ---
@@ -247,17 +253,19 @@ import { SelectMenu, SelectMenuOption } from 'react-figma-ui';
 
 // Example options
 const options = [
-  { value: 1, label: "Option 1" },
-  { value: 2, label: "Option 2" },
-  { value: 3, label: "Option 3" },
+  { value: 1, label: 'Option 1' },
+  { value: 2, label: 'Option 2' },
+  { value: 3, label: 'Option 3' },
 ];
 
 <SelectMenu
   options={options}
   render={({ value, label }) => (
-    <SelectMenuOption value={value} key={value}>{label}</SelectMenuOption>
+    <SelectMenuOption value={value} key={value}>
+      {label}
+    </SelectMenuOption>
   )}
-/>
+/>;
 ```
 
 ---
@@ -313,13 +321,14 @@ import { Type } from 'react-figma-ui';
 
 #### Available options
 
-Param | Description
--|-
-`size` | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px
-`weight` | Font weight: medium, bold
-`inverse` | Inversed (negative) application where light text is on dark background with increased letterspacing
+| Param     | Description                                                                                         |
+| --------- | --------------------------------------------------------------------------------------------------- |
+| `size`    | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px                                    |
+| `weight`  | Font weight: medium, bold                                                                           |
+| `inverse` | Inversed (negative) application where light text is on dark background with increased letterspacing |
 
-*Defaults: Font size 11px, normal weight, positive application*
+_Defaults: Font size 11px, normal weight, positive application_
 
 ## License
+
 This project is licensed under the MIT License © 2020-present Jakub Biesiada
