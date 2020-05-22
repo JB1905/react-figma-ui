@@ -23,7 +23,7 @@ $ yarn add react-figma-ui
 ## Components
 ### Button
 
-To use the button, use the following HTML markup. Each button has a destructive option. Teritary buttons are styled like hyperlinks.
+To use the button, use the following component. Each button has a destructive option. Teritary buttons are styled like hyperlinks.
 
 ```jsx
 import { Button } from 'react-figma-ui';
@@ -49,14 +49,14 @@ import { Button } from 'react-figma-ui';
 
 Param | Description
 -|-
-`tint` |
-`destructive` |
+`tint` | 
+`destructive` | 
 
 ---
 
 ### Checkbox
 
-To use the checkbox, use the following HTML markup. Remember each checkbox should get a unique ID that is referenced in the label. This ensures the checkbox and the entire label are clickable.
+To use the checkbox, use the following component. Remember each checkbox should get a unique ID.
 
 ```jsx
 import { Checkbox } from 'react-figma-ui';
@@ -71,11 +71,16 @@ import { Checkbox } from 'react-figma-ui';
 <Checkbox disabled>Label</Checkbox>
 ```
 
+Param | Description
+-|-
+`containerProps` | 
+`labelProps` | 
+
 ---
 
 ### Disclosure
 
-To use a disclosure panel, you must use the following markup and also make sure you initialize the Javascript for the disclosure to work.
+To use a disclosure panel, you must use the following component.
 
 ```jsx
 import { Disclosure, DisclosureItem } from 'react-figma-ui';
@@ -104,14 +109,14 @@ const items = [
 
 Param | Description
 -|-
-`section` |
-`expanded` |
+`section` | 
+`expanded` | 
 
 ---
 
 ### Icon
 
-To use the icon component, use the following markup. Apply the appropriate modifier class to select the item you wish to use, you can also add additional modifiers to change the color, or even spin the icon. You can also specify no icon name to use a text character as an icon (for example, like found in the width + height icon inputs in Figma)
+To use the icon, use the following component. Apply the appropriate icon name to select the item you wish to use, you can also add option to change the color, or even spin the icon. You can also specify no icon name to use a text character as an icon (for example, like found in the width + height icon inputs in Figma)
 
 ```jsx
 import { Icon } from 'react-figma-ui';
@@ -133,9 +138,9 @@ import { Icon } from 'react-figma-ui';
 
 Param | Description
 -|-
-`iconName` |
-`spin` |
-`colorName` |
+`iconName` | 
+`spin` | 
+`colorName` | 
 
 [Preview available icons here](https://github.com/thomas-lowry/figma-plugin-ds/#icon)
 
@@ -143,7 +148,7 @@ Param | Description
 
 ### Icon button
 
-The icon button is essentially a wrapper for the icon component. Refer to the icon component above for its usage.
+The icon button is essentially a wrapper for the icon component.
 
 ```jsx
 import { IconButton } from 'react-figma-ui';
@@ -159,7 +164,7 @@ import { IconButton } from 'react-figma-ui';
 
 ### Input
 
-To use the input, use the following markup. You can also insert an icon into the input (see Icon component for usage).
+To use the input, use the following component.
 
 ```jsx
 import { Input } from 'react-figma-ui';
@@ -181,7 +186,7 @@ import { Input } from 'react-figma-ui';
 
 ### Labels and sections
 
-To use a label or section, use the following markup.
+To use a label or section, use following components.
 
 ```jsx
 import { Label } from 'react-figma-ui';
@@ -197,7 +202,7 @@ import { Label } from 'react-figma-ui';
 
 ### Onboarding tip
 
-To create an onboarding tip, use the following markup. The tip also makes use of the icon component (see Icon component for usage).
+To create an onboarding tip, use the following component.
 
 ```jsx
 import { Onboarding } from 'react-figma-ui';
@@ -211,7 +216,7 @@ import { Onboarding } from 'react-figma-ui';
 
 ### Radio button
 
-To create an radio button, use the following markup. Remember each group of radio buttons must share the same name so that they are related to one another. Each button should have a unique id so that its label is associated with it and remains part of the clickable hit area.
+To create an radio button, use the following component. Remember each group of radio buttons must share the same name so that they are related to one another. Each button should have a unique id so that its label is associated with it and remains part of the clickable hit area.
 
 ```jsx
 import { Radio } from 'react-figma-ui';
@@ -309,9 +314,9 @@ import { Type } from 'react-figma-ui';
 
 Param | Description
 -|-
-`size` |
-`weight` |
-`inverse` |
+`size` | 
+`weight` | 
+`inverse` | 
 
 *Defaults: Font size 11px, normal weight, positive application*
 
