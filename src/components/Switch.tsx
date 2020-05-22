@@ -23,15 +23,15 @@ export const Switch: React.FC<Props> = ({
     <div {...containerRest} className={`switch ${containerClassName}`}>
       <input
         {...props}
-        className={`switch__toggle ${className}`}
-        type="checkbox"
         id={id}
+        type="checkbox"
+        className={`switch__toggle ${className}`}
       />
 
       <label
         {...labelRest}
-        className={`switch__label ${labelClassName}`}
         htmlFor={id}
+        className={`switch__label ${labelClassName}`}
       >
         {children}
       </label>
