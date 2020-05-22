@@ -38,7 +38,6 @@
     "figma-plugin-ds": "^0.1.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
