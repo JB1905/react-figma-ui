@@ -1,16 +1,24 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { SelectMenu, SelectMenuOption } from '../src';
 
 export default {
   title: 'SelectMenu',
-  decorators: [withKnobs],
 };
+
+const options = [
+  { value: 1, label: 'Option 1' },
+  { value: 2, label: 'Option 2' },
+  { value: 3, label: 'Option 3' },
+];
 
 export const normal = () => (
   <SelectMenu
-    options={[1, 2, 3]}
-    render={(item) => <SelectMenuOption>Lorem ipsum dolor</SelectMenuOption>}
+    options={options}
+    render={({ value, label }) => (
+      <SelectMenuOption value={value} key={value}>
+        {label}
+      </SelectMenuOption>
+    )}
   />
 );

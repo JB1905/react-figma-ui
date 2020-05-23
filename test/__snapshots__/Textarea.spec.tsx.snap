@@ -4,6 +4,19 @@ exports[`Textarea should render Textarea 1`] = `
 <div>
   <textarea
     class="textarea "
+    readonly=""
+    rows="2"
+  >
+    Initial value
+  </textarea>
+</div>
+`;
+
+exports[`Textarea should render Textarea with custom className 1`] = `
+<div>
+  <textarea
+    class="textarea custom-class-name"
+    readonly=""
     rows="2"
   >
     Initial value
@@ -16,6 +29,7 @@ exports[`Textarea should render disabled Textarea 1`] = `
   <textarea
     class="textarea "
     disabled=""
+    readonly=""
     rows="2"
   >
     Initial value

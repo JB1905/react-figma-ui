@@ -9,4 +9,12 @@ describe('SectionTitle', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render Section title with custom className', () => {
+    const { container } = render(
+      <SectionTitle className="custom-class-name">Section title</SectionTitle>
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

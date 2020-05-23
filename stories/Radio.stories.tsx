@@ -13,6 +13,7 @@ export const normal = () => (
     id="radioButton"
     checked={boolean('Checked', false)}
     disabled={boolean('Disabled', false)}
+    readOnly
   >
     {text('Value', 'Radio button')}
   </Radio>

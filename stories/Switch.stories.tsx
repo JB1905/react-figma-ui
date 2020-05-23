@@ -13,6 +13,7 @@ export const normal = () => (
     id="uniqueId"
     checked={boolean('Checked', false)}
     disabled={boolean('Disabled', false)}
+    readOnly
   >
     {text('Value', 'Label')}
   </Switch>

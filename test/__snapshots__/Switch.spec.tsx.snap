@@ -8,10 +8,32 @@ exports[`Switch should render Switch 1`] = `
     <input
       class="switch__toggle "
       id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label
       class="switch__label "
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Switch should render Switch with custom className values 1`] = `
+<div>
+  <div
+    class="switch custom-class-name"
+  >
+    <input
+      class="switch__toggle custom-class-name"
+      id="uniqueId"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="switch__label custom-class-name"
       for="uniqueId"
     >
       Label
@@ -29,6 +51,7 @@ exports[`Switch should render checked Switch 1`] = `
       checked=""
       class="switch__toggle "
       id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label
@@ -50,6 +73,7 @@ exports[`Switch should render disabled Switch 1`] = `
       class="switch__toggle "
       disabled=""
       id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label

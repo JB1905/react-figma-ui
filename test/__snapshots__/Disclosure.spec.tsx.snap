@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Disclosure should render Disclosure 1`] = `
+<div>
+  <ul
+    class="disclosure "
+  >
+    <li
+      class="disclosure__item  disclosure--expanded"
+    >
+      <div
+        class="disclosure__label  "
+      >
+        <p>
+          Heading 1
+        </p>
+      </div>
+      <div
+        class="disclosure__content "
+      >
+        <p>
+          Content 1
+        </p>
+      </div>
+    </li>
+    <li
+      class="disclosure__item  "
+    >
+      <div
+        class="disclosure__label  disclosure--section"
+      >
+        <p>
+          Heading 2
+        </p>
+      </div>
+      <div
+        class="disclosure__content "
+      >
+        <p>
+          Content 2
+        </p>
+      </div>
+    </li>
+    <li
+      class="disclosure__item  "
+    >
+      <div
+        class="disclosure__label  "
+      >
+        <p>
+          Heading 3
+        </p>
+      </div>
+      <div
+        class="disclosure__content "
+      >
+        <p>
+          Content 3
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Disclosure should render Disclosure with custom className values 1`] = `
+<div>
+  <ul
+    class="disclosure custom-class-name"
+  >
+    <li
+      class="disclosure__item custom-class-name disclosure--expanded"
+    >
+      <div
+        class="disclosure__label custom-class-name "
+      >
+        <p>
+          Heading 1
+        </p>
+      </div>
+      <div
+        class="disclosure__content custom-class-name"
+      >
+        <p>
+          Content 1
+        </p>
+      </div>
+    </li>
+    <li
+      class="disclosure__item custom-class-name "
+    >
+      <div
+        class="disclosure__label custom-class-name disclosure--section"
+      >
+        <p>
+          Heading 2
+        </p>
+      </div>
+      <div
+        class="disclosure__content custom-class-name"
+      >
+        <p>
+          Content 2
+        </p>
+      </div>
+    </li>
+    <li
+      class="disclosure__item custom-class-name "
+    >
+      <div
+        class="disclosure__label custom-class-name "
+      >
+        <p>
+          Heading 3
+        </p>
+      </div>
+      <div
+        class="disclosure__content custom-class-name"
+      >
+        <p>
+          Content 3
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

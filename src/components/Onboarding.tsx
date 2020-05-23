@@ -4,25 +4,24 @@ import { Icon, Props as IconProps } from './Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
-  readonly iconProps?: IconProps;
+  readonly iconProps: IconProps;
 }
 
 export const Onboarding: React.FC<Props> = ({
   children,
   className = '',
   containerProps = {},
-  iconProps = {} as IconProps,
+  iconProps,
   ...props
 }) => {
   const {
     className: containerClassName = '',
     ...containerRest
   } = containerProps;
-  const { iconName } = iconProps;
 
   return (
     <div {...containerRest} className={`onboarding-tip ${containerClassName}`}>
-      {iconName && <Icon {...iconProps} />}
+      <Icon {...iconProps} />
 
       <div {...props} className={`onboarding-tip__msg ${className}`}>
         {children}

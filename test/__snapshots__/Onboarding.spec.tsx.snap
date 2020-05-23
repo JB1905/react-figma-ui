@@ -6,10 +6,27 @@ exports[`Onboarding should render Onboarding 1`] = `
     class="onboarding-tip "
   >
     <div
-      class="icon icon--styles   "
+      class="icon  icon--styles  "
     />
     <div
       class="onboarding-tip__msg "
+    >
+      Onboarding tip goes here.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Onboarding should render Onboarding with custom className 1`] = `
+<div>
+  <div
+    class="onboarding-tip custom-class-name"
+  >
+    <div
+      class="icon  icon--styles  "
+    />
+    <div
+      class="onboarding-tip__msg custom-class-name"
     >
       Onboarding tip goes here.
     </div>

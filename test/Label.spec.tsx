@@ -9,4 +9,12 @@ describe('Label', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render Label with custom className', () => {
+    const { container } = render(
+      <Label className="custom-class-name">Label</Label>
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

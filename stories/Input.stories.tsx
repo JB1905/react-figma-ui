@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { Input } from '../src';
 
@@ -13,5 +13,7 @@ export const normal = () => (
     value={text('Value', 'Value')}
     placeholder={text('Placeholder', 'Placeholder')}
     iconProps={{ iconName: text('Icon Name', 'search') as any }}
+    disabled={boolean('Disabled', false)}
+    readOnly
   />
 );

@@ -9,3 +9,13 @@ exports[`SectionTitle should render Section title 1`] = `
   </div>
 </div>
 `;
+
+exports[`SectionTitle should render Section title with custom className 1`] = `
+<div>
+  <div
+    class="section-title custom-class-name"
+  >
+    Section title
+  </div>
+</div>
+`;

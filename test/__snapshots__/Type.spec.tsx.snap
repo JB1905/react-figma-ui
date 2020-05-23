@@ -1,9 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Type should render component matching snapshot 1`] = `
+exports[`Type should render Type with custom className 1`] = `
+<div>
+  <div
+    class="type custom-class-name   "
+  >
+    Lorem ipsum dolor
+  </div>
+</div>
+`;
+
+exports[`Type should render Type with default values 1`] = `
 <div>
   <div
     class="type    "
+  >
+    Lorem ipsum dolor
+  </div>
+</div>
+`;
+
+exports[`Type should render Type with large size, bold weight and inverse option 1`] = `
+<div>
+  <div
+    class="type  type--large type--weight type--inverse"
   >
     Lorem ipsum dolor
   </div>

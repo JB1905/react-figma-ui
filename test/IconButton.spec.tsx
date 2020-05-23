@@ -19,4 +19,15 @@ describe('IconButton', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render IconButton with custom className', () => {
+    const { container } = render(
+      <IconButton
+        iconProps={{ iconName: 'blend' }}
+        className="custom-class-name"
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

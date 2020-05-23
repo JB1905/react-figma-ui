@@ -62,7 +62,7 @@
     "react-dom": "^16.13.1",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^3.1.1",
-    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-terser": "^6.0.1",
     "rollup-plugin-typescript2": "^0.27.1",
     "ts-jest": "^26.0.0",
     "ts-loader": "^7.0.4",
@@ -76,6 +76,10 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
+    "moduleNameMapper": {
+      "figma-plugin-ds": "<rootDir>/test/__mocks__/figmaPluginMock.ts",
+      "\\.(css)$": "<rootDir>/test/__mocks__/styleMock.ts"
+    },
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }

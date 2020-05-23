@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox should render Checkbox with custom className values 1`] = `
+<div>
+  <div
+    class="checkbox custom-class-name"
+  >
+    <input
+      class="checkbox__box custom-class-name"
+      id="uniqueId"
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label custom-class-name"
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Checkbox should render checked Checkbox 1`] = `
 <div>
   <div
@@ -7,15 +27,16 @@ exports[`Checkbox should render checked Checkbox 1`] = `
   >
     <input
       checked=""
-      class="checkbox__box undefined"
-      id="rick-astley"
+      class="checkbox__box "
+      id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label
       class="checkbox__label "
-      for="rick-astley"
+      for="uniqueId"
     >
-      Never gonna give you up...
+      Label
     </label>
   </div>
 </div>
@@ -27,16 +48,17 @@ exports[`Checkbox should render disabled Checkbox 1`] = `
     class="checkbox "
   >
     <input
-      class="checkbox__box undefined"
+      class="checkbox__box "
       disabled=""
-      id="rick-astley"
+      id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label
       class="checkbox__label "
-      for="rick-astley"
+      for="uniqueId"
     >
-      Never gonna give you up...
+      Label
     </label>
   </div>
 </div>
@@ -48,15 +70,16 @@ exports[`Checkbox should render unchecked Checkbox 1`] = `
     class="checkbox "
   >
     <input
-      class="checkbox__box undefined"
-      id="rick-astley"
+      class="checkbox__box "
+      id="uniqueId"
+      readonly=""
       type="checkbox"
     />
     <label
       class="checkbox__label "
-      for="rick-astley"
+      for="uniqueId"
     >
-      Never gonna give you up...
+      Label
     </label>
   </div>
 </div>

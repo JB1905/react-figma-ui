@@ -13,4 +13,18 @@ describe('Onboarding', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render Onboarding with custom className', () => {
+    const { container } = render(
+      <Onboarding
+        iconProps={{ iconName: 'styles' }}
+        className="custom-class-name"
+        containerProps={{ className: 'custom-class-name' }}
+      >
+        Onboarding tip goes here.
+      </Onboarding>
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

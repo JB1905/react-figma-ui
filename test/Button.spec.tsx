@@ -29,4 +29,12 @@ describe('Button', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render Button with custom className', () => {
+    const { container } = render(
+      <Button className="custom-class-name">Label</Button>
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

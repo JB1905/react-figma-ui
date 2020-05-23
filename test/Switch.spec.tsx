@@ -5,14 +5,18 @@ import { Switch } from '../src';
 
 describe('Switch', () => {
   it('should render Switch', () => {
-    const { container } = render(<Switch id="uniqueId">Label</Switch>);
+    const { container } = render(
+      <Switch id="uniqueId" readOnly>
+        Label
+      </Switch>
+    );
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render checked Switch', () => {
     const { container } = render(
-      <Switch id="uniqueId" checked>
+      <Switch id="uniqueId" readOnly checked>
         Label
       </Switch>
     );
@@ -22,7 +26,23 @@ describe('Switch', () => {
 
   it('should render disabled Switch', () => {
     const { container } = render(
-      <Switch id="uniqueId" disabled>
+      <Switch id="uniqueId" readOnly disabled>
+        Label
+      </Switch>
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render Switch with custom className values', () => {
+    const { container } = render(
+      <Switch
+        id="uniqueId"
+        readOnly
+        className="custom-class-name"
+        containerProps={{ className: 'custom-class-name' }}
+        labelProps={{ className: 'custom-class-name' }}
+      >
         Label
       </Switch>
     );

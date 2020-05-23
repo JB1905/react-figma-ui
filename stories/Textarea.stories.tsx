@@ -14,5 +14,6 @@ export const normal = () => (
     value={text('Value', 'Initial value')}
     rows={number('Rows', 2)}
     disabled={boolean('Disabled', false)}
+    readOnly
   />
 );

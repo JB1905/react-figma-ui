@@ -6,10 +6,26 @@ exports[`Input should render Disabled input 1`] = `
     class="input  "
   >
     <input
-      class="input__field undefined"
+      class="input__field "
       disabled=""
+      readonly=""
       type="input"
       value="Initial value"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input should render Input with custom className values 1`] = `
+<div>
+  <div
+    class="input custom-class-name "
+  >
+    <input
+      class="input__field custom-class-name"
+      readonly=""
+      type="search"
+      value="Value"
     />
   </div>
 </div>
@@ -18,13 +34,14 @@ exports[`Input should render Disabled input 1`] = `
 exports[`Input should render Input with icon 1`] = `
 <div>
   <div
-    class="input input--with-icon "
+    class="input  input--with-icon"
   >
     <div
-      class="icon icon--angle   "
+      class="icon  icon--angle  "
     />
     <input
-      class="input__field undefined"
+      class="input__field "
+      readonly=""
       type="input"
       value="Value"
     />
@@ -38,7 +55,8 @@ exports[`Input should render Input with initial value 1`] = `
     class="input  "
   >
     <input
-      class="input__field undefined"
+      class="input__field "
+      readonly=""
       type="input"
       value="Initial value"
     />
@@ -52,8 +70,9 @@ exports[`Input should render Input with placeholder 1`] = `
     class="input  "
   >
     <input
-      class="input__field undefined"
+      class="input__field "
       placeholder="Placeholder"
+      readonly=""
       type="input"
     />
   </div>
