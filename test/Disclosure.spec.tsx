@@ -14,11 +14,11 @@ describe('Disclosure', () => {
     const { container } = render(
       <Disclosure
         items={items}
-        render={({ heading, content, id }) => (
+        render={({ heading, content, id }, index) => (
           <DisclosureItem
             renderHeading={() => <p>{heading}</p>}
             renderContent={() => <p>{content}</p>}
-            section={id % 2 === 0}
+            section={index % 2 === 0}
             expanded={id === 1}
             key={id}
           />

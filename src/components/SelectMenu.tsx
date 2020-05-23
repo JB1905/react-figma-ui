@@ -3,7 +3,7 @@ import { selectMenu } from 'figma-plugin-ds';
 
 interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
   readonly options: any[];
-  render(option: any): ReactElement;
+  render(...optionData: [any, number, any[]]): ReactElement;
 }
 
 interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
@@ -22,7 +22,7 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
 
   return (
     <select {...props} className={`select-menu ${className}`}>
-      {options.map((option) => render(option))}
+      {options.map((...optionData) => render(...optionData))}
     </select>
   );
 };

@@ -16,7 +16,6 @@ export const normal = () => (
   <Disclosure
     items={items}
     render={({ heading, content, id }) => (
-      // index
       <DisclosureItem
         renderHeading={() => <p>{heading}</p>}
         renderContent={() => <p>{content}</p>}

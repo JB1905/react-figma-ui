@@ -9,7 +9,7 @@ import { disclosure } from 'figma-plugin-ds';
 
 interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
   readonly items: any[];
-  render(item: any): ReactElement;
+  render(...itemData: [any, number, any[]]): ReactElement;
 }
 
 interface DisclosureItemProps
@@ -38,7 +38,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
 
   return (
     <ul {...props} className={`disclosure ${className}`}>
-      {items.map((item) => render(item))}
+      {items.map((...itemData) => render(...itemData))}
     </ul>
   );
 };
