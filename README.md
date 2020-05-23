@@ -7,6 +7,25 @@
 
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
+## Contents
+
+* [Demo](#demo)
+* [How to Install](#how-to-install)
+* [Components](#components)
+  * [Button](#button)
+  * [Checkbox](#checkbox)
+  * [Disclosure](#disclosure)
+  * [Icon](#icon)
+  * [Icon button](#icon-button)
+  * [Input](#input)
+  * [Labels and sections](#labels-and-sections)
+  * [Onboarding tip](#onboarding-tip)
+  * [Radio button](#radio-button)
+  * [Select menu](#select-menu)
+  * [Switch](#switch)
+  * [Textarea](#textarea)
+  * [Type](#type)
+
 ## Demo
 
 [**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
