@@ -9,6 +9,7 @@ cache:
 
 script:
   - yarn install
+  - yarn test
   - yarn build-storybook
 
 deploy:
