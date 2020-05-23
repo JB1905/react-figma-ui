@@ -244,7 +244,7 @@ import { Radio } from 'react-figma-ui';
 
 ### Select menu
 
-To create an select menu, use the following markup. The select menu also requires you to initalize it with Javascript. If your plugin requires you to add or remove items in the select menu, simply use Javascript to modify the select menu and the select will reinitialize.
+To create an select menu, use following components.
 
 The select menu will open and position the menu to the selected object. If there is no vertical room inside your plugin's iFrame, the position of the menu will be moved to ensure it fits inside the iframe. If you have a select menu with too many options to fit within the iFrame, the menu will scroll vertically.
 
@@ -272,7 +272,7 @@ const options = [
 
 ### Switch
 
-To use the switch, use the following HTML markup. Remember each switch should get a unique ID that is referenced in the label. This ensures the switch and the entire label are clickable.
+To use the switch, use the following component. Remember each switch should get a unique ID that is referenced in the label. This ensures the switch and the entire label are clickable.
 
 ```jsx
 import { Switch } from 'react-figma-ui';
@@ -291,7 +291,7 @@ import { Switch } from 'react-figma-ui';
 
 ### Textarea
 
-To use the textarea, use the following HTML markup.
+To use the textarea, use the following component.
 
 ```jsx
 import { Textarea } from 'react-figma-ui';
@@ -307,7 +307,7 @@ import { Textarea } from 'react-figma-ui';
 
 ### Type
 
-To use the typography that is styled like it is in the Figma UI, use the following markup plus additional modifier classes to modify the size, weight, and letterspacing that is optimized for positive (dark text on light background) and negative (light text on dark background) applications.
+To use the typography that is styled like it is in the Figma UI, use the following component plus additional options to modify the size, weight, and letterspacing that is optimized for positive (dark text on light background) and negative (light text on dark background) applications.
 
 ```jsx
 import { Type } from 'react-figma-ui';
