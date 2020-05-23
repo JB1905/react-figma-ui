@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
@@ -15,9 +17,9 @@ export const IconButton: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={`icon-button ${className} ${
-      selected ? 'icon-button--selected' : ''
-    }`}
+    className={trimClassNames(
+      `icon-button ${className} ${selected ? 'icon-button--selected' : ''}`
+    )}
   >
     <Icon {...iconProps} />
   </div>

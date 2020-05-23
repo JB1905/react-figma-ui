@@ -3,7 +3,7 @@
 exports[`Input should render Disabled input 1`] = `
 <div>
   <div
-    class="input  "
+    class="input "
   >
     <input
       class="input__field "
@@ -34,10 +34,10 @@ exports[`Input should render Input with custom className values 1`] = `
 exports[`Input should render Input with icon 1`] = `
 <div>
   <div
-    class="input  input--with-icon"
+    class="input input--with-icon"
   >
     <div
-      class="icon  icon--angle  "
+      class="icon icon--angle "
     />
     <input
       class="input__field "
@@ -52,7 +52,7 @@ exports[`Input should render Input with icon 1`] = `
 exports[`Input should render Input with initial value 1`] = `
 <div>
   <div
-    class="input  "
+    class="input "
   >
     <input
       class="input__field "
@@ -67,7 +67,7 @@ exports[`Input should render Input with initial value 1`] = `
 exports[`Input should render Input with placeholder 1`] = `
 <div>
   <div
-    class="input  "
+    class="input "
   >
     <input
       class="input__field "

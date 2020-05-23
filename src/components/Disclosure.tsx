@@ -7,6 +7,8 @@ import React, {
 } from 'react';
 import { disclosure } from 'figma-plugin-ds';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
   readonly items: any[];
   render(...itemData: [any, number, any[]]): ReactElement;
@@ -37,7 +39,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   }, []);
 
   return (
-    <ul {...props} className={`disclosure ${className}`}>
+    <ul {...props} className={trimClassNames(`disclosure ${className}`)}>
       {items.map((...itemData) => render(...itemData))}
     </ul>
   );
@@ -59,22 +61,26 @@ export const DisclosureItem: React.FC<DisclosureItemProps> = ({
   return (
     <li
       {...props}
-      className={`disclosure__item ${className} ${
-        expanded ? 'disclosure--expanded' : ''
-      }`}
+      className={trimClassNames(
+        `disclosure__item ${className} ${
+          expanded ? 'disclosure--expanded' : ''
+        }`
+      )}
     >
       <div
         {...labelRest}
-        className={`disclosure__label ${labelClassName} ${
-          section ? 'disclosure--section' : ''
-        }`}
+        className={trimClassNames(
+          `disclosure__label ${labelClassName} ${
+            section ? 'disclosure--section' : ''
+          }`
+        )}
       >
         {renderHeading()}
       </div>
 
       <div
         {...contentRest}
-        className={`disclosure__content ${contentClassName}`}
+        className={trimClassNames(`disclosure__content ${contentClassName}`)}
       >
         {renderContent()}
       </div>

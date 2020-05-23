@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
@@ -20,18 +22,21 @@ export const Radio: React.FC<Props> = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...containerRest} className={`radio ${containerClassName}`}>
+    <div
+      {...containerRest}
+      className={trimClassNames(`radio ${containerClassName}`)}
+    >
       <input
         {...props}
         id={id}
         type="radio"
-        className={`radio__button ${className}`}
+        className={trimClassNames(`radio__button ${className}`)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={`radio__label ${labelClassName}`}
+        className={trimClassNames(`radio__label ${labelClassName}`)}
       >
         {children}
       </label>

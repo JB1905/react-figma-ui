@@ -13,7 +13,7 @@ exports[`Button should render Button with custom className 1`] = `
 exports[`Button should render disabled tertirary Button 1`] = `
 <div>
   <button
-    class="button  button--tertirary"
+    class="button button--tertirary"
     disabled=""
   >
     Label
@@ -24,7 +24,7 @@ exports[`Button should render disabled tertirary Button 1`] = `
 exports[`Button should render primary Button 1`] = `
 <div>
   <button
-    class="button  button--primary"
+    class="button button--primary"
   >
     Label
   </button>
@@ -34,7 +34,7 @@ exports[`Button should render primary Button 1`] = `
 exports[`Button should render secondary Button with destructive style 1`] = `
 <div>
   <button
-    class="button  button--secondary-destructive"
+    class="button button--secondary-destructive"
   >
     Label
   </button>

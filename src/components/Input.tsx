@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
@@ -23,13 +25,17 @@ export const Input: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={`input ${containerClassName} ${
-        iconName ? 'input--with-icon' : ''
-      }`}
+      className={trimClassNames(
+        `input ${containerClassName} ${iconName ? 'input--with-icon' : ''}`
+      )}
     >
       {iconName && <Icon {...iconProps} />}
 
-      <input {...props} type={type} className={`input__field ${className}`} />
+      <input
+        {...props}
+        type={type}
+        className={trimClassNames(`input__field ${className}`)}
+      />
     </div>
   );
 };

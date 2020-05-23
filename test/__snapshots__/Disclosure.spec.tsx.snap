@@ -6,10 +6,10 @@ exports[`Disclosure should render Disclosure 1`] = `
     class="disclosure "
   >
     <li
-      class="disclosure__item  disclosure--expanded"
+      class="disclosure__item disclosure--expanded"
     >
       <div
-        class="disclosure__label  disclosure--section"
+        class="disclosure__label disclosure--section"
       >
         <p>
           Heading 1
@@ -24,10 +24,10 @@ exports[`Disclosure should render Disclosure 1`] = `
       </div>
     </li>
     <li
-      class="disclosure__item  "
+      class="disclosure__item "
     >
       <div
-        class="disclosure__label  "
+        class="disclosure__label "
       >
         <p>
           Heading 2
@@ -42,10 +42,10 @@ exports[`Disclosure should render Disclosure 1`] = `
       </div>
     </li>
     <li
-      class="disclosure__item  "
+      class="disclosure__item "
     >
       <div
-        class="disclosure__label  disclosure--section"
+        class="disclosure__label disclosure--section"
       >
         <p>
           Heading 3

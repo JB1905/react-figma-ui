@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
 
 export const SectionTitle: React.FC<Props> = ({
@@ -7,7 +9,7 @@ export const SectionTitle: React.FC<Props> = ({
   className = '',
   ...props
 }) => (
-  <div {...props} className={`section-title ${className}`}>
+  <div {...props} className={trimClassNames(`section-title ${className}`)}>
     {children}
   </div>
 );

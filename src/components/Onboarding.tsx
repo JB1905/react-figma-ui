@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 import { Icon, Props as IconProps } from './Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
@@ -20,10 +22,16 @@ export const Onboarding: React.FC<Props> = ({
   } = containerProps;
 
   return (
-    <div {...containerRest} className={`onboarding-tip ${containerClassName}`}>
+    <div
+      {...containerRest}
+      className={trimClassNames(`onboarding-tip ${containerClassName}`)}
+    >
       <Icon {...iconProps} />
 
-      <div {...props} className={`onboarding-tip__msg ${className}`}>
+      <div
+        {...props}
+        className={trimClassNames(`onboarding-tip__msg ${className}`)}
+      >
         {children}
       </div>
     </div>

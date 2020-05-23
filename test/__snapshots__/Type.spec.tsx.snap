@@ -3,7 +3,7 @@
 exports[`Type should render Type with custom className 1`] = `
 <div>
   <div
-    class="type custom-class-name   "
+    class="type custom-class-name "
   >
     Lorem ipsum dolor
   </div>
@@ -13,7 +13,7 @@ exports[`Type should render Type with custom className 1`] = `
 exports[`Type should render Type with default values 1`] = `
 <div>
   <div
-    class="type    "
+    class="type "
   >
     Lorem ipsum dolor
   </div>
@@ -23,7 +23,7 @@ exports[`Type should render Type with default values 1`] = `
 exports[`Type should render Type with large size, bold weight and inverse option 1`] = `
 <div>
   <div
-    class="type  type--large type--weight type--inverse"
+    class="type type--large type--weight type--inverse"
   >
     Lorem ipsum dolor
   </div>

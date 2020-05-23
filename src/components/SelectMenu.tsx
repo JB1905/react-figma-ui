@@ -1,6 +1,8 @@
 import React, { useEffect, HTMLProps, ReactElement } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
   readonly options: any[];
   render(...optionData: [any, number, any[]]): ReactElement;
@@ -21,7 +23,7 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
   }, []);
 
   return (
-    <select {...props} className={`select-menu ${className}`}>
+    <select {...props} className={trimClassNames(`select-menu ${className}`)}>
       {options.map((...optionData) => render(...optionData))}
     </select>
   );

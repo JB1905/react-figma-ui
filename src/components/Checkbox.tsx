@@ -1,5 +1,7 @@
 import React, { HTMLProps } from 'react';
 
+import { trimClassNames } from '../helpers/combineClassNames';
+
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
@@ -20,18 +22,21 @@ export const Checkbox: React.FC<Props> = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...containerRest} className={`checkbox ${containerClassName}`}>
+    <div
+      {...containerRest}
+      className={trimClassNames(`checkbox ${containerClassName}`)}
+    >
       <input
         {...props}
         id={id}
         type="checkbox"
-        className={`checkbox__box ${className}`}
+        className={trimClassNames(`checkbox__box ${className}`)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={`checkbox__label ${labelClassName}`}
+        className={trimClassNames(`checkbox__label ${labelClassName}`)}
       >
         {children}
       </label>
