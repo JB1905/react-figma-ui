@@ -23,9 +23,9 @@ export const Input: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={`input ${
+      className={`input ${containerClassName} ${
         iconName ? 'input--with-icon' : ''
-      } ${containerClassName}`}
+      }`}
     >
       {iconName && <Icon {...iconProps} />}
 

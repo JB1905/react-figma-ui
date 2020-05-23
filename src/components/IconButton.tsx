@@ -18,9 +18,9 @@ export const IconButton: React.FC<Props> = ({
   return (
     <div
       {...props}
-      className={`icon-button ${
+      className={`icon-button ${className} ${
         selected ? 'icon-button--selected' : ''
-      } ${className}`}
+      }`}
     >
       {iconName && <Icon {...iconProps} />}
     </div>

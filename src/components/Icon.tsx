@@ -18,9 +18,9 @@ export const Icon: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={`icon ${iconName ? `icon--${iconName}` : ''} ${
+    className={`icon ${className} ${iconName ? `icon--${iconName}` : ''} ${
       spin ? 'icon--spin' : ''
-    } ${colorName ? `icon--${colorName}` : ''} ${className}`}
+    } ${colorName ? `icon--${colorName}` : ''}`}
   >
     {children}
   </div>

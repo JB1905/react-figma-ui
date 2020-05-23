@@ -22,9 +22,9 @@ export const Button: React.FC<Props> = ({
 }) => (
   <button
     {...props}
-    className={`button ${
+    className={`button ${className} ${
       tint ? `button--${tint}${destructive ? '-destructive' : ''}` : ''
-    } ${className}`}
+    }`}
   >
     {children}
   </button>

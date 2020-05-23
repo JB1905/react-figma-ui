@@ -59,15 +59,15 @@ export const DisclosureItem: React.FC<DisclosureItemProps> = ({
   return (
     <li
       {...props}
-      className={`disclosure__item ${
+      className={`disclosure__item ${className} ${
         expanded ? 'disclosure--expanded' : ''
-      } ${className}`}
+      }`}
     >
       <div
         {...labelRest}
-        className={`disclosure__label ${
+        className={`disclosure__label ${labelClassName} ${
           section ? 'disclosure--section' : ''
-        } ${labelClassName}`}
+        }`}
       >
         {renderHeading()}
       </div>
