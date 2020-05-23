@@ -3,7 +3,7 @@
 exports[`Disclosure should render Disclosure 1`] = `
 <div>
   <ul
-    class="disclosure "
+    class="disclosure"
   >
     <li
       class="disclosure__item disclosure--expanded"
@@ -16,7 +16,7 @@ exports[`Disclosure should render Disclosure 1`] = `
         </p>
       </div>
       <div
-        class="disclosure__content "
+        class="disclosure__content"
       >
         <p>
           Content 1
@@ -24,17 +24,17 @@ exports[`Disclosure should render Disclosure 1`] = `
       </div>
     </li>
     <li
-      class="disclosure__item "
+      class="disclosure__item"
     >
       <div
-        class="disclosure__label "
+        class="disclosure__label"
       >
         <p>
           Heading 2
         </p>
       </div>
       <div
-        class="disclosure__content "
+        class="disclosure__content"
       >
         <p>
           Content 2
@@ -42,7 +42,7 @@ exports[`Disclosure should render Disclosure 1`] = `
       </div>
     </li>
     <li
-      class="disclosure__item "
+      class="disclosure__item"
     >
       <div
         class="disclosure__label disclosure--section"
@@ -52,7 +52,7 @@ exports[`Disclosure should render Disclosure 1`] = `
         </p>
       </div>
       <div
-        class="disclosure__content "
+        class="disclosure__content"
       >
         <p>
           Content 3
@@ -72,7 +72,7 @@ exports[`Disclosure should render Disclosure with custom className values 1`] = 
       class="disclosure__item custom-class-name disclosure--expanded"
     >
       <div
-        class="disclosure__label custom-class-name "
+        class="disclosure__label custom-class-name"
       >
         <p>
           Heading 1
@@ -87,7 +87,7 @@ exports[`Disclosure should render Disclosure with custom className values 1`] = 
       </div>
     </li>
     <li
-      class="disclosure__item custom-class-name "
+      class="disclosure__item custom-class-name"
     >
       <div
         class="disclosure__label custom-class-name disclosure--section"
@@ -105,10 +105,10 @@ exports[`Disclosure should render Disclosure with custom className values 1`] = 
       </div>
     </li>
     <li
-      class="disclosure__item custom-class-name "
+      class="disclosure__item custom-class-name"
     >
       <div
-        class="disclosure__label custom-class-name "
+        class="disclosure__label custom-class-name"
       >
         <p>
           Heading 3

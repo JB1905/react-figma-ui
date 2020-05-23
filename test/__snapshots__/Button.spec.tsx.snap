@@ -3,7 +3,7 @@
 exports[`Button should render Button with custom className 1`] = `
 <div>
   <button
-    class="button custom-class-name "
+    class="button custom-class-name"
   >
     Label
   </button>

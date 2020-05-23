@@ -3,16 +3,16 @@
 exports[`Switch should render Switch 1`] = `
 <div>
   <div
-    class="switch "
+    class="switch"
   >
     <input
-      class="switch__toggle "
+      class="switch__toggle"
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="switch__label "
+      class="switch__label"
       for="uniqueId"
     >
       Label
@@ -45,17 +45,17 @@ exports[`Switch should render Switch with custom className values 1`] = `
 exports[`Switch should render checked Switch 1`] = `
 <div>
   <div
-    class="switch "
+    class="switch"
   >
     <input
       checked=""
-      class="switch__toggle "
+      class="switch__toggle"
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="switch__label "
+      class="switch__label"
       for="uniqueId"
     >
       Label
@@ -67,17 +67,17 @@ exports[`Switch should render checked Switch 1`] = `
 exports[`Switch should render disabled Switch 1`] = `
 <div>
   <div
-    class="switch "
+    class="switch"
   >
     <input
-      class="switch__toggle "
+      class="switch__toggle"
       disabled=""
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="switch__label "
+      class="switch__label"
       for="uniqueId"
     >
       Label

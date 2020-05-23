@@ -12,7 +12,7 @@ exports[`Icon should render Icon with blue colorName to change color 1`] = `
 exports[`Icon should render Icon with custom className 1`] = `
 <div>
   <div
-    class="icon custom-class-name icon--warning "
+    class="icon custom-class-name icon--warning"
   />
 </div>
 `;
@@ -20,7 +20,7 @@ exports[`Icon should render Icon with custom className 1`] = `
 exports[`Icon should render Text Icon 1`] = `
 <div>
   <div
-    class="icon "
+    class="icon"
   >
     W
   </div>
@@ -30,7 +30,7 @@ exports[`Icon should render Text Icon 1`] = `
 exports[`Icon should render blend Icon 1`] = `
 <div>
   <div
-    class="icon icon--theme "
+    class="icon icon--theme"
     readonly=""
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Icon should render blend Icon 1`] = `
 exports[`Icon should render spinner Icon with spinning animation 1`] = `
 <div>
   <div
-    class="icon icon--spinner icon--spin "
+    class="icon icon--spinner icon--spin"
     readonly=""
   />
 </div>

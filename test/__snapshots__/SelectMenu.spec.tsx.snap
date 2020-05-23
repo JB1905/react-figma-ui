@@ -3,7 +3,7 @@
 exports[`SelectMenu should render SelectMenu 1`] = `
 <div>
   <select
-    class="select-menu "
+    class="select-menu"
   >
     <option
       value="1"

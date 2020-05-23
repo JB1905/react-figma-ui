@@ -3,7 +3,7 @@
 exports[`Type should render Type with custom className 1`] = `
 <div>
   <div
-    class="type custom-class-name "
+    class="type custom-class-name"
   >
     Lorem ipsum dolor
   </div>
@@ -13,7 +13,7 @@ exports[`Type should render Type with custom className 1`] = `
 exports[`Type should render Type with default values 1`] = `
 <div>
   <div
-    class="type "
+    class="type"
   >
     Lorem ipsum dolor
   </div>

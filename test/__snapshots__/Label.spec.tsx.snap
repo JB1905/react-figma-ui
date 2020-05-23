@@ -3,7 +3,7 @@
 exports[`Label should render Label 1`] = `
 <div>
   <div
-    class="label "
+    class="label"
   >
     Label
   </div>

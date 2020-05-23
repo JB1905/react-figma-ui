@@ -3,10 +3,10 @@
 exports[`Radio should render Radio button 1`] = `
 <div>
   <div
-    class="radio "
+    class="radio"
   >
     <input
-      class="radio__button "
+      class="radio__button"
       id="radioButton1"
       name="radioGroup"
       readonly=""
@@ -14,7 +14,7 @@ exports[`Radio should render Radio button 1`] = `
       value="Value"
     />
     <label
-      class="radio__label "
+      class="radio__label"
       for="radioButton1"
     >
       Radio button
@@ -49,11 +49,11 @@ exports[`Radio should render Radio with custom className values 1`] = `
 exports[`Radio should render checked Radio button 1`] = `
 <div>
   <div
-    class="radio "
+    class="radio"
   >
     <input
       checked=""
-      class="radio__button "
+      class="radio__button"
       id="radioButton2"
       name="radioGroup"
       readonly=""
@@ -61,7 +61,7 @@ exports[`Radio should render checked Radio button 1`] = `
       value="Value"
     />
     <label
-      class="radio__label "
+      class="radio__label"
       for="radioButton2"
     >
       Radio button
@@ -73,10 +73,10 @@ exports[`Radio should render checked Radio button 1`] = `
 exports[`Radio should render disabled Radio button 1`] = `
 <div>
   <div
-    class="radio "
+    class="radio"
   >
     <input
-      class="radio__button "
+      class="radio__button"
       disabled=""
       id="radioButton3"
       name="radioGroup"
@@ -85,7 +85,7 @@ exports[`Radio should render disabled Radio button 1`] = `
       value="Value"
     />
     <label
-      class="radio__label "
+      class="radio__label"
       for="radioButton3"
     >
       Radio button

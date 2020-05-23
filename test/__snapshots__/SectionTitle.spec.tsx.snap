@@ -3,7 +3,7 @@
 exports[`SectionTitle should render Section title 1`] = `
 <div>
   <div
-    class="section-title "
+    class="section-title"
   >
     Section title
   </div>

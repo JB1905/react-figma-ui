@@ -23,17 +23,17 @@ exports[`Checkbox should render Checkbox with custom className values 1`] = `
 exports[`Checkbox should render checked Checkbox 1`] = `
 <div>
   <div
-    class="checkbox "
+    class="checkbox"
   >
     <input
       checked=""
-      class="checkbox__box "
+      class="checkbox__box"
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="checkbox__label "
+      class="checkbox__label"
       for="uniqueId"
     >
       Label
@@ -45,17 +45,17 @@ exports[`Checkbox should render checked Checkbox 1`] = `
 exports[`Checkbox should render disabled Checkbox 1`] = `
 <div>
   <div
-    class="checkbox "
+    class="checkbox"
   >
     <input
-      class="checkbox__box "
+      class="checkbox__box"
       disabled=""
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="checkbox__label "
+      class="checkbox__label"
       for="uniqueId"
     >
       Label
@@ -67,16 +67,16 @@ exports[`Checkbox should render disabled Checkbox 1`] = `
 exports[`Checkbox should render unchecked Checkbox 1`] = `
 <div>
   <div
-    class="checkbox "
+    class="checkbox"
   >
     <input
-      class="checkbox__box "
+      class="checkbox__box"
       id="uniqueId"
       readonly=""
       type="checkbox"
     />
     <label
-      class="checkbox__label "
+      class="checkbox__label"
       for="uniqueId"
     >
       Label
