@@ -13,8 +13,11 @@ export const Radio: React.FC<Props> = ({
   labelProps = {},
   ...props
 }) => {
-  const { className: containerClassName, ...containerRest } = containerProps;
-  const { className: labelClassName, ...labelRest } = labelProps;
+  const {
+    className: containerClassName = '',
+    ...containerRest
+  } = containerProps;
+  const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
     <div {...containerRest} className={`radio ${containerClassName}`}>

@@ -8,7 +8,7 @@ interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
 export const Checkbox: React.FC<Props> = ({
   children,
   id,
-  className,
+  className = '',
   containerProps = {},
   labelProps = {},
   ...props

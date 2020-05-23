@@ -8,7 +8,7 @@ interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
 }
 
 export const Input: React.FC<Props> = ({
-  className,
+  className = '',
   type = 'input',
   containerProps = {},
   iconProps = {} as IconProps,
