@@ -10,16 +10,16 @@ import { disclosure } from 'figma-plugin-ds';
 import { trimClassNames } from '../helpers/combineClassNames';
 
 interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
-  readonly items: any[];
-  render(...itemData: [any, number, any[]]): ReactElement;
+  readonly tips: any[];
+  render(...tipData: [any, number, any[]]): ReactElement;
 }
 
-interface DisclosureItemProps
+interface DisclosureTipProps
   extends Readonly<
     DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
   > {
-  renderHeading(): ReactElement;
-  renderContent(): ReactElement;
+  readonly heading: ReactElement;
+  readonly content: ReactElement;
   readonly section?: boolean;
   readonly expanded?: boolean;
   readonly labelProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -27,7 +27,7 @@ interface DisclosureItemProps
 }
 
 export const Disclosure: React.FC<DisclosureProps> = ({
-  items,
+  tips,
   render,
   className = '',
   ...props
@@ -40,16 +40,16 @@ export const Disclosure: React.FC<DisclosureProps> = ({
 
   return (
     <ul {...props} className={trimClassNames(`disclosure ${className}`)}>
-      {items.map((...itemData) => render(...itemData))}
+      {tips.map((...tipData) => render(...tipData))}
     </ul>
   );
 };
 
-export const DisclosureItem: React.FC<DisclosureItemProps> = ({
+export const DisclosureTip: React.FC<DisclosureTipProps> = ({
   section,
   expanded,
-  renderHeading,
-  renderContent,
+  heading,
+  content,
   className = '',
   labelProps = {},
   contentProps = {},
@@ -75,14 +75,14 @@ export const DisclosureItem: React.FC<DisclosureItemProps> = ({
           }`
         )}
       >
-        {renderHeading()}
+        {heading}
       </div>
 
       <div
         {...contentRest}
         className={trimClassNames(`disclosure__content ${contentClassName}`)}
       >
-        {renderContent()}
+        {content}
       </div>
     </li>
   );
