@@ -3,6 +3,8 @@ import { withKnobs, text, boolean, radios } from '@storybook/addon-knobs';
 
 import { Button } from '../src';
 
+import { Tint } from '../src/types';
+
 export default {
   title: 'Button',
   decorators: [withKnobs],
@@ -19,7 +21,7 @@ export const normal = () => (
           Tertirary: 'tertiary',
         },
         'primary'
-      ) as any
+      ) as Tint
     }
     destructive={boolean('Destructive', false)}
     disabled={boolean('Disabled', false)}

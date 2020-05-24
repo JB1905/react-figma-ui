@@ -3,6 +3,8 @@ import { withKnobs, text, boolean, radios } from '@storybook/addon-knobs';
 
 import { Type } from '../src';
 
+import { Size, Weight } from '../src/types';
+
 export default {
   title: 'Type',
   decorators: [withKnobs],
@@ -15,10 +17,10 @@ export const normal = () => (
         'Size',
         { Small: 'small', Large: 'large', Xlarge: 'xlarge' },
         'small'
-      ) as any
+      ) as Size
     }
     weight={
-      radios('Weight', { Medium: 'medium', Bold: 'bold' }, 'medium') as any
+      radios('Weight', { Medium: 'medium', Bold: 'bold' }, 'medium') as Weight
     }
     inverse={boolean('Inverse', false)}
   >

@@ -3,6 +3,8 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { IconButton } from '../src';
 
+import { IconName } from '../src/types';
+
 export default {
   title: 'IconButton',
   decorators: [withKnobs],
@@ -10,7 +12,7 @@ export default {
 
 export const normal = () => (
   <IconButton
-    iconProps={{ iconName: text('Icon Name', 'theme') as any }}
+    iconProps={{ iconName: text('Icon Name', 'theme') as IconName }}
     selected={boolean('Selected', false)}
   />
 );
