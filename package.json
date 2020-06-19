@@ -35,7 +35,8 @@
   },
   "homepage": "https://github.com/jb1905/react-figma-ui#readme",
   "dependencies": {
-    "figma-plugin-ds": "^0.1.8"
+    "figma-plugin-ds": "^0.1.8",
+    "s-trimmer": "^1.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^8.0.1",
@@ -49,7 +50,7 @@
     "@types/react": "^16.9.38",
     "@typescript-eslint/parser": "^3.3.0",
     "babel-loader": "^8.1.0",
-    "eslint": "7.2.0",
+    "eslint": "7.3.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",

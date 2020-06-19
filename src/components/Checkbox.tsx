@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -24,19 +23,19 @@ export const Checkbox: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={combineClassNames(`checkbox ${containerClassName}`)}
+      className={sTrimmer(`checkbox ${containerClassName}`)}
     >
       <input
         {...props}
         id={id}
         type="checkbox"
-        className={combineClassNames(`checkbox__box ${className}`)}
+        className={sTrimmer(`checkbox__box ${className}`)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={combineClassNames(`checkbox__label ${labelClassName}`)}
+        className={sTrimmer(`checkbox__label ${labelClassName}`)}
       >
         {children}
       </label>

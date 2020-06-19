@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -22,21 +21,18 @@ export const Radio: React.FC<Props> = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div
-      {...containerRest}
-      className={combineClassNames(`radio ${containerClassName}`)}
-    >
+    <div {...containerRest} className={sTrimmer(`radio ${containerClassName}`)}>
       <input
         {...props}
         id={id}
         type="radio"
-        className={combineClassNames(`radio__button ${className}`)}
+        className={sTrimmer(`radio__button ${className}`)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={combineClassNames(`radio__label ${labelClassName}`)}
+        className={sTrimmer(`radio__label ${labelClassName}`)}
       >
         {children}
       </label>

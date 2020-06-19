@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -25,7 +24,7 @@ export const Input: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={combineClassNames(
+      className={sTrimmer(
         `input ${containerClassName} ${iconName ? 'input--with-icon' : ''}`
       )}
     >
@@ -34,7 +33,7 @@ export const Input: React.FC<Props> = ({
       <input
         {...props}
         type={type}
-        className={combineClassNames(`input__field ${className}`)}
+        className={sTrimmer(`input__field ${className}`)}
       />
     </div>
   );

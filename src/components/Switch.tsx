@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -24,19 +23,19 @@ export const Switch: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={combineClassNames(`switch ${containerClassName}`)}
+      className={sTrimmer(`switch ${containerClassName}`)}
     >
       <input
         {...props}
         id={id}
         type="checkbox"
-        className={combineClassNames(`switch__toggle ${className}`)}
+        className={sTrimmer(`switch__toggle ${className}`)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={combineClassNames(`switch__label ${labelClassName}`)}
+        className={sTrimmer(`switch__label ${labelClassName}`)}
       >
         {children}
       </label>

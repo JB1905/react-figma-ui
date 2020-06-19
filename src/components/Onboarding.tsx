@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -24,14 +23,11 @@ export const Onboarding: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={combineClassNames(`onboarding-tip ${containerClassName}`)}
+      className={sTrimmer(`onboarding-tip ${containerClassName}`)}
     >
       <Icon {...iconProps} />
 
-      <div
-        {...props}
-        className={combineClassNames(`onboarding-tip__msg ${className}`)}
-      >
+      <div {...props} className={sTrimmer(`onboarding-tip__msg ${className}`)}>
         {children}
       </div>
     </div>

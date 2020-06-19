@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -17,7 +16,7 @@ export const IconButton: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={combineClassNames(
+    className={sTrimmer(
       `icon-button ${className} ${selected ? 'icon-button--selected' : ''}`
     )}
   >

@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
-
-import { combineClassNames } from '../helpers/combineClassNames';
+import sTrimmer from 's-trimmer';
 
 import type { IconName, ColorName } from '../types';
 
@@ -20,7 +19,7 @@ export const Icon: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={combineClassNames(
+    className={sTrimmer(
       `icon ${className} ${iconName ? `icon--${iconName}` : ''} ${
         spin ? 'icon--spin' : ''
       } ${colorName ? `icon--${colorName}` : ''}`
