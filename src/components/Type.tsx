@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 import type { Size, Weight } from '../types';
 
@@ -20,7 +20,7 @@ export const Type: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={trimClassNames(
+    className={combineClassNames(
       `type ${className} ${size ? `type--${size}` : ''} ${
         weight ? 'type--weight' : ''
       } ${inverse ? 'type--inverse' : ''}`

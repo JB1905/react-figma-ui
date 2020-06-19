@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { disclosure } from 'figma-plugin-ds';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
   readonly tips: any[];
@@ -39,7 +39,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   }, []);
 
   return (
-    <ul {...props} className={trimClassNames(`disclosure ${className}`)}>
+    <ul {...props} className={combineClassNames(`disclosure ${className}`)}>
       {tips.map((...tipData) => render(...tipData))}
     </ul>
   );
@@ -61,7 +61,7 @@ export const DisclosureTip: React.FC<DisclosureTipProps> = ({
   return (
     <li
       {...props}
-      className={trimClassNames(
+      className={combineClassNames(
         `disclosure__item ${className} ${
           expanded ? 'disclosure--expanded' : ''
         }`
@@ -69,7 +69,7 @@ export const DisclosureTip: React.FC<DisclosureTipProps> = ({
     >
       <div
         {...labelRest}
-        className={trimClassNames(
+        className={combineClassNames(
           `disclosure__label ${labelClassName} ${
             section ? 'disclosure--section' : ''
           }`
@@ -80,7 +80,7 @@ export const DisclosureTip: React.FC<DisclosureTipProps> = ({
 
       <div
         {...contentRest}
-        className={trimClassNames(`disclosure__content ${contentClassName}`)}
+        className={combineClassNames(`disclosure__content ${contentClassName}`)}
       >
         {content}
       </div>

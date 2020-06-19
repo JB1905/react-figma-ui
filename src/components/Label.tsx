@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
 
@@ -9,7 +9,7 @@ export const Label: React.FC<Props> = ({
   className = '',
   ...props
 }) => (
-  <div {...props} className={trimClassNames(`label ${className}`)}>
+  <div {...props} className={combineClassNames(`label ${className}`)}>
     {children}
   </div>
 );

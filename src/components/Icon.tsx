@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 import type { IconName, ColorName } from '../types';
 
@@ -20,7 +20,7 @@ export const Icon: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={trimClassNames(
+    className={combineClassNames(
       `icon ${className} ${iconName ? `icon--${iconName}` : ''} ${
         spin ? 'icon--spin' : ''
       } ${colorName ? `icon--${colorName}` : ''}`

@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -24,13 +24,13 @@ export const Onboarding: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={trimClassNames(`onboarding-tip ${containerClassName}`)}
+      className={combineClassNames(`onboarding-tip ${containerClassName}`)}
     >
       <Icon {...iconProps} />
 
       <div
         {...props}
-        className={trimClassNames(`onboarding-tip__msg ${className}`)}
+        className={combineClassNames(`onboarding-tip__msg ${className}`)}
       >
         {children}
       </div>

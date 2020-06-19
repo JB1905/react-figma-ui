@@ -1,3 +1,3 @@
-export const trimClassNames = (classNames: string) => {
+export const combineClassNames = (classNames: string) => {
   return classNames.trim().split(/\s+/).join(' ');
 };

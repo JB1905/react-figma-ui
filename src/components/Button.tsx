@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
-import { trimClassNames } from '../helpers/combineClassNames';
+import { combineClassNames } from '../helpers/combineClassNames';
 
 import type { Tint } from '../types';
 
@@ -24,7 +24,7 @@ export const Button: React.FC<Props> = ({
 }) => (
   <button
     {...props}
-    className={trimClassNames(
+    className={combineClassNames(
       `button ${className} ${
         tint ? `button--${tint}${destructive ? '-destructive' : ''}` : ''
       }`
