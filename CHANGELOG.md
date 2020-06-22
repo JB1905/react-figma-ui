@@ -1,6 +1,6 @@
 # React Figma UI Changelog
 
-## 1.0.0 beta 4 (2020-06-22)
+## 1.0.0 beta 4 / 1.0.0 beta 5 (2020-06-22)
 
 #### Internal
 
@@ -23,6 +23,7 @@
 - updated tests
 
 #### Docs
+
 - updated examples in README.md
 
 ## 1.0.0 beta 1 / 1.0.0 beta 2 (2020-05-23)
