@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -65,7 +65,7 @@
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
-    "ts-jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
   },

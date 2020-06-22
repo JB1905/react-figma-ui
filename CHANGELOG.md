@@ -1,6 +1,31 @@
 # React Figma UI Changelog
 
-## 1.0.0 beta 1 (2020-05-23)
+## 1.0.0 beta 4 (2020-06-22)
+
+#### Internal
+
+- added `sTrimmer` to remove whitespaces in class names
+- cleaned up
+
+#### Repository Changes
+
+- updated types for stories
+
+## 1.0.0 beta 3 (2020-05-24)
+
+#### Breaking Changes
+
+- renamed `DisclosureItem` to `DisclosureTip`
+
+#### Repository Changes
+
+- updated stories
+- updated tests
+
+#### Docs
+- updated examples in README.md
+
+## 1.0.0 beta 1 / 1.0.0 beta 2 (2020-05-23)
 
 #### New Feature
 
