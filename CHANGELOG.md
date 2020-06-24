@@ -1,6 +1,6 @@
 # React Figma UI Changelog
 
-## 1.0.0 beta 4 / 1.0.0 beta 5 (2020-06-22)
+## 1.0.0 beta 4 / 1.0.0 beta 5 / 1.0.0 beta 6 (2020-06-22)
 
 #### Internal
 
