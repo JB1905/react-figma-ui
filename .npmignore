@@ -2,7 +2,8 @@ src
 stories
 storybook-static
 .storybook
-test
+__tests__
+__mocks__
 coverage
 
 tsconfig.json
