@@ -217,7 +217,7 @@ import { Input } from 'react-figma-ui';
 To use a label or section, use following components.
 
 ```jsx
-import { Label } from 'react-figma-ui';
+import { Label, SectionTitle } from 'react-figma-ui';
 
 // Label
 <Label>Label</Label>
