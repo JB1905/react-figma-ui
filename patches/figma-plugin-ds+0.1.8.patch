@@ -1,0 +1,15 @@
+diff --git a/node_modules/figma-plugin-ds/.DS_Store b/node_modules/figma-plugin-ds/.DS_Store
+new file mode 100644
+index 0000000..8de6dd1
+Binary files /dev/null and b/node_modules/figma-plugin-ds/.DS_Store differ
+diff --git a/node_modules/figma-plugin-ds/index.js b/node_modules/figma-plugin-ds/index.js
+index f080d09..d8c1002 100644
+--- a/node_modules/figma-plugin-ds/index.js
++++ b/node_modules/figma-plugin-ds/index.js
+@@ -1,5 +1,5 @@
+ //import modules
+ import disclosure from './dist/modules/disclosure';
+-import selectMenu from './dist/modules/SelectMenu';
++import selectMenu from './dist/modules/selectMenu';
+  
+ export { disclosure, selectMenu };
