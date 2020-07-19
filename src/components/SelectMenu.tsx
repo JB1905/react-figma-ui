@@ -31,6 +31,4 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
 export const SelectMenuOption: React.FC<SelectMenuItemProps> = ({
   children,
   ...props
-}) => {
-  return <option {...props}>{children}</option>;
-};
+}) => <option {...props}>{children}</option>;
