@@ -1,8 +1,8 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import classNames from 'classnames';
 
 interface Props extends Readonly<HTMLProps<HTMLTextAreaElement>> {}
 
 export const Textarea: React.FC<Props> = ({ className = '', ...props }) => (
-  <textarea {...props} className={sTrimmer(`textarea ${className}`)} />
+  <textarea {...props} className={classNames('textarea', className)} />
 );

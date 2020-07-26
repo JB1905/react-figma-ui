@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import classNames from 'classnames';
 
 import type { Size, Weight } from '../types';
 
@@ -19,10 +19,12 @@ export const Type: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={sTrimmer(
-      `type ${className} ${size ? `type--${size}` : ''} ${
-        weight ? 'type--weight' : ''
-      } ${inverse ? 'type--inverse' : ''}`
+    className={classNames(
+      'type',
+      className,
+      size ? `type--${size}` : '',
+      weight ? 'type--weight' : '',
+      inverse ? 'type--inverse' : ''
     )}
   >
     {children}

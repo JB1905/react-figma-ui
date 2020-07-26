@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import classNames from 'classnames';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -23,11 +23,11 @@ export const Onboarding: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={sTrimmer(`onboarding-tip ${containerClassName}`)}
+      className={classNames('onboarding-tip', containerClassName)}
     >
       <Icon {...iconProps} />
 
-      <div {...props} className={sTrimmer(`onboarding-tip__msg ${className}`)}>
+      <div {...props} className={classNames('onboarding-tip__msg', className)}>
         {children}
       </div>
     </div>

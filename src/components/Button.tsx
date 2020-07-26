@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
-import sTrimmer from 's-trimmer';
+import classNames from 'classnames';
 
 import type { Tint } from '../types';
 
@@ -23,10 +23,10 @@ export const Button: React.FC<Props> = ({
 }) => (
   <button
     {...props}
-    className={sTrimmer(
-      `button ${className} ${
-        tint ? `button--${tint}${destructive ? '-destructive' : ''}` : ''
-      }`
+    className={classNames(
+      'button',
+      className,
+      tint ? `button--${tint}${destructive ? '-destructive' : ''}` : ''
     )}
   >
     {children}

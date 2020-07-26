@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import classNames from 'classnames';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -16,8 +16,10 @@ export const IconButton: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={sTrimmer(
-      `icon-button ${className} ${selected ? 'icon-button--selected' : ''}`
+    className={classNames(
+      'icon-button',
+      className,
+      selected ? 'icon-button--selected' : ''
     )}
   >
     <Icon {...iconProps} />
