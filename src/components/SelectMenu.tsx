@@ -7,8 +7,6 @@ interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
   render(...optionData: [any, number, any[]]): ReactElement;
 }
 
-interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
-
 export const SelectMenu: React.FC<SelectMenuProps> = ({
   options,
   render,
@@ -28,7 +26,6 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
   );
 };
 
-export const SelectMenuOption: React.FC<SelectMenuItemProps> = ({
-  children,
-  ...props
-}) => <option {...props}>{children}</option>;
+export const SelectMenuOption: React.FC<Readonly<
+  HTMLProps<HTMLOptionElement>
+>> = ({ children, ...props }) => <option {...props}>{children}</option>;

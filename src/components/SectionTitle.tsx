@@ -1,9 +1,7 @@
 import React, { HTMLProps } from 'react';
 import sTrimmer from 's-trimmer';
 
-interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
-
-export const SectionTitle: React.FC<Props> = ({
+export const SectionTitle: React.FC<Readonly<HTMLProps<HTMLDivElement>>> = ({
   children,
   className = '',
   ...props
