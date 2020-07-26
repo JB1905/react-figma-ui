@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Type } from '../src';
+import { Type } from '.';
 
 describe('Type', () => {
   it('should render Type with default values', () => {

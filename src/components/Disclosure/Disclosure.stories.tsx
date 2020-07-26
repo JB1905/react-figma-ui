@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Disclosure, DisclosureTip } from '../src';
+import { Disclosure, DisclosureTip } from '.';
 
 export default {
   title: 'Disclosure',

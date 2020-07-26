@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Input } from '../src';
+import { Input } from '.';
 
 describe('Input', () => {
   it('should render Input with placeholder', () => {

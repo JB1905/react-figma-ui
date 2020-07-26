@@ -1,7 +1,7 @@
 import React, { HTMLProps } from 'react';
 import sTrimmer from 's-trimmer';
 
-import type { IconName, ColorName } from '../types';
+import type { IconName, ColorName } from '../../types';
 
 export interface Props extends HTMLProps<HTMLDivElement> {
   readonly iconName?: Readonly<IconName>;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { IconButton } from '../src';
+import { IconButton } from '.';
 
 describe('IconButton', () => {
   it('should render Icon Button with a blend icon', () => {

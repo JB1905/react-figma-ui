@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Switch } from '../src';
+import { Switch } from '.';
 
 describe('Switch', () => {
   it('should render Switch', () => {

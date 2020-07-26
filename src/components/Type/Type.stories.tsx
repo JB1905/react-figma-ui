@@ -1,9 +1,9 @@
 import React from 'react';
 import { withKnobs, text, boolean, radios } from '@storybook/addon-knobs';
 
-import { Type } from '../src';
+import { Type } from '.';
 
-import { Size, Weight } from '../src/types';
+import { Size, Weight } from '../../types';
 
 export default {
   title: 'Type',

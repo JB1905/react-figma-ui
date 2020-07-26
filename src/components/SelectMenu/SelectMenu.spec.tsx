@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { SelectMenu, SelectMenuOption } from '../src';
+import { SelectMenu, SelectMenuOption } from '.';
 
 describe('SelectMenu', () => {
   const options = [

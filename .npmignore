@@ -1,8 +1,6 @@
 src
-stories
 storybook-static
 .storybook
-__tests__
 __mocks__
 coverage
 

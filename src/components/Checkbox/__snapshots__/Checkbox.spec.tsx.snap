@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render Checkbox with custom className values 1`] = `
+<div>
+  <div
+    class="checkbox custom-class-name"
+  >
+    <input
+      class="checkbox__box custom-class-name"
+      id="uniqueId"
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label custom-class-name"
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox should render checked Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__box"
+      id="uniqueId"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label"
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox should render disabled Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__box"
+      disabled=""
+      id="uniqueId"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label"
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox should render unchecked Checkbox 1`] = `
+<div>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__box"
+      id="uniqueId"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="checkbox__label"
+      for="uniqueId"
+    >
+      Label
+    </label>
+  </div>
+</div>
+`;

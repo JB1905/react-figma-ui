@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Label } from '../src';
+import { Label } from '.';
 
 export default {
   title: 'Label',

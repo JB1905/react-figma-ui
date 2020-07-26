@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Disclosure, DisclosureTip } from '../src';
+import { Disclosure, DisclosureTip } from '.';
 
 describe('Disclosure', () => {
   const tips = [

@@ -1,7 +1,7 @@
 import React, { HTMLProps } from 'react';
 import sTrimmer from 's-trimmer';
 
-import { Icon, Props as IconProps } from './Icon';
+import { Icon, Props as IconProps } from '../Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;

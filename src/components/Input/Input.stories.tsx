@@ -1,9 +1,9 @@
 import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import { Input } from '../src';
+import { Input } from '.';
 
-import { IconName } from '../src/types';
+import { IconName } from '../../types';
 
 export default {
   title: 'Input',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SelectMenu, SelectMenuOption } from '../src';
+import { SelectMenu, SelectMenuOption } from '.';
 
 export default {
   title: 'SelectMenu',

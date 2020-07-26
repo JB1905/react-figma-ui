@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Checkbox } from '../src';
+import { Checkbox } from '.';
 
 describe('Checkbox', () => {
   it('should render unchecked Checkbox', () => {

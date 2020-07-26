@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import { Switch } from '../src';
+import { Switch } from '.';
 
 export default {
   title: 'Switch',

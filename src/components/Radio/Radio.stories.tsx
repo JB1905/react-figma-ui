@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import { Radio } from '../src';
+import { Radio } from '.';
 
 export default {
   title: 'Radio',

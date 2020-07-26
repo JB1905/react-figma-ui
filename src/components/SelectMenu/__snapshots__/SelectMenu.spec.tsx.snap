@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectMenu should render SelectMenu 1`] = `
+<div>
+  <select
+    class="select-menu"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+</div>
+`;
+
+exports[`SelectMenu should render SelectMenu with custom className 1`] = `
+<div>
+  <select
+    class="select-menu custom-class-name"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+</div>
+`;

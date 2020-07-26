@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionTitle } from '../src';
+import { SectionTitle } from '.';
 
 describe('SectionTitle', () => {
   it('should render Section title', () => {

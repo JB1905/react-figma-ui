@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 import sTrimmer from 's-trimmer';
 
-import type { Tint } from '../types';
+import type { Tint } from '../../types';
 
 interface Props
   extends Readonly<

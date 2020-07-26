@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Textarea } from '../src';
+import { Textarea } from '.';
 
 describe('Textarea', () => {
   it('should render Textarea', () => {

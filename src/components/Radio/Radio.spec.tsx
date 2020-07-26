@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Radio } from '../src';
+import { Radio } from '.';
 
 describe('Radio', () => {
   it('should render Radio button', () => {

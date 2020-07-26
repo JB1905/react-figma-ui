@@ -1,9 +1,9 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Onboarding } from '../src';
+import { Onboarding } from '.';
 
-import { IconName } from '../src/types';
+import { IconName } from '../../types';
 
 export default {
   title: 'Onboarding',

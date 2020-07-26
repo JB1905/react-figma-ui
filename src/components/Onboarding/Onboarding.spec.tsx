@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Onboarding } from '../src';
+import { Onboarding } from '.';
 
 describe('Onboarding', () => {
   it('should render Onboarding', () => {

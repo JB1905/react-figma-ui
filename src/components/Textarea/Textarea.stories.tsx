@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 
-import { Textarea } from '../src';
+import { Textarea } from '.';
 
 export default {
   title: 'Textarea',
