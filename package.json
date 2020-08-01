@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0-beta.6",
+  "version": "0.0.0-development",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "module": "lib/react-figma-ui.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "release": "rimraf lib/* && npm run prettier && npm run lint && npm run build",
+    "//": "rimraf lib/* && npm run prettier && npm run lint && npm run build",
     "build": "rollup -c",
     "test": "jest --coverage",
     "watch": "npm run build -- --watch",
@@ -18,16 +18,17 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jb1905/react-figma-ui.git"
   },
   "keywords": [
-    "Figma",
+    "figma",
     "ui",
-    "React",
+    "react",
     "components",
     "library"
   ],
@@ -47,17 +48,17 @@
     "@storybook/react": "^5.3.19",
     "@storybook/storybook-deployer": "^2.8.6",
     "@testing-library/react": "^10.4.7",
-    "@types/jest": "^26.0.7",
-    "@types/react": "^16.9.43",
-    "@typescript-eslint/parser": "^3.7.0",
+    "@types/jest": "^26.0.8",
+    "@types/react": "^16.9.44",
+    "@typescript-eslint/parser": "^3.7.1",
     "babel-loader": "^8.1.0",
-    "eslint": "7.5.0",
+    "eslint": "7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.4",
+    "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
@@ -68,13 +69,14 @@
     "rollup-plugin-postcss": "^3.1.3",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
-    "ts-jest": "^26.1.3",
+    "ts-jest": "^26.1.4",
     "ts-loader": "^8.0.1",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "semantic-release": "^17.1.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.13.1"
   },
   "jest": {
     "testPathIgnorePatterns": [
