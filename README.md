@@ -1,7 +1,11 @@
 # [React Figma UI](https://github.com/jb1905/react-figma-ui)
 
-[![NPM version](http://img.shields.io/npm/v/react-figma-ui.svg?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/react-figma-ui.svg?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
+[![NPM version](http://img.shields.io/npm/v/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
+[![NPM license](https://img.shields.io/npm/l/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
+[![Codecov](https://img.shields.io/codecov/c/github/JB1905/react-figma-ui?style=flat-square)](https://codecov.io/gh/JB1905/react-figma-ui)
+[![Travis](https://img.shields.io/travis/JB1905/react-figma-ui?style=flat-square)](https://travis-ci.org/JB1905/react-figma-ui)
+[![Bundle size](https://img.shields.io/bundlephobia/min/react-figma-ui?style=flat-square)](https://bundlephobia.com/result?p=react-figma-ui)
 
 ## About
 
