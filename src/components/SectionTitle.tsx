@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
 
@@ -8,7 +8,7 @@ export const SectionTitle: React.FC<Props> = ({
   className = '',
   ...props
 }) => (
-  <div {...props} className={classNames('section-title', className)}>
+  <div {...props} className={clsx('section-title', className)}>
     {children}
   </div>
 );

@@ -1,6 +1,6 @@
 import React, { useEffect, HTMLProps, ReactElement } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
   readonly options: any[];
@@ -22,7 +22,7 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
   }, []);
 
   return (
-    <select {...props} className={classNames('select-menu', className)}>
+    <select {...props} className={clsx('select-menu', className)}>
       {options.map((...optionData) => render(...optionData))}
     </select>
   );

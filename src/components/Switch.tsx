@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -21,21 +21,18 @@ export const Switch: React.FC<Props> = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div
-      {...containerRest}
-      className={classNames('switch', containerClassName)}
-    >
+    <div {...containerRest} className={clsx('switch', containerClassName)}>
       <input
         {...props}
         id={id}
         type="checkbox"
-        className={classNames('switch__toggle', className)}
+        className={clsx('switch__toggle', className)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={classNames('switch__label', labelClassName)}
+        className={clsx('switch__label', labelClassName)}
       >
         {children}
       </label>

@@ -1,8 +1,8 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLTextAreaElement>> {}
 
 export const Textarea: React.FC<Props> = ({ className = '', ...props }) => (
-  <textarea {...props} className={classNames('textarea', className)} />
+  <textarea {...props} className={clsx('textarea', className)} />
 );

@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
@@ -21,18 +21,18 @@ export const Radio: React.FC<Props> = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...containerRest} className={classNames('radio', containerClassName)}>
+    <div {...containerRest} className={clsx('radio', containerClassName)}>
       <input
         {...props}
         id={id}
         type="radio"
-        className={classNames('radio__button', className)}
+        className={clsx('radio__button', className)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={classNames('radio__label', labelClassName)}
+        className={clsx('radio__label', labelClassName)}
       >
         {children}
       </label>

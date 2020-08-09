@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import type { IconName, ColorName } from '../types';
 
@@ -19,12 +19,12 @@ export const Icon: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={classNames(
+    className={clsx(
       'icon',
       className,
-      iconName ? `icon--${iconName}` : '',
-      spin ? 'icon--spin' : '',
-      colorName ? `icon--${colorName}` : ''
+      iconName && `icon--${iconName}`,
+      spin && 'icon--spin',
+      colorName && `icon--${colorName}`
     )}
   >
     {children}

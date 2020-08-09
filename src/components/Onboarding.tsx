@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -23,11 +23,11 @@ export const Onboarding: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={classNames('onboarding-tip', containerClassName)}
+      className={clsx('onboarding-tip', containerClassName)}
     >
       <Icon {...iconProps} />
 
-      <div {...props} className={classNames('onboarding-tip__msg', className)}>
+      <div {...props} className={clsx('onboarding-tip__msg', className)}>
         {children}
       </div>
     </div>

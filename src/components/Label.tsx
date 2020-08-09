@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
 
@@ -8,7 +8,7 @@ export const Label: React.FC<Props> = ({
   className = '',
   ...props
 }) => (
-  <div {...props} className={classNames('label', className)}>
+  <div {...props} className={clsx('label', className)}>
     {children}
   </div>
 );

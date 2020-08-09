@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import type { Size, Weight } from '../types';
 
@@ -19,12 +19,12 @@ export const Type: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={classNames(
+    className={clsx(
       'type',
       className,
-      size ? `type--${size}` : '',
-      weight ? 'type--weight' : '',
-      inverse ? 'type--inverse' : ''
+      size && `type--${size}`,
+      weight && 'type--weight',
+      inverse && 'type--inverse'
     )}
   >
     {children}

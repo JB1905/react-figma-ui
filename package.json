@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/jb1905/react-figma-ui#readme",
   "dependencies": {
-    "classnames": "^2.2.6",
+    "clsx": "^1.1.1",
     "figma-plugin-ds": "^0.1.8"
   },
   "devDependencies": {

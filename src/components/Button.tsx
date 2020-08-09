@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import type { Tint } from '../types';
 
@@ -23,10 +23,10 @@ export const Button: React.FC<Props> = ({
 }) => (
   <button
     {...props}
-    className={classNames(
+    className={clsx(
       'button',
       className,
-      tint ? `button--${tint}${destructive ? '-destructive' : ''}` : ''
+      tint && `button--${tint}${destructive && '-destructive'}`
     )}
   >
     {children}

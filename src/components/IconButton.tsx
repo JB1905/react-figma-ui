@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -16,7 +16,7 @@ export const IconButton: React.FC<Props> = ({
 }) => (
   <div
     {...props}
-    className={classNames(
+    className={clsx(
       'icon-button',
       className,
       selected ? 'icon-button--selected' : ''

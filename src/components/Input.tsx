@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -24,10 +24,10 @@ export const Input: React.FC<Props> = ({
   return (
     <div
       {...containerRest}
-      className={classNames(
+      className={clsx(
         'input',
         containerClassName,
-        iconName ? 'input--with-icon' : ''
+        iconName && 'input--with-icon'
       )}
     >
       {iconName && <Icon {...iconProps} />}
@@ -35,7 +35,7 @@ export const Input: React.FC<Props> = ({
       <input
         {...props}
         type={type}
-        className={classNames('input__field', className)}
+        className={clsx('input__field', className)}
       />
     </div>
   );
