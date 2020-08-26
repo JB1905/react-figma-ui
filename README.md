@@ -11,6 +11,13 @@
 
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
+### Alternatives
+
+- [react-figma-plugin-ds](https://github.com/alexandrtovmach/react-figma-plugin-ds/) by [Alexandr Tovmach](https://github.com/alexandrtovmach/)
+- [Figma Styled Components](https://github.com/jhardy/figma-styled-components/) by [Jared](https://github.com/jhardy/)
+- [figma-ui-components](https://github.com/lessmess-dev/figma-ui-components/) by [lessmess](https://github.com/lessmess-dev/)
+- [Figma React UI Kit](https://github.com/LiamMartens/figma-react-ui-kit/) by [Liam Martens](https://github.com/LiamMartens/)
+
 ## Contents
 
 - [Demo](#demo)

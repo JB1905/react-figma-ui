@@ -2,19 +2,20 @@ import React, { useEffect, HTMLProps, ReactElement } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 import sTrimmer from 's-trimmer';
 
-interface SelectMenuProps extends Readonly<HTMLProps<HTMLSelectElement>> {
-  readonly options: any[];
-  render(...optionData: [any, number, any[]]): ReactElement;
+interface SelectMenuProps<T> extends Readonly<HTMLProps<HTMLSelectElement>> {
+  readonly options: T[];
+  render(...optionData: [T, number, T[]]): ReactElement;
 }
 
 interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
 
-export const SelectMenu: React.FC<SelectMenuProps> = ({
+// TODO
+export function SelectMenu<T extends object>({
   options,
   render,
   className = '',
   ...props
-}) => {
+}: SelectMenuProps<T>) {
   useEffect(() => {
     selectMenu.init();
 
@@ -23,10 +24,10 @@ export const SelectMenu: React.FC<SelectMenuProps> = ({
 
   return (
     <select {...props} className={sTrimmer(`select-menu ${className}`)}>
-      {options.map((...optionData) => render(...optionData))}
+      {options.map(render)}
     </select>
   );
-};
+}
 
 export const SelectMenuOption: React.FC<SelectMenuItemProps> = ({
   children,
