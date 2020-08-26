@@ -20,9 +20,9 @@ describe('Button', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render disabled tertirary Button', () => {
+  it('should render disabled tertiary Button', () => {
     const { container } = render(
-      <Button tint="tertirary" disabled>
+      <Button tint="tertiary" disabled>
         Label
       </Button>
     );

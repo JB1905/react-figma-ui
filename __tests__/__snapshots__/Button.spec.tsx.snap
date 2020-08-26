@@ -10,10 +10,10 @@ exports[`Button should render Button with custom className 1`] = `
 </div>
 `;
 
-exports[`Button should render disabled tertirary Button 1`] = `
+exports[`Button should render disabled tertiary Button 1`] = `
 <div>
   <button
-    class="button button--tertirary"
+    class="button button--tertiary"
     disabled=""
   >
     Label

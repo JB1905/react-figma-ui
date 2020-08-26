@@ -18,7 +18,7 @@ export const normal = () => (
         {
           Primary: 'primary',
           Secondary: 'secondary',
-          Tertirary: 'tertiary',
+          Tertiary: 'tertiary',
         },
         'primary'
       ) as Tint
