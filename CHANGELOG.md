@@ -4,7 +4,7 @@
 
 #### Bug Fix
 
-- fixed incorrect tint type (#13)
+- fixed incorrect tint type [#13](https://github.com/JB1905/react-figma-ui/issues/13)
 
 #### Repository Changes
 
