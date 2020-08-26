@@ -1,22 +1,22 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Label } from "../src";
+import { Label } from '../src';
 
 interface Props {
   readonly label: string;
 }
 
 export default {
-  title: "Label",
+  title: 'Label',
   component: Label,
   argTypes: {
-    label: { control: "text" },
+    label: { control: 'text' },
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ label }) => <Label>{label}</Label>;
 
 normal.args = {
-  label: "Label",
+  label: 'Label',
 };
