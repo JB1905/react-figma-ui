@@ -1,5 +1,18 @@
 # React Figma UI Changelog
 
+## 1.0.0 beta 12 (2020-08-26)
+
+#### Bug Fix
+
+- fixed incorrect tint type (#13)
+
+#### Repository Changes
+
+- added badges in README.md
+- updated CI config
+- updated docs
+- added coverage logs
+
 ## 1.0.0 beta 4 / 1.0.0 beta 5 / 1.0.0 beta 6 (2020-06-22)
 
 #### Internal
