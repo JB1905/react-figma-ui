@@ -1,31 +1,40 @@
 import React from 'react';
-import { withKnobs, text, boolean, radios } from '@storybook/addon-knobs';
+import { Meta, Story } from '@storybook/react';
 
 import { Button } from '../src';
 
 import { Tint } from '../src/types';
 
+interface Props {
+  readonly tint: Tint;
+  readonly destructive: boolean;
+  readonly disabled: boolean;
+  readonly label: string;
+}
+
 export default {
   title: 'Button',
-  decorators: [withKnobs],
-};
+  component: Button,
+  argTypes: {
+    tint: {
+      control: {
+        type: 'radio',
+        options: ['primary', 'secondary', 'tertiary'],
+      },
+    },
+    destructive: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    label: { control: 'text' },
+  },
+} as Meta;
 
-export const normal = () => (
-  <Button
-    tint={
-      radios(
-        'Tint',
-        {
-          Primary: 'primary',
-          Secondary: 'secondary',
-          Tertiary: 'tertiary',
-        },
-        'primary'
-      ) as Tint
-    }
-    destructive={boolean('Destructive', false)}
-    disabled={boolean('Disabled', false)}
-  >
-    {text('Label', 'Label')}
-  </Button>
+export const normal: Story<Props> = ({ label, ...args }) => (
+  <Button {...args}>{label}</Button>
 );
+
+normal.args = {
+  tint: 'primary',
+  destructive: false,
+  disabled: false,
+  label: 'Label',
+};

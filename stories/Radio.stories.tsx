@@ -1,20 +1,49 @@
 import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
 import { Radio } from '../src';
 
+interface Props {
+  readonly checked: boolean;
+  readonly disabled: boolean;
+  readonly value: string;
+}
+
 export default {
   title: 'Radio',
-  decorators: [withKnobs],
+  component: Radio,
+  argTypes: {
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    value: { control: 'text' },
+  },
+  args: {
+    checked: false,
+    disabled: false,
+    value: 'Radio Button',
+  },
+} as Meta;
+
+// TODO add more radio buttons
+
+export const normal: Story<Props> = ({ checked, value, ...args }) => {
+  const [_args, updateArgs] = useArgs();
+
+  return (
+    <Radio
+      id="radioButton" // TODO
+      checked={checked}
+      onClick={() => updateArgs({ checked: true })}
+      {...args}
+    >
+      {value}
+    </Radio>
+  );
 };
 
-export const normal = () => (
-  <Radio
-    id="radioButton"
-    checked={boolean('Checked', false)}
-    disabled={boolean('Disabled', false)}
-    readOnly
-  >
-    {text('Value', 'Radio button')}
-  </Radio>
-);
+normal.args = {
+  checked: false,
+  disabled: false,
+  value: 'Radio Button',
+};

@@ -1,21 +1,35 @@
 import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { Meta, Story } from '@storybook/react';
 
 import { Icon } from '../src';
 
 import { IconName, ColorName } from '../src/types';
 
+interface Props {
+  readonly iconName: IconName;
+  readonly iconColor: ColorName;
+  readonly spin: boolean;
+  readonly value: string;
+}
+
 export default {
   title: 'Icon',
-  decorators: [withKnobs],
-};
+  component: Icon,
+  argTypes: {
+    iconName: { control: 'text' }, // TODO
+    iconColor: { control: 'text' }, // TODO
+    spin: { control: 'boolean' },
+    value: { control: 'text' },
+  },
+} as Meta;
 
-export const normal = () => (
-  <Icon
-    iconName={text('Icon Name', 'blend') as IconName}
-    colorName={text('Icon Color', '') as ColorName}
-    spin={boolean('Spin', false)}
-  >
-    {text('Value', '')}
-  </Icon>
+export const normal: Story<Props> = ({ value, ...args }) => (
+  <Icon {...args}>{value}</Icon>
 );
+
+normal.args = {
+  iconName: 'blend', // TODO
+  iconColor: 'blue', // TODO
+  spin: false,
+  value: '',
+};

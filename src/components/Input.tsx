@@ -12,7 +12,7 @@ export const Input: React.FC<Props> = ({
   className = '',
   type = 'input',
   containerProps = {},
-  iconProps = {} as IconProps,
+  iconProps = {},
   ...props
 }) => {
   const {

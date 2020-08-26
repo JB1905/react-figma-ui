@@ -1,29 +1,45 @@
 import React from 'react';
-import { withKnobs, text, boolean, radios } from '@storybook/addon-knobs';
+import { Meta, Story } from '@storybook/react';
 
 import { Type } from '../src';
 
 import { Size, Weight } from '../src/types';
 
+interface Props {
+  readonly size: Size;
+  readonly weight: Weight;
+  readonly inverse: boolean;
+  readonly text: string;
+}
+
 export default {
   title: 'Type',
-  decorators: [withKnobs],
-};
+  component: Type,
+  argTypes: {
+    size: {
+      control: {
+        type: 'radio',
+        options: ['small', 'large', 'xlarge'],
+      },
+    },
+    weight: {
+      control: {
+        type: 'radio',
+        options: ['medium', 'bold'],
+      },
+    },
+    inverse: { control: 'boolean' },
+    text: { control: 'text' },
+  },
+} as Meta;
 
-export const normal = () => (
-  <Type
-    size={
-      radios(
-        'Size',
-        { Small: 'small', Large: 'large', Xlarge: 'xlarge' },
-        'small'
-      ) as Size
-    }
-    weight={
-      radios('Weight', { Medium: 'medium', Bold: 'bold' }, 'medium') as Weight
-    }
-    inverse={boolean('Inverse', false)}
-  >
-    {text('Text', 'Hello World!')}
-  </Type>
+export const normal: Story<Props> = ({ text, ...args }) => (
+  <Type {...args}>{text}</Type>
 );
+
+normal.args = {
+  size: 'small',
+  weight: 'medium',
+  inverse: false,
+  text: 'Hello World!',
+};

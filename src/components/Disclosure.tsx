@@ -8,29 +8,30 @@ import React, {
 import { disclosure } from 'figma-plugin-ds';
 import sTrimmer from 's-trimmer';
 
-interface DisclosureProps extends Readonly<HTMLProps<HTMLUListElement>> {
-  readonly tips: any[];
-  render(...tipData: [any, number, any[]]): ReactElement;
+interface DisclosureProps<T> extends Readonly<HTMLProps<HTMLUListElement>> {
+  readonly tips: T[];
+  render(...tipData: [T, number, T[]]): ReactElement;
 }
 
 interface DisclosureTipProps
   extends Readonly<
     DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
   > {
-  readonly heading: ReactElement;
-  readonly content: ReactElement;
+  readonly heading: string;
+  readonly content: string;
   readonly section?: boolean;
   readonly expanded?: boolean;
   readonly labelProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly contentProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
-export const Disclosure: React.FC<DisclosureProps> = ({
+// TODO
+export function Disclosure<T extends object>({
   tips,
   render,
   className = '',
   ...props
-}) => {
+}: DisclosureProps<T>) {
   useEffect(() => {
     disclosure.init();
 
@@ -39,10 +40,10 @@ export const Disclosure: React.FC<DisclosureProps> = ({
 
   return (
     <ul {...props} className={sTrimmer(`disclosure ${className}`)}>
-      {tips.map((...tipData) => render(...tipData))}
+      {tips.map(render)}
     </ul>
   );
-};
+}
 
 export const DisclosureTip: React.FC<DisclosureTipProps> = ({
   section,

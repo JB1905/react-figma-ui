@@ -1,10 +1,19 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
 import { SelectMenu, SelectMenuOption } from '../src';
 
 export default {
   title: 'SelectMenu',
-};
+  component: SelectMenu,
+  decorators: [
+    (Story) => (
+      <div style={{ minWidth: 200 }}>
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta;
 
 const options = [
   { value: 1, label: 'Option 1' },
@@ -12,7 +21,7 @@ const options = [
   { value: 3, label: 'Option 3' },
 ];
 
-export const normal = () => (
+export const normal: Story = () => (
   <SelectMenu
     options={options}
     render={({ value, label }) => (

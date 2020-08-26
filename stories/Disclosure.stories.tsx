@@ -1,10 +1,12 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
 import { Disclosure, DisclosureTip } from '../src';
 
 export default {
   title: 'Disclosure',
-};
+  component: Disclosure,
+} as Meta;
 
 const tips = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
@@ -12,7 +14,7 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-export const normal = () => (
+export const normal: Story = () => (
   <Disclosure
     tips={tips}
     render={({ heading, content, id }) => (
