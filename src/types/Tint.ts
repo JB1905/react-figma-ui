@@ -1,1 +1,1 @@
-export type Tint = 'primary' | 'secondary' | 'tertirary';
+export type Tint = 'primary' | 'secondary' | 'tertiary';
