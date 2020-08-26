@@ -1,18 +1,29 @@
-import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
 
-import { IconButton } from '../src';
+import { IconButton } from "../src";
 
-import { IconName } from '../src/types';
+import { IconName } from "../src/types";
+
+interface Props {
+  readonly iconName: IconName;
+  readonly selected: boolean;
+}
 
 export default {
-  title: 'IconButton',
-  decorators: [withKnobs],
-};
+  title: "IconButton",
+  component: IconButton,
+  argTypes: {
+    iconName: { control: "text" }, // TODO
+    selected: { control: "boolean" },
+  },
+} as Meta;
 
-export const normal = () => (
-  <IconButton
-    iconProps={{ iconName: text('Icon Name', 'theme') as IconName }}
-    selected={boolean('Selected', false)}
-  />
+export const normal: Story<Props> = ({ iconName, ...args }) => (
+  <IconButton iconProps={{ iconName }} {...args} />
 );
+
+normal.args = {
+  iconName: "theme",
+  selected: false,
+};

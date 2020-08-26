@@ -1,20 +1,42 @@
-import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { useArgs } from "@storybook/addons";
 
-import { Switch } from '../src';
+import { Switch } from "../src";
+
+interface Props {
+  readonly checked: boolean;
+  readonly disabled: boolean;
+  readonly value: string;
+}
 
 export default {
-  title: 'Switch',
-  decorators: [withKnobs],
+  title: "Switch",
+  component: Switch,
+  argTypes: {
+    checked: { control: "boolean" },
+    disabled: { control: "boolean" },
+    value: { control: "text" },
+  },
+} as Meta;
+
+export const normal: Story<Props> = ({ checked, value, ...args }) => {
+  const [_args, updateArgs] = useArgs();
+
+  return (
+    <Switch
+      {...args}
+      id="uniqueId"
+      checked={checked}
+      onClick={() => updateArgs({ checked: !checked })}
+    >
+      {value}
+    </Switch>
+  );
 };
 
-export const normal = () => (
-  <Switch
-    id="uniqueId"
-    checked={boolean('Checked', false)}
-    disabled={boolean('Disabled', false)}
-    readOnly
-  >
-    {text('Value', 'Label')}
-  </Switch>
-);
+normal.args = {
+  checked: false,
+  disabled: false,
+  value: "Label",
+};

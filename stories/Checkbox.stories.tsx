@@ -1,20 +1,42 @@
-import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { useArgs } from "@storybook/addons";
 
-import { Checkbox } from '../src';
+import { Checkbox } from "../src";
+
+interface Props {
+  readonly checked: boolean;
+  readonly disabled: boolean;
+  readonly label: string;
+}
 
 export default {
-  title: 'Checkbox',
-  decorators: [withKnobs],
+  title: "Checkbox",
+  component: Checkbox,
+  argTypes: {
+    checked: { control: "boolean" },
+    disabled: { control: "boolean" },
+    label: { control: "text" },
+  },
+} as Meta;
+
+export const normal: Story<Props> = ({ checked, label, ...args }) => {
+  const [_args, updateArgs] = useArgs();
+
+  return (
+    <Checkbox
+      id="uniqueId"
+      checked={checked}
+      onClick={() => updateArgs({ checked: !checked })}
+      {...args}
+    >
+      {label}
+    </Checkbox>
+  );
 };
 
-export const normal = () => (
-  <Checkbox
-    id="uniqueId"
-    checked={boolean('Checked', false)}
-    disabled={boolean('Disabled', false)}
-    readOnly
-  >
-    {text('Label', 'Label')}
-  </Checkbox>
-);
+normal.args = {
+  checked: false,
+  disabled: false,
+  label: "Label",
+};
