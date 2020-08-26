@@ -1,20 +1,24 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { SelectMenu, SelectMenuOption } from "../src";
+import { SelectMenu, SelectMenuOption } from '../src';
 
 export default {
-  title: "SelectMenu",
+  title: 'SelectMenu',
   component: SelectMenu,
   decorators: [
-    (Story) => <div style={{ minWidth: 200 }}><Story /></div>,
+    (Story) => (
+      <div style={{ minWidth: 200 }}>
+        <Story />
+      </div>
+    ),
   ],
 } as Meta;
 
 const options = [
-  { value: 1, label: "Option 1" },
-  { value: 2, label: "Option 2" },
-  { value: 3, label: "Option 3" },
+  { value: 1, label: 'Option 1' },
+  { value: 2, label: 'Option 2' },
+  { value: 3, label: 'Option 3' },
 ];
 
 export const normal: Story = () => (

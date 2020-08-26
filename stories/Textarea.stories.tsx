@@ -1,8 +1,8 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import { useArgs } from "@storybook/addons";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
-import { Textarea } from "../src";
+import { Textarea } from '../src';
 
 interface Props {
   readonly placeholder: string;
@@ -12,13 +12,13 @@ interface Props {
 }
 
 export default {
-  title: "Textarea",
+  title: 'Textarea',
   component: Textarea,
   argTypes: {
-    placeholder: { control: "text" },
-    value: { control: "text" },
-    rows: { control: "number" },
-    disabled: { control: "boolean" },
+    placeholder: { control: 'text' },
+    value: { control: 'text' },
+    rows: { control: 'number' },
+    disabled: { control: 'boolean' },
   },
 } as Meta;
 
@@ -30,14 +30,15 @@ export const normal: Story<Props> = ({ value, ...args }) => {
       {...args}
       value={value}
       onChange={(e) =>
-        updateArgs({ value: (e.target as HTMLTextAreaElement).value })} // TODO
+        updateArgs({ value: (e.target as HTMLTextAreaElement).value })
+      } // TODO
     />
   );
 };
 
 normal.args = {
-  placeholder: "Placeholder",
-  value: "Initial Value",
+  placeholder: 'Placeholder',
+  value: 'Initial Value',
   rows: 2,
   disabled: false,
 };

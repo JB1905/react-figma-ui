@@ -1,17 +1,17 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { SectionTitle } from "../src";
+import { SectionTitle } from '../src';
 
 interface Props {
   readonly sectionTitle: string;
 }
 
 export default {
-  title: "SectionTitle",
+  title: 'SectionTitle',
   component: SectionTitle,
   argTypes: {
-    sectionTitle: { control: "text" },
+    sectionTitle: { control: 'text' },
   },
 } as Meta;
 
@@ -20,5 +20,5 @@ export const normal: Story<Props> = ({ sectionTitle }) => (
 );
 
 normal.args = {
-  sectionTitle: "Section Title",
+  sectionTitle: 'Section Title',
 };

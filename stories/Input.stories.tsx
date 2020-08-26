@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import { useArgs } from "@storybook/addons";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
-import { Input } from "../src";
+import { Input } from '../src';
 
-import { IconName } from "../src/types";
+import { IconName } from '../src/types';
 
 interface Props {
   readonly value: string;
@@ -14,13 +14,13 @@ interface Props {
 }
 
 export default {
-  title: "Input",
+  title: 'Input',
   component: Input,
   argTypes: {
-    value: { control: "text" },
-    placeholder: { control: "text" },
-    iconName: { control: "text" }, // TODOeat: replace knobs with controls
-    disabled: { control: "boolean" },
+    value: { control: 'text' },
+    placeholder: { control: 'text' },
+    iconName: { control: 'text' }, // TODOeat: replace knobs with controls
+    disabled: { control: 'boolean' },
   },
 } as Meta;
 
@@ -32,14 +32,15 @@ export const normal: Story<Props> = ({ iconName, ...args }) => {
       {...args}
       iconProps={{ iconName }}
       onChange={(e) =>
-        updateArgs({ value: (e.target as HTMLInputElement).value })} // TODO
+        updateArgs({ value: (e.target as HTMLInputElement).value })
+      } // TODO
     />
   );
 };
 
 normal.args = {
-  value: "Value",
-  placeholder: "Placeholder",
-  iconName: "search",
+  value: 'Value',
+  placeholder: 'Placeholder',
+  iconName: 'search',
   disabled: false,
 };

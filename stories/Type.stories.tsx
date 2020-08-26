@@ -1,9 +1,9 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Type } from "../src";
+import { Type } from '../src';
 
-import { Size, Weight } from "../src/types";
+import { Size, Weight } from '../src/types';
 
 interface Props {
   readonly size: Size;
@@ -13,23 +13,23 @@ interface Props {
 }
 
 export default {
-  title: "Type",
+  title: 'Type',
   component: Type,
   argTypes: {
     size: {
       control: {
-        type: "radio",
-        options: ["small", "large", "xlarge"],
+        type: 'radio',
+        options: ['small', 'large', 'xlarge'],
       },
     },
     weight: {
       control: {
-        type: "radio",
-        options: ["medium", "bold"],
+        type: 'radio',
+        options: ['medium', 'bold'],
       },
     },
-    inverse: { control: "boolean" },
-    text: { control: "text" },
+    inverse: { control: 'boolean' },
+    text: { control: 'text' },
   },
 } as Meta;
 
@@ -38,8 +38,8 @@ export const normal: Story<Props> = ({ text, ...args }) => (
 );
 
 normal.args = {
-  size: "small",
-  weight: "medium",
+  size: 'small',
+  weight: 'medium',
   inverse: false,
-  text: "Hello World!",
+  text: 'Hello World!',
 };

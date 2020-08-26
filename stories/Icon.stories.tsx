@@ -1,9 +1,9 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Icon } from "../src";
+import { Icon } from '../src';
 
-import { IconName, ColorName } from "../src/types";
+import { IconName, ColorName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;
@@ -13,13 +13,13 @@ interface Props {
 }
 
 export default {
-  title: "Icon",
+  title: 'Icon',
   component: Icon,
   argTypes: {
-    iconName: { control: "text" }, // TODO
-    iconColor: { control: "text" }, // TODO
-    spin: { control: "boolean" },
-    value: { control: "text" },
+    iconName: { control: 'text' }, // TODO
+    iconColor: { control: 'text' }, // TODO
+    spin: { control: 'boolean' },
+    value: { control: 'text' },
   },
 } as Meta;
 
@@ -28,8 +28,8 @@ export const normal: Story<Props> = ({ value, ...args }) => (
 );
 
 normal.args = {
-  iconName: "blend", // TODO
-  iconColor: "blue", // TODO
+  iconName: 'blend', // TODO
+  iconColor: 'blue', // TODO
   spin: false,
-  value: "",
+  value: '',
 };

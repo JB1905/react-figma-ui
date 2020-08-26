@@ -1,8 +1,8 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import { useArgs } from "@storybook/addons";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
-import { Radio } from "../src";
+import { Radio } from '../src';
 
 interface Props {
   readonly checked: boolean;
@@ -11,17 +11,17 @@ interface Props {
 }
 
 export default {
-  title: "Radio",
+  title: 'Radio',
   component: Radio,
   argTypes: {
-    checked: { control: "boolean" },
-    disabled: { control: "boolean" },
-    value: { control: "text" },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    value: { control: 'text' },
   },
   args: {
     checked: false,
     disabled: false,
-    value: "Radio Button",
+    value: 'Radio Button',
   },
 } as Meta;
 
@@ -45,5 +45,5 @@ export const normal: Story<Props> = ({ checked, value, ...args }) => {
 normal.args = {
   checked: false,
   disabled: false,
-  value: "Radio Button",
+  value: 'Radio Button',
 };

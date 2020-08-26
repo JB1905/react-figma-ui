@@ -1,9 +1,9 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Button } from "../src";
+import { Button } from '../src';
 
-import { Tint } from "../src/types";
+import { Tint } from '../src/types';
 
 interface Props {
   readonly tint: Tint;
@@ -13,18 +13,18 @@ interface Props {
 }
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: Button,
   argTypes: {
     tint: {
       control: {
-        type: "radio",
-        options: ["primary", "secondary", "tertiary"],
+        type: 'radio',
+        options: ['primary', 'secondary', 'tertiary'],
       },
     },
-    destructive: { control: "boolean" },
-    disabled: { control: "boolean" },
-    label: { control: "text" },
+    destructive: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    label: { control: 'text' },
   },
 } as Meta;
 
@@ -33,8 +33,8 @@ export const normal: Story<Props> = ({ label, ...args }) => (
 );
 
 normal.args = {
-  tint: "primary",
+  tint: 'primary',
   destructive: false,
   disabled: false,
-  label: "Label",
+  label: 'Label',
 };

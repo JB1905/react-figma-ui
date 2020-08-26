@@ -15,21 +15,8 @@ export default {
   },
 } as Meta;
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-export const normal = ({ label }: Props) => <Label>{label}</Label>;
-
-normal.args = {
-=======
-export const Normal = ({ label }: Props) => <Label>{label}</Label>;
-
-Normal.args = {
->>>>>>> feat: replace knobs with controls
-  label: 'Label',
-=======
 export const normal: Story<Props> = ({ label }) => <Label>{label}</Label>;
 
 normal.args = {
   label: "Label",
->>>>>>> Stashed changes
 };

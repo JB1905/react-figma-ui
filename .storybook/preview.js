@@ -1,17 +1,26 @@
-import React from 'react';
-import { addDecorator } from '@storybook/react';
+import React from "react";
+import { addDecorator } from "@storybook/react";
 
-addDecorator((storyFn) => (
+export const parameters = {
+  previewTabs: {
+    "storybook/docs/panel": {
+      hidden: true,
+    },
+  },
+  docs: { page: null },
+};
+
+addDecorator((Story) => (
   <div
     style={{
       maxWidth: 300,
-      height: '100vh',
-      margin: '0 auto',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      height: "100vh", // TODO disable overflow
+      margin: "0 auto",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     }}
   >
-    {storyFn()}
+    <Story />
   </div>
 ));

@@ -1,8 +1,8 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import { useArgs } from "@storybook/addons";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
-import { Switch } from "../src";
+import { Switch } from '../src';
 
 interface Props {
   readonly checked: boolean;
@@ -11,12 +11,12 @@ interface Props {
 }
 
 export default {
-  title: "Switch",
+  title: 'Switch',
   component: Switch,
   argTypes: {
-    checked: { control: "boolean" },
-    disabled: { control: "boolean" },
-    value: { control: "text" },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    value: { control: 'text' },
   },
 } as Meta;
 
@@ -38,5 +38,5 @@ export const normal: Story<Props> = ({ checked, value, ...args }) => {
 normal.args = {
   checked: false,
   disabled: false,
-  value: "Label",
+  value: 'Label',
 };

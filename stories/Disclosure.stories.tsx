@@ -1,17 +1,17 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Disclosure, DisclosureTip } from "../src";
+import { Disclosure, DisclosureTip } from '../src';
 
 export default {
-  title: "Disclosure",
+  title: 'Disclosure',
   component: Disclosure,
 } as Meta;
 
 const tips = [
-  { heading: "Heading 1", content: "Content 1", id: 1 },
-  { heading: "Heading 2", content: "Content 2", id: 2 },
-  { heading: "Heading 3", content: "Content 3", id: 3 },
+  { heading: 'Heading 1', content: 'Content 1', id: 1 },
+  { heading: 'Heading 2', content: 'Content 2', id: 2 },
+  { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
 export const normal: Story = () => (

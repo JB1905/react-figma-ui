@@ -1,9 +1,9 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { IconButton } from "../src";
+import { IconButton } from '../src';
 
-import { IconName } from "../src/types";
+import { IconName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;
@@ -11,11 +11,11 @@ interface Props {
 }
 
 export default {
-  title: "IconButton",
+  title: 'IconButton',
   component: IconButton,
   argTypes: {
-    iconName: { control: "text" }, // TODO
-    selected: { control: "boolean" },
+    iconName: { control: 'text' }, // TODO
+    selected: { control: 'boolean' },
   },
 } as Meta;
 
@@ -24,6 +24,6 @@ export const normal: Story<Props> = ({ iconName, ...args }) => (
 );
 
 normal.args = {
-  iconName: "theme",
+  iconName: 'theme',
   selected: false,
 };

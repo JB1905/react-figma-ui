@@ -1,9 +1,9 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import { Onboarding } from "../src";
+import { Onboarding } from '../src';
 
-import { IconName } from "../src/types";
+import { IconName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;
@@ -11,11 +11,11 @@ interface Props {
 }
 
 export default {
-  title: "Onboarding",
+  title: 'Onboarding',
   component: Onboarding,
   argTypes: {
-    iconName: { control: "text" }, // TODO
-    message: { control: "text" },
+    iconName: { control: 'text' }, // TODO
+    message: { control: 'text' },
   },
 } as Meta;
 
@@ -24,6 +24,6 @@ export const normal: Story<Props> = ({ iconName, message }) => (
 );
 
 normal.args = {
-  iconName: "warning",
-  message: "Onboarding tip goes here.",
+  iconName: 'warning',
+  message: 'Onboarding tip goes here.',
 };

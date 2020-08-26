@@ -1,8 +1,8 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import { useArgs } from "@storybook/addons";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/addons';
 
-import { Checkbox } from "../src";
+import { Checkbox } from '../src';
 
 interface Props {
   readonly checked: boolean;
@@ -11,12 +11,12 @@ interface Props {
 }
 
 export default {
-  title: "Checkbox",
+  title: 'Checkbox',
   component: Checkbox,
   argTypes: {
-    checked: { control: "boolean" },
-    disabled: { control: "boolean" },
-    label: { control: "text" },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    label: { control: 'text' },
   },
 } as Meta;
 
@@ -38,5 +38,5 @@ export const normal: Story<Props> = ({ checked, label, ...args }) => {
 normal.args = {
   checked: false,
   disabled: false,
-  label: "Label",
+  label: 'Label',
 };
