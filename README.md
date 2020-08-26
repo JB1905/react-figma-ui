@@ -74,7 +74,6 @@ import { Button } from 'react-figma-ui';
 <Button tint="secondary" destructive>Label</Button>
 <Button tint="secondary" disabled>Label</Button>
 
-
 // Tertiary (Hyperlink style button)
 <Button tint="tertiary">Label</Button>
 <Button tint="tertiary" destructive>Label</Button>
