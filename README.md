@@ -52,7 +52,7 @@ $ yarn add react-figma-ui
 
 ### Button
 
-To use the button, use the following component. Each button has a destructive option. Teritary buttons are styled like hyperlinks.
+To use the button, use the following component. Each button has a destructive option. Tertiary buttons are styled like hyperlinks.
 
 ```jsx
 import { Button } from 'react-figma-ui';
