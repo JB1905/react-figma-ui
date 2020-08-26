@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.0.0-beta.12",
+  "version": "1.0.0-beta.13",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -8,7 +8,8 @@
   "module": "lib/react-figma-ui.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "release": "rimraf lib/* && npm run prettier && npm run lint && npm run build",
+    "prepack": "npm run clean && npm run prettier && npm run lint && npm run build",
+    "clean": "rimraf lib/*",
     "build": "rollup -c",
     "test": "jest --coverage",
     "watch": "npm run build -- --watch",
@@ -18,16 +19,18 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jb1905/react-figma-ui.git"
   },
   "keywords": [
-    "Figma",
+    "figma",
     "ui",
-    "React",
+    "react",
     "components",
     "library"
   ],
@@ -52,6 +55,7 @@
     "@types/react": "^16.9.47",
     "@typescript-eslint/parser": "^3.10.1",
     "babel-loader": "^8.1.0",
+    "cz-conventional-changelog": "3.2.1",
     "eslint": "7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -71,11 +75,17 @@
     "rollup-plugin-typescript2": "^0.27.2",
     "ts-jest": "^26.3.0",
     "ts-loader": "^8.0.3",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "semantic-release": "^17.1.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "jest": {
     "testPathIgnorePatterns": [
