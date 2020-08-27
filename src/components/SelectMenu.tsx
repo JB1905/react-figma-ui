@@ -9,7 +9,6 @@ interface SelectMenuProps<T> extends Readonly<HTMLProps<HTMLSelectElement>> {
 
 interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
 
-// TODO
 export function SelectMenu<T extends object>({
   options,
   render,

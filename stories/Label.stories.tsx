@@ -10,13 +10,9 @@ interface Props {
 export default {
   title: 'Label',
   component: Label,
-  argTypes: {
-    label: { control: 'text' },
+  args: {
+    label: 'Label',
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ label }) => <Label>{label}</Label>;
-
-normal.args = {
-  label: 'Label',
-};

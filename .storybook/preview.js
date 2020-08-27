@@ -14,7 +14,7 @@ addDecorator((Story) => (
   <div
     style={{
       maxWidth: 300,
-      height: '100vh', // TODO disable overflow
+      height: 'calc(100vh - 32px)',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',

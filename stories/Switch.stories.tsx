@@ -13,10 +13,10 @@ interface Props {
 export default {
   title: 'Switch',
   component: Switch,
-  argTypes: {
-    checked: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    value: { control: 'text' },
+  args: {
+    checked: false,
+    disabled: false,
+    value: 'Label',
   },
 } as Meta;
 
@@ -33,10 +33,4 @@ export const normal: Story<Props> = ({ checked, value, ...args }) => {
       {value}
     </Switch>
   );
-};
-
-normal.args = {
-  checked: false,
-  disabled: false,
-  value: 'Label',
 };

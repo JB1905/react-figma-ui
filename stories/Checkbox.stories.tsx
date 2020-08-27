@@ -13,10 +13,10 @@ interface Props {
 export default {
   title: 'Checkbox',
   component: Checkbox,
-  argTypes: {
-    checked: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    label: { control: 'text' },
+  args: {
+    checked: false,
+    disabled: false,
+    label: 'Label',
   },
 } as Meta;
 
@@ -25,18 +25,12 @@ export const normal: Story<Props> = ({ checked, label, ...args }) => {
 
   return (
     <Checkbox
+      {...args}
       id="uniqueId"
       checked={checked}
       onClick={() => updateArgs({ checked: !checked })}
-      {...args}
     >
       {label}
     </Checkbox>
   );
-};
-
-normal.args = {
-  checked: false,
-  disabled: false,
-  label: 'Label',
 };

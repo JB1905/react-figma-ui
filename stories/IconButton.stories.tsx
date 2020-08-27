@@ -13,17 +13,12 @@ interface Props {
 export default {
   title: 'IconButton',
   component: IconButton,
-  argTypes: {
-    iconName: { control: 'text' }, // TODO
-    selected: { control: 'boolean' },
+  args: {
+    iconName: 'theme',
+    selected: false,
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ iconName, ...args }) => (
-  <IconButton iconProps={{ iconName }} {...args} />
+  <IconButton {...args} iconProps={{ iconName }} />
 );
-
-normal.args = {
-  iconName: 'theme',
-  selected: false,
-};

@@ -25,7 +25,6 @@ interface DisclosureTipProps
   readonly contentProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
-// TODO
 export function Disclosure<T extends object>({
   tips,
   render,

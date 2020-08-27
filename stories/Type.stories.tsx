@@ -15,31 +15,14 @@ interface Props {
 export default {
   title: 'Type',
   component: Type,
-  argTypes: {
-    size: {
-      control: {
-        type: 'radio',
-        options: ['small', 'large', 'xlarge'],
-      },
-    },
-    weight: {
-      control: {
-        type: 'radio',
-        options: ['medium', 'bold'],
-      },
-    },
-    inverse: { control: 'boolean' },
-    text: { control: 'text' },
+  args: {
+    size: 'small',
+    weight: 'medium',
+    inverse: false,
+    text: 'Hello World!',
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ text, ...args }) => (
   <Type {...args}>{text}</Type>
 );
-
-normal.args = {
-  size: 'small',
-  weight: 'medium',
-  inverse: false,
-  text: 'Hello World!',
-};

@@ -16,16 +16,16 @@ interface Props {
 export default {
   title: 'Input',
   component: Input,
-  argTypes: {
-    value: { control: 'text' },
-    placeholder: { control: 'text' },
-    iconName: { control: 'text' }, // TODOeat: replace knobs with controls
-    disabled: { control: 'boolean' },
+  args: {
+    value: 'Value',
+    placeholder: 'Placeholder',
+    iconName: 'search',
+    disabled: false,
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ iconName, ...args }) => {
-  const [_args, updateArgs] = useArgs(); // TODO
+  const [_args, updateArgs] = useArgs();
 
   return (
     <Input
@@ -33,14 +33,7 @@ export const normal: Story<Props> = ({ iconName, ...args }) => {
       iconProps={{ iconName }}
       onChange={(e) =>
         updateArgs({ value: (e.target as HTMLInputElement).value })
-      } // TODO
+      }
     />
   );
-};
-
-normal.args = {
-  value: 'Value',
-  placeholder: 'Placeholder',
-  iconName: 'search',
-  disabled: false,
 };

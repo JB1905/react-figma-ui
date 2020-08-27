@@ -13,17 +13,12 @@ interface Props {
 export default {
   title: 'Onboarding',
   component: Onboarding,
-  argTypes: {
-    iconName: { control: 'text' }, // TODO
-    message: { control: 'text' },
+  args: {
+    iconName: 'warning',
+    message: 'Onboarding tip goes here.',
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ iconName, message }) => (
   <Onboarding iconProps={{ iconName }}>{message}</Onboarding>
 );
-
-normal.args = {
-  iconName: 'warning',
-  message: 'Onboarding tip goes here.',
-};

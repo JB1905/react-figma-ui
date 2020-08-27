@@ -12,6 +12,15 @@ script:
   - bash <(curl -s https://codecov.io/bash)
   - yarn build-storybook
 
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: yarn semantic-release
+
 deploy:
   provider: pages
   skip_cleanup: true

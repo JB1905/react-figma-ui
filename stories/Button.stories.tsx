@@ -15,26 +15,14 @@ interface Props {
 export default {
   title: 'Button',
   component: Button,
-  argTypes: {
-    tint: {
-      control: {
-        type: 'radio',
-        options: ['primary', 'secondary', 'tertiary'],
-      },
-    },
-    destructive: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    label: { control: 'text' },
+  args: {
+    tint: 'primary',
+    destructive: false,
+    disabled: false,
+    label: 'Label',
   },
 } as Meta;
 
 export const normal: Story<Props> = ({ label, ...args }) => (
   <Button {...args}>{label}</Button>
 );
-
-normal.args = {
-  tint: 'primary',
-  destructive: false,
-  disabled: false,
-  label: 'Label',
-};

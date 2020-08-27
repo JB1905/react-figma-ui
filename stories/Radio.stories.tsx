@@ -13,11 +13,6 @@ interface Props {
 export default {
   title: 'Radio',
   component: Radio,
-  argTypes: {
-    checked: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    value: { control: 'text' },
-  },
   args: {
     checked: false,
     disabled: false,
@@ -25,25 +20,17 @@ export default {
   },
 } as Meta;
 
-// TODO add more radio buttons
-
 export const normal: Story<Props> = ({ checked, value, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (
     <Radio
-      id="radioButton" // TODO
+      {...args}
+      id="radioButton"
       checked={checked}
       onClick={() => updateArgs({ checked: true })}
-      {...args}
     >
       {value}
     </Radio>
   );
-};
-
-normal.args = {
-  checked: false,
-  disabled: false,
-  value: 'Radio Button',
 };
