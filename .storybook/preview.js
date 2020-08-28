@@ -14,7 +14,7 @@ addDecorator((Story) => (
   <div
     style={{
       maxWidth: 300,
-      height: 'calc(100vh - 32px)',
+      height: 'calc(100vh - 2rem)',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
