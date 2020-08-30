@@ -4,7 +4,7 @@ import { useArgs } from '@storybook/addons';
 
 import { Input } from '../src';
 
-import { IconName } from '../src/types';
+import type { IconName } from '../src/types';
 
 interface Props {
   readonly value: string;

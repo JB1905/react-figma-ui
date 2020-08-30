@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Button } from '../src';
 
-import { Tint } from '../src/types';
+import type { Tint } from '../src/types';
 
 interface Props {
   readonly tint: Tint;

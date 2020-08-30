@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Icon } from '../src';
 
-import { IconName, ColorName } from '../src/types';
+import type { IconName, ColorName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;

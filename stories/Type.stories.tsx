@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Type } from '../src';
 
-import { Size, Weight } from '../src/types';
+import type { Size, Weight } from '../src/types';
 
 interface Props {
   readonly size: Size;
