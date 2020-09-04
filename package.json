@@ -49,7 +49,7 @@
     "@storybook/addons": "^6.0.21",
     "@storybook/react": "^6.0.21",
     "@storybook/storybook-deployer": "^2.8.6",
-    "@testing-library/react": "^11.0.1",
+    "@testing-library/react": "^11.0.2",
     "@types/jest": "^26.0.13",
     "@types/react": "^16.9.49",
     "@typescript-eslint/parser": "^4.0.1",
