@@ -8,13 +8,14 @@ export const parameters = {
     },
   },
   docs: { page: null },
+  layout: 'fullscreen',
 };
 
 addDecorator((Story) => (
   <div
     style={{
       maxWidth: 300,
-      height: 'calc(100vh - 2rem)',
+      height: '100vh',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
