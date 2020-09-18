@@ -39,7 +39,7 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ## Demo
 
-[**Playground – play with library in Storybook**](https://JB1905.github.io/react-figma-ui/)
+[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
 
