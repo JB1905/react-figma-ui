@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jb1905/react-figma-ui.git"
+    "url": "https://github.com/JB1905/react-figma-ui.git"
   },
   "keywords": [
     "figma",
@@ -35,9 +35,9 @@
     "library"
   ],
   "bugs": {
-    "url": "https://github.com/jb1905/react-figma-ui/issues"
+    "url": "https://github.com/JB1905/react-figma-ui/issues"
   },
-  "homepage": "https://github.com/jb1905/react-figma-ui#readme",
+  "homepage": "https://github.com/JB1905/react-figma-ui#readme",
   "dependencies": {
     "figma-plugin-ds": "^0.1.8",
     "s-trimmer": "^1.0.0"

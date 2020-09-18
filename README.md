@@ -1,4 +1,4 @@
-# [React Figma UI](https://github.com/jb1905/react-figma-ui)
+# [React Figma UI](https://github.com/JB1905/react-figma-ui)
 
 [![NPM version](http://img.shields.io/npm/v/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
@@ -39,7 +39,7 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ## Demo
 
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+[**Playground – play with library in Storybook**](https://JB1905.github.io/react-figma-ui/)
 
 ## How to Install
 
