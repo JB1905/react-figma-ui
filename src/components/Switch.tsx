@@ -6,14 +6,14 @@ interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
-export const Switch: React.FC<Props> = ({
+export const Switch = ({
   children,
   id,
   className = '',
   containerProps = {},
   labelProps = {},
   ...props
-}) => {
+}: Props) => {
   const {
     className: containerClassName = '',
     ...containerRest

@@ -8,12 +8,12 @@ interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly iconProps: IconProps;
 }
 
-export const IconButton: React.FC<Props> = ({
+export const IconButton = ({
   selected,
   className = '',
   iconProps,
   ...props
-}) => (
+}: Props) => (
   <div
     {...props}
     className={sTrimmer(

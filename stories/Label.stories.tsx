@@ -15,4 +15,4 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ label }) => <Label>{label}</Label>;
+export const Normal: Story<Props> = ({ label }) => <Label>{label}</Label>;

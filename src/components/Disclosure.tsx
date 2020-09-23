@@ -44,7 +44,7 @@ export function Disclosure<T extends object>({
   );
 }
 
-export const DisclosureTip: React.FC<DisclosureTipProps> = ({
+export const DisclosureTip = ({
   section,
   expanded,
   heading,
@@ -53,7 +53,7 @@ export const DisclosureTip: React.FC<DisclosureTipProps> = ({
   labelProps = {},
   contentProps = {},
   ...props
-}) => {
+}: DisclosureTipProps) => {
   const { className: labelClassName = '', ...labelRest } = labelProps;
   const { className: contentClassName = '', ...contentRest } = contentProps;
 

@@ -12,7 +12,7 @@ interface Props {
 
 export default {
   title: 'Checkbox',
-  component: Checkbox,
+  // component: Checkbox,
   args: {
     checked: false,
     disabled: false,
@@ -20,7 +20,7 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ checked, label, ...args }) => {
+export const Normal: Story<Props> = ({ checked, label, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (

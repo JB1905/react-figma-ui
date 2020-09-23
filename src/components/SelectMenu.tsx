@@ -28,7 +28,7 @@ export function SelectMenu<T extends object>({
   );
 }
 
-export const SelectMenuOption: React.FC<SelectMenuItemProps> = ({
+export const SelectMenuOption = ({
   children,
   ...props
-}) => <option {...props}>{children}</option>;
+}: SelectMenuItemProps) => <option {...props}>{children}</option>;

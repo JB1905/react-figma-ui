@@ -8,13 +8,13 @@ interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly iconProps: IconProps;
 }
 
-export const Onboarding: React.FC<Props> = ({
+export const Onboarding = ({
   children,
   className = '',
   containerProps = {},
   iconProps,
   ...props
-}) => {
+}: Props) => {
   const {
     className: containerClassName = '',
     ...containerRest

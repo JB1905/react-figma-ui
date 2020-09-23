@@ -15,7 +15,7 @@ interface Props {
 
 export default {
   title: 'Input',
-  component: Input,
+  // component: Input,
   args: {
     value: 'Value',
     placeholder: 'Placeholder',
@@ -24,7 +24,7 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ iconName, ...args }) => {
+export const Normal: Story<Props> = ({ iconName, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (

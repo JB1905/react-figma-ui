@@ -12,7 +12,7 @@ interface Props {
 
 export default {
   title: 'Switch',
-  component: Switch,
+  // component: Switch,
   args: {
     checked: false,
     disabled: false,
@@ -20,7 +20,7 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ checked, value, ...args }) => {
+export const Normal: Story<Props> = ({ checked, value, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (
@@ -28,7 +28,9 @@ export const normal: Story<Props> = ({ checked, value, ...args }) => {
       {...args}
       id="uniqueId"
       checked={checked}
-      onClick={() => updateArgs({ checked: !checked })}
+      // onClick={() => updateArgs({ checked: !checked })}
+      // disabled={false}
+      // readOnly
     >
       {value}
     </Switch>

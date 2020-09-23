@@ -5,7 +5,7 @@ import { SelectMenu, SelectMenuOption } from '../src';
 
 export default {
   title: 'SelectMenu',
-  component: SelectMenu,
+  // component: SelectMenu,
   decorators: [
     (Story) => (
       <div style={{ minWidth: 200 }}>
@@ -21,7 +21,7 @@ const options = [
   { value: 3, label: 'Option 3' },
 ];
 
-export const normal: Story = () => (
+export const Normal: Story = () => (
   <SelectMenu
     options={options}
     render={({ value, label }) => (
