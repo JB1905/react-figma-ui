@@ -12,13 +12,13 @@ interface Props {
 
 export default {
   title: 'IconButton',
-  component: IconButton,
+  // component: IconButton,
   args: {
     iconName: 'theme',
     selected: false,
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ iconName, ...args }) => (
+export const Normal: Story<Props> = ({ iconName, ...args }) => (
   <IconButton {...args} iconProps={{ iconName }} />
 );

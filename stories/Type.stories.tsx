@@ -23,6 +23,6 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ text, ...args }) => (
+export const Normal: Story<Props> = ({ text, ...args }) => (
   <Type {...args}>{text}</Type>
 );

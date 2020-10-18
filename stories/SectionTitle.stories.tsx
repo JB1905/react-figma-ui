@@ -15,6 +15,6 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ sectionTitle }) => (
+export const Normal: Story<Props> = ({ sectionTitle }) => (
   <SectionTitle>{sectionTitle}</SectionTitle>
 );

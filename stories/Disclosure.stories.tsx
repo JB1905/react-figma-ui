@@ -5,7 +5,8 @@ import { Disclosure, DisclosureTip } from '../src';
 
 export default {
   title: 'Disclosure',
-  component: Disclosure,
+  // component: Disclosure,
+  // parameters: {},
 } as Meta;
 
 const tips = [
@@ -14,7 +15,7 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-export const normal: Story = () => (
+export const Normal: Story = () => (
   <Disclosure
     tips={tips}
     render={({ heading, content, id }) => (

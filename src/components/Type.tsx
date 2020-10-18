@@ -9,14 +9,14 @@ interface Props extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'size'>> {
   readonly inverse?: boolean;
 }
 
-export const Type: React.FC<Props> = ({
+export const Type = ({
   children,
   size,
   weight,
   inverse,
   className = '',
   ...props
-}) => (
+}: Props) => (
   <div
     {...props}
     className={sTrimmer(

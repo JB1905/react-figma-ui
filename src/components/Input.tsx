@@ -8,13 +8,13 @@ interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly iconProps?: IconProps;
 }
 
-export const Input: React.FC<Props> = ({
+export const Input = ({
   className = '',
   type = 'input',
   containerProps = {},
   iconProps = {},
   ...props
-}) => {
+}: Props) => {
   const {
     className: containerClassName = '',
     ...containerRest

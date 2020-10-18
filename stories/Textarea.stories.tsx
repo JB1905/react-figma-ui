@@ -22,7 +22,7 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ value, ...args }) => {
+export const Normal: Story<Props> = ({ value, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (

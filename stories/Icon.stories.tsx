@@ -14,7 +14,7 @@ interface Props {
 
 export default {
   title: 'Icon',
-  component: Icon,
+  // component: Icon,
   args: {
     iconName: 'blend',
     spin: false,
@@ -22,6 +22,6 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ value, ...args }) => (
+export const Normal: Story<Props> = ({ value, ...args }) => (
   <Icon {...args}>{value}</Icon>
 );

@@ -9,14 +9,14 @@ export interface Props extends HTMLProps<HTMLDivElement> {
   readonly colorName?: Readonly<ColorName>;
 }
 
-export const Icon: React.FC<Props> = ({
+export const Icon = ({
   children,
   iconName,
   className = '',
   spin,
   colorName,
   ...props
-}) => (
+}: Props) => (
   <div
     {...props}
     className={sTrimmer(

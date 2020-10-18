@@ -12,7 +12,7 @@ interface Props {
 
 export default {
   title: 'Radio',
-  component: Radio,
+  // component: Radio,
   args: {
     checked: false,
     disabled: false,
@@ -20,7 +20,7 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ checked, value, ...args }) => {
+export const Normal: Story<Props> = ({ checked, value, ...args }) => {
   const [_args, updateArgs] = useArgs();
 
   return (

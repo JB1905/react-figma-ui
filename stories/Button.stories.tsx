@@ -23,6 +23,6 @@ export default {
   },
 } as Meta;
 
-export const normal: Story<Props> = ({ label, ...args }) => (
+export const Normal: Story<Props> = ({ label, ...args }) => (
   <Button {...args}>{label}</Button>
 );

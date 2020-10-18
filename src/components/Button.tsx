@@ -14,13 +14,13 @@ interface Props
   readonly destructive?: boolean;
 }
 
-export const Button: React.FC<Props> = ({
+export const Button = ({
   children,
   tint,
   destructive,
   className = '',
   ...props
-}) => (
+}: Props) => (
   <button
     {...props}
     className={sTrimmer(

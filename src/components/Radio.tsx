@@ -6,14 +6,14 @@ interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
 }
 
-export const Radio: React.FC<Props> = ({
+export const Radio = ({
   children,
   id,
   className = '',
   containerProps = {},
   labelProps = {},
   ...props
-}) => {
+}: Props) => {
   const {
     className: containerClassName = '',
     ...containerRest
