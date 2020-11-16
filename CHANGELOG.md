@@ -1,6 +1,6 @@
 # React Figma UI Changelog
 
-## 1.0.0 beta 12 (2020-08-26)
+## 1.0.0 beta 12 / 1.0.0 (2020-08-26)
 
 #### Bug Fix
 
