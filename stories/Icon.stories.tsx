@@ -14,7 +14,7 @@ interface Props {
 
 export default {
   title: 'Icon',
-  // component: Icon,
+  component: Icon,
   args: {
     iconName: 'blend',
     spin: false,

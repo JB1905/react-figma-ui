@@ -5,7 +5,11 @@ import { SelectMenu, SelectMenuOption } from '../src';
 
 export default {
   title: 'SelectMenu',
-  // component: SelectMenu,
+  parameters: {
+    controls: {
+      disabled: true,
+    },
+  },
   decorators: [
     (Story) => (
       <div style={{ minWidth: 200 }}>

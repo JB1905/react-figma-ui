@@ -15,7 +15,6 @@ interface Props {
 
 export default {
   title: 'Input',
-  // component: Input,
   args: {
     value: 'Value',
     placeholder: 'Placeholder',

@@ -12,7 +12,6 @@ interface Props {
 
 export default {
   title: 'IconButton',
-  // component: IconButton,
   args: {
     iconName: 'theme',
     selected: false,

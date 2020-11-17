@@ -12,7 +12,6 @@ interface Props {
 
 export default {
   title: 'Switch',
-  // component: Switch,
   args: {
     checked: false,
     disabled: false,
@@ -28,9 +27,9 @@ export const Normal: Story<Props> = ({ checked, value, ...args }) => {
       {...args}
       id="uniqueId"
       checked={checked}
-      // onClick={() => updateArgs({ checked: !checked })}
-      // disabled={false}
-      // readOnly
+      onClick={() => updateArgs({ checked: !checked })}
+      disabled={false}
+      readOnly
     >
       {value}
     </Switch>

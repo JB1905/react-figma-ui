@@ -12,7 +12,6 @@ interface Props {
 
 export default {
   title: 'Onboarding',
-  // component: Onboarding,
   args: {
     iconName: 'warning',
     message: 'Onboarding tip goes here.',

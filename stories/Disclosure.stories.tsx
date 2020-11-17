@@ -5,8 +5,11 @@ import { Disclosure, DisclosureTip } from '../src';
 
 export default {
   title: 'Disclosure',
-  // component: Disclosure,
-  // parameters: {},
+  parameters: {
+    controls: {
+      disabled: true,
+    },
+  },
 } as Meta;
 
 const tips = [
