@@ -28,8 +28,6 @@ export const Normal: Story<Props> = ({ checked, value, ...args }) => {
       id="uniqueId"
       checked={checked}
       onClick={() => updateArgs({ checked: !checked })}
-      disabled={false}
-      readOnly
     >
       {value}
     </Switch>
