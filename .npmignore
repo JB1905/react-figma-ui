@@ -5,7 +5,6 @@ storybook-static
 __tests__
 __mocks__
 coverage
-patches
 
 tsconfig.json
 .travis.yml
