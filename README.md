@@ -138,7 +138,7 @@ const tips = [
       key={id}
     />
   )}
-/>
+/>;
 ```
 
 #### Available options
@@ -247,7 +247,7 @@ import { Onboarding } from 'react-figma-ui';
 
 <Onboarding iconProps={{ iconName: 'styles' }}>
   Onboarding tip goes here.
-</Onboarding>
+</Onboarding>;
 ```
 
 ---
@@ -294,7 +294,7 @@ const options = [
       {label}
     </SelectMenuOption>
   )}
-/>
+/>;
 ```
 
 ---

@@ -1,5 +1,11 @@
 # React Figma UI Changelog
 
+## 1.0.1 (2020-12-02)
+
+#### Bug Fix
+
+- added missing `patch-package` & `postinstall-postinstall` to dependencies
+
 ## 1.0.0 beta 12 / 1.0.0 (2020-08-26)
 
 #### Bug Fix
