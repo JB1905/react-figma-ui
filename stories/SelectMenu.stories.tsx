@@ -9,6 +9,7 @@ export default {
     controls: {
       disabled: true,
     },
+    // selectedPanel: 'storybook/source-loader/panel', // TODO
   },
   decorators: [
     (Story) => (
