@@ -19,14 +19,14 @@ export const Onboarding = ({
     className: containerClassName = '',
     ...containerRest
   } = containerProps;
-  const { style = {}, ...iconRest } = iconProps;
+  const { style: iconStyle = {}, ...iconRest } = iconProps;
 
   return (
     <div
       {...containerRest}
       className={sTrimmer(`onboarding-tip ${containerClassName}`)}
     >
-      <Icon {...iconRest} style={{ minWidth: 32, ...style }} />
+      <Icon {...iconRest} style={{ minWidth: 32, ...iconStyle }} />
 
       <div {...props} className={sTrimmer(`onboarding-tip__msg ${className}`)}>
         {children}
