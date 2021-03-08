@@ -5,6 +5,7 @@ storybook-static
 __tests__
 __mocks__
 coverage
+.husky
 
 tsconfig.json
 .travis.yml
