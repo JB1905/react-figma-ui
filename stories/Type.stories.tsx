@@ -15,6 +15,20 @@ interface Props {
 export default {
   title: 'Type',
   component: Type,
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'large', 'xlarge'],
+      },
+    },
+    weight: {
+      control: {
+        type: 'select',
+        options: ['medium', 'bold'],
+      },
+    },
+  },
   args: {
     size: 'small',
     weight: 'medium',
