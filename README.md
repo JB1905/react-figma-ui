@@ -57,6 +57,8 @@ $ yarn add react-figma-ui
 
 ## Components
 
+<!-- TODO add types, required & default values -->
+
 ### Button
 
 To use the button, use the following component. Each button has a destructive option. Tertiary buttons are styled like hyperlinks.
@@ -82,6 +84,8 @@ import { Button } from 'react-figma-ui';
 
 #### Available options
 
+<!-- TODO extend button props -->
+
 | Param         | Description                                                                            |
 | ------------- | -------------------------------------------------------------------------------------- |
 | `tint`        | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink) |
@@ -105,6 +109,11 @@ import { Checkbox } from 'react-figma-ui';
 // Checkbox disabled
 <Checkbox id="uniqueId" disabled>Label</Checkbox>
 ```
+
+<!-- TODO extend input props -->
+<!-- TODO containerProps extend div props -->
+<!-- TODO labelProps extend label props -->
+
 
 | Param            | Description                  |
 | ---------------- | ---------------------------- |
@@ -143,6 +152,18 @@ const tips = [
 
 #### Available options
 
+<!-- TODO extends UL list props -->
+<!-- TODO tips -->
+<!-- TODO render -->
+
+<!-- TODO tipprops extends HTMLLi element -->
+<!-- TODO heading -->
+<!-- TODO content -->
+<!-- TODO section -->
+<!-- TODO expanded -->
+<!-- TODO labelProps -> div element props -->
+<!-- TODO contentProps -> div element props -->
+
 | Param      | Description                                   |
 | ---------- | --------------------------------------------- |
 | `section`  | Style label like a heading                    |
@@ -172,6 +193,8 @@ import { Icon } from 'react-figma-ui';
 
 #### Available options
 
+<!-- TODO extends HTMLDivElement props -->
+
 | Param         | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
 | `iconName`    | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
@@ -198,6 +221,10 @@ import { IconButton } from 'react-figma-ui';
 <IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
 
+<!-- TODO extends HTMLDivElement -->
+<!-- TODO selected boolean -->
+<!-- TODO iconProps -> IconProps -->
+
 ---
 
 ### Input
@@ -220,6 +247,10 @@ import { Input } from 'react-figma-ui';
 <Input value="Value" iconProps={{ iconName: 'angle' }} />
 ```
 
+<!-- extends HTMLInputElement -->
+<!-- containerProps HTMLDivElement -->
+<!-- iconProps IconProps -->
+
 ---
 
 ### Labels and sections
@@ -236,6 +267,8 @@ import { Label, SectionTitle } from 'react-figma-ui';
 <SectionTitle>Section title</SectionTitle>
 ```
 
+<!-- extends HTMLDivElement -->
+
 ---
 
 ### Onboarding tip
@@ -249,6 +282,10 @@ import { Onboarding } from 'react-figma-ui';
   Onboarding tip goes here.
 </Onboarding>;
 ```
+
+<!-- extends HTMLDivElement -->
+<!-- containerProps HTMLDivElement props -->
+<!-- iconProps IconProps -->
 
 ---
 
@@ -268,6 +305,10 @@ import { Radio } from 'react-figma-ui';
 // Radio button disabled
 <Radio value="Value" id="radioButton3" name="radioGroup" disabled>Radio button</Radio>
 ```
+
+<!-- extends HTMLInputElement -->
+<!-- containerProps HTMLInputElement props -->
+<!-- labelProps HTMLLabelElement props -->
 
 ---
 
@@ -297,6 +338,12 @@ const options = [
 />;
 ```
 
+<!-- selectmenu extends HTMLSelectElement -->
+<!-- options -->
+<!-- render -->
+
+<!-- selectmenuitem extends SelectMenuItemProps -->
+
 ---
 
 ### Switch
@@ -316,6 +363,10 @@ import { Switch } from 'react-figma-ui';
 <Switch id="uniqueId" disabled>Label</Switch>
 ```
 
+<!-- extends HTMLInputElement -->
+<!-- containerProps HTMLDivElement -->
+<!-- labelProps HTMLLabelElement -->
+
 ---
 
 ### Textarea
@@ -331,6 +382,8 @@ import { Textarea } from 'react-figma-ui';
 // Textarea disabled
 <Textarea value="Initial value" rows={2} disabled />
 ```
+
+<!-- extends HTMLTextAreaElement -->
 
 ---
 
@@ -349,6 +402,8 @@ import { Type } from 'react-figma-ui';
 ```
 
 #### Available options
+
+<!-- extends HTMLDivElement omit size -->
 
 | Param     | Description                                                                                         |
 | --------- | --------------------------------------------------------------------------------------------------- |
