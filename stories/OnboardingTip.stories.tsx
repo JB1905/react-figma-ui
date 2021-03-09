@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Onboarding } from '../src';
+import { OnboardingTip } from '../src';
 
 import type { IconName } from '../src/types';
 
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default {
-  title: 'Onboarding',
+  title: 'OnboardingTip',
   args: {
     iconName: 'warning',
     message: 'Onboarding tip goes here.',
@@ -19,5 +19,5 @@ export default {
 } as Meta;
 
 export const Normal: Story<Props> = ({ iconName, message }) => (
-  <Onboarding iconProps={{ iconName }}>{message}</Onboarding>
+  <OnboardingTip iconProps={{ iconName }}>{message}</OnboardingTip>
 );

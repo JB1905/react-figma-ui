@@ -5,7 +5,7 @@ export * from './Icon';
 export * from './IconButton';
 export * from './Input';
 export * from './Label';
-export * from './Onboarding';
+export * from './OnboardingTip';
 export * from './Radio';
 export * from './SectionTitle';
 export * from './SelectMenu';

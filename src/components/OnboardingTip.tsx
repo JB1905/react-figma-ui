@@ -8,7 +8,7 @@ interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly iconProps: IconProps;
 }
 
-export const Onboarding = ({
+export const OnboardingTip = ({
   children,
   className = '',
   containerProps = {},
