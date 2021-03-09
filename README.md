@@ -84,7 +84,7 @@ import { Button } from 'react-figma-ui';
 
 #### Available options
 
-<!-- TODO extend button props -->
+[HTML button element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) and dedicated params
 
 | Param         | Description                                                                            |
 | ------------- | -------------------------------------------------------------------------------------- |
@@ -110,15 +110,14 @@ import { Checkbox } from 'react-figma-ui';
 <Checkbox id="uniqueId" disabled>Label</Checkbox>
 ```
 
-<!-- TODO extend input props -->
-<!-- TODO containerProps extend div props -->
-<!-- TODO labelProps extend label props -->
+#### Available options
 
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and dedicated params
 
-| Param            | Description                  |
-| ---------------- | ---------------------------- |
-| `containerProps` | Props for checkbox container |
-| `labelProps`     | Props for label element      |
+| Param                                                                                                             | Description                  |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for checkbox container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element      |
 
 ---
 
@@ -152,22 +151,29 @@ const tips = [
 
 #### Available options
 
-<!-- TODO extends UL list props -->
-<!-- TODO tips -->
-<!-- TODO render -->
+**Disclosure**
 
-<!-- TODO tipprops extends HTMLLi element -->
-<!-- TODO heading -->
-<!-- TODO content -->
-<!-- TODO section -->
-<!-- TODO expanded -->
-<!-- TODO labelProps -> div element props -->
-<!-- TODO contentProps -> div element props -->
+[HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param      | Description                                   |
-| ---------- | --------------------------------------------- |
-| `section`  | Style label like a heading                    |
-| `expanded` | Add this option to have item expanded on load |
+<!-- TODO -->
+
+| Param    | Description |
+| -------- | ----------- |
+| `tips`   |             |
+| `render` |             |
+
+**DisclosureTip**
+
+[HTML li element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes) and dedicated params
+
+| Param                                                                                                           | Description                                   |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `heading`                                                                                                       | Heading text value                            |
+| `content`                                                                                                       | Content text value                            |
+| `section`                                                                                                       | Style label like a heading                    |
+| `expanded`                                                                                                      | Add this option to have item expanded on load |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)   | Props for label element                       |
+| [`contentProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for content element                     |
 
 ---
 
@@ -193,7 +199,7 @@ import { Icon } from 'react-figma-ui';
 
 #### Available options
 
-<!-- TODO extends HTMLDivElement props -->
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
 | Param         | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
@@ -221,9 +227,16 @@ import { IconButton } from 'react-figma-ui';
 <IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
 
-<!-- TODO extends HTMLDivElement -->
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
 <!-- TODO selected boolean -->
-<!-- TODO iconProps -> IconProps -->
+
+| Param                | Description              |
+| -------------------- | ------------------------ |
+| `selected`           |                          |
+| [`iconProps`](#icon) | Props for icon component |
 
 ---
 
@@ -247,9 +260,14 @@ import { Input } from 'react-figma-ui';
 <Input value="Value" iconProps={{ iconName: 'angle' }} />
 ```
 
-<!-- extends HTMLInputElement -->
-<!-- containerProps HTMLDivElement -->
-<!-- iconProps IconProps -->
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`iconProps`](#icon)                                                                                              | Props for icon component   |
 
 ---
 
@@ -267,7 +285,9 @@ import { Label, SectionTitle } from 'react-figma-ui';
 <SectionTitle>Section title</SectionTitle>
 ```
 
-<!-- extends HTMLDivElement -->
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)
 
 ---
 
@@ -283,9 +303,14 @@ import { Onboarding } from 'react-figma-ui';
 </Onboarding>;
 ```
 
-<!-- extends HTMLDivElement -->
-<!-- containerProps HTMLDivElement props -->
-<!-- iconProps IconProps -->
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`iconProps`](#icon)                                                                                              | Props for icon component   |
 
 ---
 
@@ -306,9 +331,14 @@ import { Radio } from 'react-figma-ui';
 <Radio value="Value" id="radioButton3" name="radioGroup" disabled>Radio button</Radio>
 ```
 
-<!-- extends HTMLInputElement -->
-<!-- containerProps HTMLInputElement props -->
-<!-- labelProps HTMLLabelElement props -->
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                          | Description               |
+| ---------------------------------------------------------------------------------------------- | ------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) | Props for radio container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)     | Props for label element   |
 
 ---
 
@@ -338,11 +368,24 @@ const options = [
 />;
 ```
 
-<!-- selectmenu extends HTMLSelectElement -->
+#### Available options
+
+**SelectMenu**
+
+[HTML select element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+<!-- TODO -->
 <!-- options -->
 <!-- render -->
 
-<!-- selectmenuitem extends SelectMenuItemProps -->
+| Param     | Description |
+| --------- | ----------- |
+| `options` |             |
+| `render`  |             |
+
+**SelectMenuOption**
+
+[HTML option element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)
 
 ---
 
@@ -363,9 +406,14 @@ import { Switch } from 'react-figma-ui';
 <Switch id="uniqueId" disabled>Label</Switch>
 ```
 
-<!-- extends HTMLInputElement -->
-<!-- containerProps HTMLDivElement -->
-<!-- labelProps HTMLLabelElement -->
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element    |
 
 ---
 
@@ -383,7 +431,9 @@ import { Textarea } from 'react-figma-ui';
 <Textarea value="Initial value" rows={2} disabled />
 ```
 
-<!-- extends HTMLTextAreaElement -->
+#### Available options
+
+[HTML textarea element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes)
 
 ---
 
@@ -403,7 +453,7 @@ import { Type } from 'react-figma-ui';
 
 #### Available options
 
-<!-- extends HTMLDivElement omit size -->
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
 | Param     | Description                                                                                         |
 | --------- | --------------------------------------------------------------------------------------------------- |
