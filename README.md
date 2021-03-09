@@ -144,7 +144,7 @@ const tips = [
       key={id}
     />
   )}
-/>;
+/>
 ```
 
 #### Available options
@@ -359,7 +359,7 @@ const options = [
       {label}
     </SelectMenuOption>
   )}
-/>;
+/>
 ```
 
 #### Available options
