@@ -124,7 +124,7 @@ import { Checkbox } from 'react-figma-ui';
 To use a disclosure panel, you must use the following component.
 
 ```jsx
-import { Disclosure, DisclosureTip } from 'react-figma-ui';
+import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
 // Example tips
 const tips = [
@@ -136,7 +136,7 @@ const tips = [
 <Disclosure
   tips={tips}
   render={({ heading, content, id }, index) => (
-    <DisclosureTip
+    <DisclosureItem
       heading={heading}
       content={content}
       section={index % 2 === 0}
