@@ -290,11 +290,11 @@ import { Label, SectionTitle } from 'react-figma-ui';
 To create an onboarding tip, use the following component.
 
 ```jsx
-import { Onboarding } from 'react-figma-ui';
+import { OnboardingTip } from 'react-figma-ui';
 
-<Onboarding iconProps={{ iconName: 'styles' }}>
+<OnboardingTip iconProps={{ iconName: 'styles' }}>
   Onboarding tip goes here.
-</Onboarding>
+</OnboardingTip>
 ```
 
 #### Available options
