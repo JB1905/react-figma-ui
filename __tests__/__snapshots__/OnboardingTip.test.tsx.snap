@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Onboarding should render Onboarding 1`] = `
+exports[`OnboardingTip should render OnboardingTip 1`] = `
 <div>
   <div
     class="onboarding-tip"
@@ -18,7 +18,7 @@ exports[`Onboarding should render Onboarding 1`] = `
 </div>
 `;
 
-exports[`Onboarding should render Onboarding with custom className 1`] = `
+exports[`OnboardingTip should render OnboardingTip with custom className 1`] = `
 <div>
   <div
     class="onboarding-tip custom-class-name"
