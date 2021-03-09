@@ -144,7 +144,7 @@ const items = [
       key={id}
     />
   )}
-/>
+/>;
 ```
 
 #### Available options
@@ -153,10 +153,10 @@ const items = [
 
 [HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param    | Description                    |
-| -------- | ------------------------------ |
-| `items`  | Array with disclosure items    |
-| `render` | Render props for DisclosureTip |
+| Param    | Description                     |
+| -------- | ------------------------------- |
+| `items`  | Array with disclosure items     |
+| `render` | Render props for DisclosureItem |
 
 **DisclosureItem**
 
@@ -294,7 +294,7 @@ import { OnboardingTip } from 'react-figma-ui';
 
 <OnboardingTip iconProps={{ iconName: 'styles' }}>
   Onboarding tip goes here.
-</OnboardingTip>
+</OnboardingTip>;
 ```
 
 #### Available options
@@ -359,7 +359,7 @@ const options = [
       {label}
     </SelectMenuOption>
   )}
-/>
+/>;
 ```
 
 #### Available options
