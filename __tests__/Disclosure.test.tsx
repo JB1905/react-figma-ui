@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Disclosure, DisclosureTip } from '../src';
+import { Disclosure, DisclosureItem } from '../src';
 
 describe('Disclosure', () => {
-  const tips = [
+  const items = [
     { heading: 'Heading 1', content: 'Content 1', id: 1 },
     { heading: 'Heading 2', content: 'Content 2', id: 2 },
     { heading: 'Heading 3', content: 'Content 3', id: 3 },
@@ -13,9 +13,9 @@ describe('Disclosure', () => {
   it('should render Disclosure', () => {
     const { container } = render(
       <Disclosure
-        tips={tips}
+        items={items}
         render={({ heading, content, id }, index) => (
-          <DisclosureTip
+          <DisclosureItem
             heading={heading}
             content={content}
             section={index % 2 === 0}
@@ -32,10 +32,10 @@ describe('Disclosure', () => {
   it('should render Disclosure with custom className values', () => {
     const { container } = render(
       <Disclosure
-        tips={tips}
+        items={items}
         className="custom-class-name"
         render={({ heading, content, id }) => (
-          <DisclosureTip
+          <DisclosureItem
             heading={heading}
             content={content}
             className="custom-class-name"

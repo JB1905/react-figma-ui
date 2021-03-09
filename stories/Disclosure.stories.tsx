@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Disclosure, DisclosureTip } from '../src';
+import { Disclosure, DisclosureItem } from '../src';
 
 export default {
   title: 'Disclosure',
@@ -12,7 +12,7 @@ export default {
   },
 } as Meta;
 
-const tips = [
+const items = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
@@ -20,9 +20,9 @@ const tips = [
 
 export const Normal: Story = () => (
   <Disclosure
-    tips={tips}
+    items={items}
     render={({ heading, content, id }) => (
-      <DisclosureTip
+      <DisclosureItem
         heading={heading}
         content={content}
         section={id % 2 === 0}
