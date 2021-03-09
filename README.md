@@ -155,10 +155,10 @@ const tips = [
 
 | Param    | Description                    |
 | -------- | ------------------------------ |
-| `tips`   | Array with disclosure tips     |
+| `items`  | Array with disclosure items    |
 | `render` | Render props for DisclosureTip |
 
-**DisclosureTip**
+**DisclosureItem**
 
 [HTML li element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes) and dedicated params
 
