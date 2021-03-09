@@ -126,15 +126,15 @@ To use a disclosure panel, you must use the following component.
 ```jsx
 import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
-// Example tips
-const tips = [
+// Example items
+const items = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
 <Disclosure
-  tips={tips}
+  items={items}
   render={({ heading, content, id }, index) => (
     <DisclosureItem
       heading={heading}
