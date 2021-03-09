@@ -227,10 +227,10 @@ import { IconButton } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param                | Description                                       |
-| -------------------- | ------------------------------------------------- |
-| `selected`           | Add this option to have selected style for button |
-| [`iconProps`](#icon) | Props for icon component                          |
+| Param                               | Description                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| `selected`                          | Add this option to have selected style for button |
+| [`iconProps`](#available-options-3) | Props for icon component                          |
 
 ---
 
@@ -261,7 +261,7 @@ import { Input } from 'react-figma-ui';
 | Param                                                                                                             | Description                |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
-| [`iconProps`](#icon)                                                                                              | Props for icon component   |
+| [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
 
 ---
 
@@ -304,7 +304,7 @@ import { Onboarding } from 'react-figma-ui';
 | Param                                                                                                             | Description                |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
-| [`iconProps`](#icon)                                                                                              | Props for icon component   |
+| [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
 
 ---
 
