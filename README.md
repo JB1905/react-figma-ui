@@ -110,7 +110,7 @@ import { Checkbox } from 'react-figma-ui';
 
 #### Available options
 
-[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and dedicated params
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
 | Param                                                                                                             | Description                  |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -329,10 +329,10 @@ import { Radio } from 'react-figma-ui';
 
 [HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
-| Param                                                                                          | Description               |
-| ---------------------------------------------------------------------------------------------- | ------------------------- |
-| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) | Props for radio container |
-| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)     | Props for label element   |
+| Param                                                                                                             | Description               |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for radio container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element   |
 
 ---
 
