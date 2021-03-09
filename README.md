@@ -57,8 +57,6 @@ $ yarn add react-figma-ui
 
 ## Components
 
-<!-- TODO add types, required & default values -->
-
 ### Button
 
 To use the button, use the following component. Each button has a destructive option. Tertiary buttons are styled like hyperlinks.
@@ -155,12 +153,10 @@ const tips = [
 
 [HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-<!-- TODO -->
-
-| Param    | Description |
-| -------- | ----------- |
-| `tips`   |             |
-| `render` |             |
+| Param    | Description                    |
+| -------- | ------------------------------ |
+| `tips`   | Array with disclosure tips     |
+| `render` | Render props for DisclosureTip |
 
 **DisclosureTip**
 
@@ -231,12 +227,10 @@ import { IconButton } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-<!-- TODO selected boolean -->
-
-| Param                | Description              |
-| -------------------- | ------------------------ |
-| `selected`           |                          |
-| [`iconProps`](#icon) | Props for icon component |
+| Param                | Description                                       |
+| -------------------- | ------------------------------------------------- |
+| `selected`           | Add this option to have selected style for button |
+| [`iconProps`](#icon) | Props for icon component                          |
 
 ---
 
@@ -374,14 +368,10 @@ const options = [
 
 [HTML select element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-<!-- TODO -->
-<!-- options -->
-<!-- render -->
-
-| Param     | Description |
-| --------- | ----------- |
-| `options` |             |
-| `render`  |             |
+| Param     | Description                       |
+| --------- | --------------------------------- |
+| `options` | Array with select menu options    |
+| `render`  | Render props for SelectMenuOption |
 
 **SelectMenuOption**
 
