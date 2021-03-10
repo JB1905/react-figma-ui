@@ -12,6 +12,7 @@ export default {
   },
 } as Meta;
 
+// TODO
 const tips = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
