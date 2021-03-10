@@ -19,6 +19,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "//TODO": "",
     "postinstall": "patch-package",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
