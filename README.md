@@ -57,6 +57,8 @@ $ yarn add react-figma-ui
 
 ## Components
 
+<!-- TODO add type defs, required & initial values -->
+
 ### Button
 
 To use the button, use the following component. Each button has a destructive option. Tertiary buttons are styled like hyperlinks.
