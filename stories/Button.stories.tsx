@@ -20,7 +20,7 @@ export default {
   argTypes: {
     tint: {
       control: {
-        type: 'select',
+        type: 'inline-radio',
         options: tints,
       },
     },

@@ -21,13 +21,13 @@ export default {
   argTypes: {
     size: {
       control: {
-        type: 'select',
+        type: 'inline-radio',
         options: sizes,
       },
     },
     weight: {
       control: {
-        type: 'select',
+        type: 'inline-radio',
         options: weights,
       },
     },
