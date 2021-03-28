@@ -25,7 +25,25 @@ exports[`Onboarding should render Onboarding with custom className 1`] = `
   >
     <div
       class="icon icon--styles"
-      style="min-width: 32px;"
+      style="min-width: 32px; background-color: red;"
+    />
+    <div
+      class="onboarding-tip__msg custom-class-name"
+    >
+      Onboarding tip goes here.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Onboarding should render Onboarding with custom className and icon style 1`] = `
+<div>
+  <div
+    class="onboarding-tip custom-class-name"
+  >
+    <div
+      class="icon icon--styles"
+      style="min-width: 32px; background-color: red;"
     />
     <div
       class="onboarding-tip__msg custom-class-name"

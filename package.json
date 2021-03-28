@@ -92,6 +92,9 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
     "moduleNameMapper": {
       "figma-plugin-ds": "<rootDir>/__mocks__/figmaPluginMock.ts",
       "\\.(css)$": "<rootDir>/__mocks__/styleMock.ts"

@@ -7,7 +7,7 @@ describe('Label', () => {
   it('should render Label', () => {
     const { getByText, container } = render(<Label>Label</Label>);
 
-    expect(getByText('Hello World!')).toBeInTheDocument();
+    expect(getByText('Label')).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();
   });
