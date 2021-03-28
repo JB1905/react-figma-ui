@@ -3,6 +3,9 @@ import { Meta, Story } from '@storybook/react';
 
 import { Type } from '../src';
 
+import { sizes } from '../src/constants/sizes';
+import { weights } from '../src/constants/weights';
+
 import type { Size, Weight } from '../src/types';
 
 interface Props {
@@ -19,15 +22,13 @@ export default {
     size: {
       control: {
         type: 'select',
-        // TODO
-        options: ['small', 'large', 'xlarge'],
+        options: sizes,
       },
     },
     weight: {
       control: {
         type: 'select',
-        // TODO
-        options: ['medium', 'bold'],
+        options: weights,
       },
     },
   },

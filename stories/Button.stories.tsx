@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 
 import { Button } from '../src';
 
+import { tints } from '../src/constants/tints';
+
 import type { Tint } from '../src/types';
 
 interface Props {
@@ -19,8 +21,7 @@ export default {
     tint: {
       control: {
         type: 'select',
-        // TODO
-        options: ['primary', 'secondary', 'tertiary'],
+        options: tints,
       },
     },
   },
