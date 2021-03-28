@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 
 import { Icon } from '../src';
 
+import { iconNames } from '../src/constants/iconNames';
+
 import type { IconName, ColorName } from '../src/types';
 
 interface Props {
@@ -15,6 +17,14 @@ interface Props {
 export default {
   title: 'Icon',
   component: Icon,
+  argTypes: {
+    iconName: {
+      control: {
+        type: 'select',
+        options: iconNames,
+      },
+    },
+  },
   args: {
     iconName: 'blend',
     spin: false,

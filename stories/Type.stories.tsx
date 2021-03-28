@@ -19,12 +19,14 @@ export default {
     size: {
       control: {
         type: 'select',
+        // TODO
         options: ['small', 'large', 'xlarge'],
       },
     },
     weight: {
       control: {
         type: 'select',
+        // TODO
         options: ['medium', 'bold'],
       },
     },

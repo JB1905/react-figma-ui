@@ -15,11 +15,11 @@ interface Props {
 export default {
   title: 'Button',
   component: Button,
-  // TODO
   argTypes: {
     tint: {
       control: {
         type: 'select',
+        // TODO
         options: ['primary', 'secondary', 'tertiary'],
       },
     },
