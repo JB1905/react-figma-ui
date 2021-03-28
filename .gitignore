@@ -4,4 +4,5 @@ yarn-error.log
 .rpt2_cache
 storybook-static
 coverage
+.husky
 lib

@@ -4,6 +4,8 @@ import { useArgs } from '@storybook/addons';
 
 import { Input } from '../src';
 
+import { iconNames } from '../src/constants/iconNames';
+
 import type { IconName } from '../src/types';
 
 interface Props {
@@ -15,6 +17,14 @@ interface Props {
 
 export default {
   title: 'Input',
+  argTypes: {
+    iconName: {
+      control: {
+        type: 'select',
+        options: iconNames,
+      },
+    },
+  },
   args: {
     value: 'Value',
     placeholder: 'Placeholder',
