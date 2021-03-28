@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 import type { IconName, ColorName } from '../types';
 
@@ -19,10 +19,12 @@ export const Icon = ({
 }: Props) => (
   <div
     {...props}
-    className={sTrimmer(
-      `icon ${className} ${iconName ? `icon--${iconName}` : ''} ${
-        spin ? 'icon--spin' : ''
-      } ${colorName ? `icon--${colorName}` : ''}`
+    className={clsx(
+      'icon',
+      className,
+      iconName && `icon--${iconName}`,
+      spin && 'icon--spin',
+      colorName && `icon--${colorName}`
     )}
   >
     {children}

@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -16,8 +16,10 @@ export const IconButton = ({
 }: Props) => (
   <div
     {...props}
-    className={sTrimmer(
-      `icon-button ${className} ${selected ? 'icon-button--selected' : ''}`
+    className={clsx(
+      'icon-button',
+      className,
+      selected && 'icon-button--selected'
     )}
   >
     <Icon {...iconProps} />

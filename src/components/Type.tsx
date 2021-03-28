@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 import type { Size, Weight } from '../types';
 
@@ -19,10 +19,12 @@ export const Type = ({
 }: Props) => (
   <div
     {...props}
-    className={sTrimmer(
-      `type ${className} ${size ? `type--${size}` : ''} ${
-        weight ? 'type--weight' : ''
-      } ${inverse ? 'type--inverse' : ''}`
+    className={clsx(
+      'type',
+      className,
+      size && `type--${size}`,
+      weight && 'type--weight',
+      inverse && 'type--inverse'
     )}
   >
     {children}

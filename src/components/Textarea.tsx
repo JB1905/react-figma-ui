@@ -1,8 +1,8 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLTextAreaElement>> {}
 
 export const Textarea = ({ className = '', ...props }: Props) => (
-  <textarea {...props} className={sTrimmer(`textarea ${className}`)} />
+  <textarea {...props} className={clsx('textarea', className)} />
 );

@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -24,11 +24,11 @@ export const Onboarding = ({
   return (
     <div
       {...containerRest}
-      className={sTrimmer(`onboarding-tip ${containerClassName}`)}
+      className={clsx('onboarding-tip', containerClassName)}
     >
       <Icon {...iconRest} style={{ minWidth: 32, ...iconStyle }} />
 
-      <div {...props} className={sTrimmer(`onboarding-tip__msg ${className}`)}>
+      <div {...props} className={clsx('onboarding-tip__msg', className)}>
         {children}
       </div>
     </div>
