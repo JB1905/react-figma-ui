@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
@@ -24,8 +24,10 @@ export const Input = ({
   return (
     <div
       {...containerRest}
-      className={sTrimmer(
-        `input ${containerClassName} ${iconName ? 'input--with-icon' : ''}`
+      className={clsx(
+        'input',
+        containerClassName,
+        iconName && 'input--with-icon'
       )}
     >
       {iconName && <Icon {...iconProps} />}
@@ -33,7 +35,7 @@ export const Input = ({
       <input
         {...props}
         type={type}
-        className={sTrimmer(`input__field ${className}`)}
+        className={clsx('input__field', className)}
       />
     </div>
   );

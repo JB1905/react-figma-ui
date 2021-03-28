@@ -39,10 +39,10 @@
   },
   "homepage": "https://github.com/JB1905/react-figma-ui#readme",
   "dependencies": {
+    "clsx": "^1.1.1",
     "figma-plugin-ds": "^0.1.8",
     "patch-package": "^6.4.6",
-    "postinstall-postinstall": "^2.1.0",
-    "s-trimmer": "^1.0.0"
+    "postinstall-postinstall": "^2.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.2.0",
