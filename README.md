@@ -133,18 +133,20 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-<Disclosure
-  tips={tips}
-  render={({ heading, content, id }, index) => (
-    <DisclosureTip
-      heading={heading}
-      content={content}
-      section={index % 2 === 0}
-      expanded={index % 2 === 1}
-      key={id}
-    />
-  )}
-/>
+() => (
+  <Disclosure
+    tips={tips}
+    render={({ heading, content, id }, index) => (
+      <DisclosureTip
+        heading={heading}
+        content={content}
+        section={index % 2 === 0}
+        expanded={index % 2 === 1}
+        key={id}
+      />
+    )}
+  />
+);
 ```
 
 #### Available options
@@ -292,9 +294,11 @@ To create an onboarding tip, use the following component.
 ```jsx
 import { Onboarding } from 'react-figma-ui';
 
-<Onboarding iconProps={{ iconName: 'styles' }}>
-  Onboarding tip goes here.
-</Onboarding>
+() => (
+  <Onboarding iconProps={{ iconName: 'styles' }}>
+    Onboarding tip goes here.
+  </Onboarding>
+);
 ```
 
 #### Available options
@@ -352,14 +356,16 @@ const options = [
   { value: 3, label: 'Option 3' },
 ];
 
-<SelectMenu
-  options={options}
-  render={({ value, label }) => (
-    <SelectMenuOption value={value} key={value}>
-      {label}
-    </SelectMenuOption>
-  )}
-/>
+() => (
+  <SelectMenu
+    options={options}
+    render={({ value, label }) => (
+      <SelectMenuOption value={value} key={value}>
+        {label}
+      </SelectMenuOption>
+    )}
+  />
+);
 ```
 
 #### Available options
