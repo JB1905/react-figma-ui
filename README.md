@@ -11,6 +11,10 @@
 
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
+### Demo
+
+[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+
 ### Alternatives
 
 - [react-figma-plugin-ds](https://github.com/alexandrtovmach/react-figma-plugin-ds/) by [Alexandr Tovmach](https://github.com/alexandrtovmach/)
@@ -20,7 +24,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ## Contents
 
-- [Demo](#demo)
 - [How to Install](#how-to-install)
 - [Components](#components)
   - [Button](#button)
@@ -36,10 +39,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
   - [Switch](#switch)
   - [Textarea](#textarea)
   - [Type](#type)
-
-## Demo
-
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
 
