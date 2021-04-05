@@ -27,7 +27,7 @@ export const Normal: Story<Props> = ({ checked, label, ...args }) => {
       {...args}
       id="uniqueId"
       checked={checked}
-      onClick={() => updateArgs({ checked: !checked })}
+      onChange={(e) => updateArgs({ checked: e.target.checked })} // TODO
     >
       {label}
     </Checkbox>
