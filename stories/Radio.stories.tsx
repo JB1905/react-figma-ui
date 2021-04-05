@@ -27,7 +27,7 @@ export const Normal: Story<Props> = ({ checked, value, ...args }) => {
       {...args}
       id="radioButton"
       checked={checked}
-      onClick={() => updateArgs({ checked: true })}
+      onChange={(e) => updateArgs({ checked: e.target.checked })} // TODO
     >
       {value}
     </Radio>

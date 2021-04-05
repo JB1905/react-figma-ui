@@ -19,9 +19,9 @@ export default {
   component: Icon,
   argTypes: {
     iconName: {
+      options: iconNames,
       control: {
         type: 'select',
-        options: iconNames,
       },
     },
   },

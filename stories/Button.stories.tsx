@@ -19,9 +19,9 @@ export default {
   component: Button,
   argTypes: {
     tint: {
+      options: tints,
       control: {
         type: 'inline-radio',
-        options: tints,
       },
     },
   },

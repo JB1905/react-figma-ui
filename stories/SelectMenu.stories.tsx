@@ -7,7 +7,7 @@ export default {
   title: 'SelectMenu',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
   },
   decorators: [

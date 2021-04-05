@@ -19,9 +19,9 @@ export default {
   title: 'Input',
   argTypes: {
     iconName: {
+      options: iconNames,
       control: {
         type: 'select',
-        options: iconNames,
       },
     },
   },

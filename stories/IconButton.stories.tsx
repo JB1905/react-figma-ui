@@ -16,9 +16,9 @@ export default {
   title: 'IconButton',
   argTypes: {
     iconName: {
+      options: iconNames,
       control: {
         type: 'select',
-        options: iconNames,
       },
     },
   },

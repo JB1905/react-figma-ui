@@ -20,15 +20,15 @@ export default {
   component: Type,
   argTypes: {
     size: {
+      options: sizes,
       control: {
         type: 'inline-radio',
-        options: sizes,
       },
     },
     weight: {
+      options: weights,
       control: {
         type: 'inline-radio',
-        options: weights,
       },
     },
   },
