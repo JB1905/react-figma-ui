@@ -4,6 +4,7 @@ import clsx from 'clsx';
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = ({

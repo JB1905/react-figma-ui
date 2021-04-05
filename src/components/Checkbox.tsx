@@ -2,8 +2,10 @@ import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
 interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+  // extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Checkbox = ({
