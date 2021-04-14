@@ -31,4 +31,5 @@ export function SelectMenu<T extends object>({
 export const SelectMenuOption = ({
   children,
   ...props
-}: SelectMenuItemProps) => <option {...props}>{children}</option>;
+  //@ts-ignore
+}: SelectMenuItemProps) => <option onClick={()=>console.log('in click option', props)}{...props}>{children}</option>;
