@@ -7,6 +7,8 @@ __mocks__
 coverage
 .husky
 
+package-lock.json
+
 tsconfig.json
 .travis.yml
 .prettierrc
