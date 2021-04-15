@@ -27,7 +27,7 @@ export function SelectMenu<T extends object>({
 
   console.log('dwootton in select menu react changed')
   return (
-    <select onchange="onSelect()" onChange={()=>console.log('in onChange')} {...props} className={clsx('select-menu', className)}>
+    <select  onChange={()=>console.log('in onChange')} {...props} className={clsx('select-menu', className)}>
       {options.map(render)}
     </select>
   );
