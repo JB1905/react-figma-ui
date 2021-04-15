@@ -21,6 +21,7 @@ export function SelectMenu<T extends object>({
     return () => selectMenu.destroy();
   }, []);
 
+  console.log('dwootton in select menu react')
   return (
     <select {...props} className={clsx('select-menu', className)}>
       {options.map(render)}

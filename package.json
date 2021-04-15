@@ -43,6 +43,7 @@
     "figma-plugin-ds": "^0.1.8",
     "patch-package": "^6.4.6",
     "postinstall-postinstall": "^2.1.0",
+    "react-figma-ui": "^1.0.1",
     "rollup": "^2.45.2"
   },
   "devDependencies": {
