@@ -1,4 +1,4 @@
-import React, { useEffect, HTMLProps, ReactElement } from 'react';
+import React, { useEffect, useState, HTMLProps, ReactElement } from 'react';
 import { selectMenu } from 'figma-plugin-ds';
 import clsx from 'clsx';
 
@@ -21,13 +21,16 @@ export function SelectMenu<T extends object>({
     return () => selectMenu.destroy();
   }, []);
 
-  function onSelect(){
-    console.log('selected!')
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  function onSelect(event:any){
+    console.log('in onSelect');
+    setSelectedOption(event.target.value);
   }
 
   console.log('dwootton in select menu react changed')
   return (
-    <select onSelect={()=>console.log('in onSelect')} onChange={()=>console.log('in onChange')} {...props} className={clsx('select-menu', className)}>
+    <select onSelect={onSelect} onChange={onSelect} {...props} className={clsx('select-menu', className)}>
       {options.map(render)}
     </select>
   );
