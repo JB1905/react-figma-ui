@@ -11,6 +11,10 @@
 
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
+### Demo
+
+[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+
 ### Alternatives
 
 - [react-figma-plugin-ds](https://github.com/alexandrtovmach/react-figma-plugin-ds/) by [Alexandr Tovmach](https://github.com/alexandrtovmach/)
@@ -20,7 +24,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ## Contents
 
-- [Demo](#demo)
 - [How to Install](#how-to-install)
 - [Components](#components)
   - [Button](#button)
@@ -36,10 +39,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
   - [Switch](#switch)
   - [Textarea](#textarea)
   - [Type](#type)
-
-## Demo
-
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
 
@@ -133,18 +132,20 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-<Disclosure
-  tips={tips}
-  render={({ heading, content, id }, index) => (
-    <DisclosureTip
-      heading={heading}
-      content={content}
-      section={index % 2 === 0}
-      expanded={index % 2 === 1}
-      key={id}
-    />
-  )}
-/>
+() => (
+  <Disclosure
+    tips={tips}
+    render={({ heading, content, id }, index) => (
+      <DisclosureTip
+        heading={heading}
+        content={content}
+        section={index % 2 === 0}
+        expanded={index % 2 === 1}
+        key={id}
+      />
+    )}
+  />
+);
 ```
 
 #### Available options
@@ -292,9 +293,11 @@ To create an onboarding tip, use the following component.
 ```jsx
 import { Onboarding } from 'react-figma-ui';
 
-<Onboarding iconProps={{ iconName: 'styles' }}>
-  Onboarding tip goes here.
-</Onboarding>
+() => (
+  <Onboarding iconProps={{ iconName: 'styles' }}>
+    Onboarding tip goes here.
+  </Onboarding>
+);
 ```
 
 #### Available options
@@ -352,14 +355,16 @@ const options = [
   { value: 3, label: 'Option 3' },
 ];
 
-<SelectMenu
-  options={options}
-  render={({ value, label }) => (
-    <SelectMenuOption value={value} key={value}>
-      {label}
-    </SelectMenuOption>
-  )}
-/>
+() => (
+  <SelectMenu
+    options={options}
+    render={({ value, label }) => (
+      <SelectMenuOption value={value} key={value}>
+        {label}
+      </SelectMenuOption>
+    )}
+  />
+);
 ```
 
 #### Available options

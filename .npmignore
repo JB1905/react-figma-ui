@@ -13,6 +13,7 @@ tsconfig.json
 
 .eslintrc.js
 global.d.ts
+setupTests.ts
 rollup.config.js
 yarn-error.log
 .rpt2_cache

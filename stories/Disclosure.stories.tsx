@@ -7,7 +7,7 @@ export default {
   title: 'Disclosure',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
   },
 } as Meta;

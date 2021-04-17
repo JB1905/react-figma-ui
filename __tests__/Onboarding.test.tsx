@@ -14,10 +14,10 @@ describe('Onboarding', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render Onboarding with custom className', () => {
+  it('should render Onboarding with custom className and icon style', () => {
     const { container } = render(
       <Onboarding
-        iconProps={{ iconName: 'styles' }}
+        iconProps={{ iconName: 'styles', style: { backgroundColor: 'red' } }}
         className="custom-class-name"
         containerProps={{ className: 'custom-class-name' }}
       >
