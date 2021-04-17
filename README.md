@@ -11,6 +11,10 @@
 
 React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds/) by [Tom Lowry](https://github.com/thomas-lowry/)
 
+### Demo
+
+[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+
 ### Alternatives
 
 - [react-figma-plugin-ds](https://github.com/alexandrtovmach/react-figma-plugin-ds/) by [Alexandr Tovmach](https://github.com/alexandrtovmach/)
@@ -20,7 +24,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ## Contents
 
-- [Demo](#demo)
 - [How to Install](#how-to-install)
 - [Components](#components)
   - [Button](#button)
@@ -36,10 +39,6 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
   - [Switch](#switch)
   - [Textarea](#textarea)
   - [Type](#type)
-
-## Demo
-
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ## How to Install
 
@@ -82,6 +81,8 @@ import { Button } from 'react-figma-ui';
 
 #### Available options
 
+[HTML button element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) and dedicated params
+
 | Param         | Description                                                                            |
 | ------------- | -------------------------------------------------------------------------------------- |
 | `tint`        | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink) |
@@ -106,10 +107,14 @@ import { Checkbox } from 'react-figma-ui';
 <Checkbox id="uniqueId" disabled>Label</Checkbox>
 ```
 
-| Param            | Description                  |
-| ---------------- | ---------------------------- |
-| `containerProps` | Props for checkbox container |
-| `labelProps`     | Props for label element      |
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description                  |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for checkbox container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element      |
 
 ---
 
@@ -127,26 +132,45 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-<Disclosure
-  tips={tips}
-  render={({ heading, content, id }, index) => (
-    <DisclosureTip
-      heading={heading}
-      content={content}
-      section={index % 2 === 0}
-      expanded={index % 2 === 1}
-      key={id}
-    />
-  )}
-/>;
+() => (
+  <Disclosure
+    tips={tips}
+    render={({ heading, content, id }, index) => (
+      <DisclosureTip
+        heading={heading}
+        content={content}
+        section={index % 2 === 0}
+        expanded={index % 2 === 1}
+        key={id}
+      />
+    )}
+  />
+);
 ```
 
 #### Available options
 
-| Param      | Description                                   |
-| ---------- | --------------------------------------------- |
-| `section`  | Style label like a heading                    |
-| `expanded` | Add this option to have item expanded on load |
+**Disclosure**
+
+[HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+| Param    | Description                    |
+| -------- | ------------------------------ |
+| `tips`   | Array with disclosure tips     |
+| `render` | Render props for DisclosureTip |
+
+**DisclosureTip**
+
+[HTML li element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes) and dedicated params
+
+| Param                                                                                                           | Description                                   |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `heading`                                                                                                       | Heading text value                            |
+| `content`                                                                                                       | Content text value                            |
+| `section`                                                                                                       | Style label like a heading                    |
+| `expanded`                                                                                                      | Add this option to have item expanded on load |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)   | Props for label element                       |
+| [`contentProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for content element                     |
 
 ---
 
@@ -171,6 +195,8 @@ import { Icon } from 'react-figma-ui';
 ```
 
 #### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
 | Param         | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
@@ -198,6 +224,15 @@ import { IconButton } from 'react-figma-ui';
 <IconButton iconProps={{ iconName: 'blend' }} selected />
 ```
 
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+| Param                               | Description                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| `selected`                          | Add this option to have selected style for button |
+| [`iconProps`](#available-options-3) | Props for icon component                          |
+
 ---
 
 ### Input
@@ -220,6 +255,15 @@ import { Input } from 'react-figma-ui';
 <Input value="Value" iconProps={{ iconName: 'angle' }} />
 ```
 
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
+
 ---
 
 ### Labels and sections
@@ -236,6 +280,10 @@ import { Label, SectionTitle } from 'react-figma-ui';
 <SectionTitle>Section title</SectionTitle>
 ```
 
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)
+
 ---
 
 ### Onboarding tip
@@ -245,10 +293,21 @@ To create an onboarding tip, use the following component.
 ```jsx
 import { Onboarding } from 'react-figma-ui';
 
-<Onboarding iconProps={{ iconName: 'styles' }}>
-  Onboarding tip goes here.
-</Onboarding>;
+() => (
+  <Onboarding iconProps={{ iconName: 'styles' }}>
+    Onboarding tip goes here.
+  </Onboarding>
+);
 ```
+
+#### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
 
 ---
 
@@ -269,6 +328,15 @@ import { Radio } from 'react-figma-ui';
 <Radio value="Value" id="radioButton3" name="radioGroup" disabled>Radio button</Radio>
 ```
 
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description               |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for radio container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element   |
+
 ---
 
 ### Select menu
@@ -287,15 +355,32 @@ const options = [
   { value: 3, label: 'Option 3' },
 ];
 
-<SelectMenu
-  options={options}
-  render={({ value, label }) => (
-    <SelectMenuOption value={value} key={value}>
-      {label}
-    </SelectMenuOption>
-  )}
-/>;
+() => (
+  <SelectMenu
+    options={options}
+    render={({ value, label }) => (
+      <SelectMenuOption value={value} key={value}>
+        {label}
+      </SelectMenuOption>
+    )}
+  />
+);
 ```
+
+#### Available options
+
+**SelectMenu**
+
+[HTML select element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
+
+| Param     | Description                       |
+| --------- | --------------------------------- |
+| `options` | Array with select menu options    |
+| `render`  | Render props for SelectMenuOption |
+
+**SelectMenuOption**
+
+[HTML option element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes)
 
 ---
 
@@ -316,6 +401,15 @@ import { Switch } from 'react-figma-ui';
 <Switch id="uniqueId" disabled>Label</Switch>
 ```
 
+#### Available options
+
+[HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
+
+| Param                                                                                                             | Description                |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
+| [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element    |
+
 ---
 
 ### Textarea
@@ -331,6 +425,10 @@ import { Textarea } from 'react-figma-ui';
 // Textarea disabled
 <Textarea value="Initial value" rows={2} disabled />
 ```
+
+#### Available options
+
+[HTML textarea element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes)
 
 ---
 
@@ -349,6 +447,8 @@ import { Type } from 'react-figma-ui';
 ```
 
 #### Available options
+
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
 | Param     | Description                                                                                         |
 | --------- | --------------------------------------------------------------------------------------------------- |

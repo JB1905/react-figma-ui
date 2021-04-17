@@ -3,6 +3,9 @@ import { Meta, Story } from '@storybook/react';
 
 import { Type } from '../src';
 
+import { sizes } from '../src/constants/sizes';
+import { weights } from '../src/constants/weights';
+
 import type { Size, Weight } from '../src/types';
 
 interface Props {
@@ -15,6 +18,20 @@ interface Props {
 export default {
   title: 'Type',
   component: Type,
+  argTypes: {
+    size: {
+      options: sizes,
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    weight: {
+      options: weights,
+      control: {
+        type: 'inline-radio',
+      },
+    },
+  },
   args: {
     size: 'small',
     weight: 'medium',

@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 
 import { IconButton } from '../src';
 
+import { iconNames } from '../src/constants/iconNames';
+
 import type { IconName } from '../src/types';
 
 interface Props {
@@ -12,6 +14,14 @@ interface Props {
 
 export default {
   title: 'IconButton',
+  argTypes: {
+    iconName: {
+      options: iconNames,
+      control: {
+        type: 'select',
+      },
+    },
+  },
   args: {
     iconName: 'theme',
     selected: false,

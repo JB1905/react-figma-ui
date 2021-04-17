@@ -15,7 +15,7 @@ exports[`Label should render Label with custom className 1`] = `
   <div
     class="label custom-class-name"
   >
-    Label
+    Hello World!
   </div>
 </div>
 `;
