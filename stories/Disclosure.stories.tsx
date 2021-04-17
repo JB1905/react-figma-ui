@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react';
 
 import { Disclosure, DisclosureTip } from '../src';
 
-// TODO
 const tips = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
@@ -16,22 +15,7 @@ interface Props {
 
 export default {
   title: 'Disclosure',
-  argTypes: {
-    tips: {
-      options: tips,
-      control: {
-        type: 'object',
-      },
-    },
-  },
-  // parameters: {
-  //   controls: {
-  //     disable: true,
-  //   },
-  // },
-  args: {
-    tips,
-  },
+  args: { tips },
 } as Meta;
 
 export const Normal: Story<Props> = ({ tips }) => (

@@ -3,13 +3,19 @@ import { Meta, Story } from '@storybook/react';
 
 import { SelectMenu, SelectMenuOption } from '../src';
 
+const options = [
+  { value: 1, label: 'Option 1' },
+  { value: 2, label: 'Option 2' },
+  { value: 3, label: 'Option 3' },
+];
+
+interface Props {
+  readonly options: typeof options;
+}
+
 export default {
   title: 'SelectMenu',
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
+  args: { options },
   decorators: [
     (Story) => (
       <div style={{ minWidth: 200 }}>
@@ -19,14 +25,7 @@ export default {
   ],
 } as Meta;
 
-// TODO
-const options = [
-  { value: 1, label: 'Option 1' },
-  { value: 2, label: 'Option 2' },
-  { value: 3, label: 'Option 3' },
-];
-
-export const Normal: Story = () => (
+export const Normal: Story<Props> = ({ options }) => (
   <SelectMenu
     options={options}
     render={({ value, label }) => (
