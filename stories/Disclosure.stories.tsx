@@ -3,15 +3,6 @@ import { Meta, Story } from '@storybook/react';
 
 import { Disclosure, DisclosureTip } from '../src';
 
-export default {
-  title: 'Disclosure',
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
-} as Meta;
-
 // TODO
 const tips = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
@@ -19,7 +10,31 @@ const tips = [
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-export const Normal: Story = () => (
+interface Props {
+  readonly tips: typeof tips;
+}
+
+export default {
+  title: 'Disclosure',
+  argTypes: {
+    tips: {
+      options: tips,
+      control: {
+        type: 'object',
+      },
+    },
+  },
+  // parameters: {
+  //   controls: {
+  //     disable: true,
+  //   },
+  // },
+  args: {
+    tips,
+  },
+} as Meta;
+
+export const Normal: Story<Props> = ({ tips }) => (
   <Disclosure
     tips={tips}
     render={({ heading, content, id }) => (
