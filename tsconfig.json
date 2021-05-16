@@ -8,7 +8,7 @@
     "outDir": "lib",
     "strict": true,
     "moduleResolution": "Node",
-    "esModuleInterop": true
-  },
-  "include": ["src", "global.d.ts"]
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
 }
