@@ -16,10 +16,8 @@ export const Checkbox = ({
   labelProps = {},
   ...props
 }: Props) => {
-  const {
-    className: containerClassName = '',
-    ...containerRest
-  } = containerProps;
+  const { className: containerClassName = '', ...containerRest } =
+    containerProps;
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (

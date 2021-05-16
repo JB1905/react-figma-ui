@@ -15,10 +15,8 @@ export const Onboarding = ({
   iconProps,
   ...props
 }: Props) => {
-  const {
-    className: containerClassName = '',
-    ...containerRest
-  } = containerProps;
+  const { className: containerClassName = '', ...containerRest } =
+    containerProps;
 
   return (
     <div
