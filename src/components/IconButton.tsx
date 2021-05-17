@@ -1,9 +1,15 @@
-import React, { HTMLProps } from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
-interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
+interface Props
+  extends Readonly<
+    DetailedHTMLProps<
+      ButtonHTMLAttributes<HTMLButtonElement>,
+      HTMLButtonElement
+    >
+  > {
   readonly selected?: boolean;
   readonly iconProps: IconProps;
 }
@@ -14,7 +20,7 @@ export const IconButton = ({
   iconProps,
   ...props
 }: Props) => (
-  <div
+  <button
     {...props}
     className={clsx(
       'icon-button',
@@ -23,5 +29,5 @@ export const IconButton = ({
     )}
   >
     <Icon {...iconProps} />
-  </div>
+  </button>
 );
