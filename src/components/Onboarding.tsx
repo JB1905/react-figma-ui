@@ -5,16 +5,22 @@ import { Icon, Props as IconProps } from './Icon';
 
 interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
-  readonly iconProps: IconProps;
 }
+
+type CustomComponentProps = {
+  readonly sideComponent: React.ReactNode;
+};
+
+type WithIcon = {
+  readonly iconProps: IconProps;
+};
 
 export const Onboarding = ({
   children,
   className = '',
   containerProps = {},
-  iconProps,
   ...props
-}: Props) => {
+}: Props & (CustomComponentProps | WithIcon)) => {
   const { className: containerClassName = '', ...containerRest } =
     containerProps;
 
@@ -23,7 +29,12 @@ export const Onboarding = ({
       {...containerRest}
       className={clsx('onboarding-tip', containerClassName)}
     >
-      <Icon {...iconProps} />
+      {/* TODO refactor */}
+      {'sideComponent' in props ? (
+        props.sideComponent
+      ) : (
+        <Icon {...props.iconProps} />
+      )}
 
       <div {...props} className={clsx('onboarding-tip__msg', className)}>
         {children}
