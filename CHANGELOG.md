@@ -1,5 +1,16 @@
 # React Figma UI Changelog
 
+## 1.1.0 (2021-05-17)
+
+#### Breaking Changes
+
+- updated `figma-plugin-ds` to v1
+
+#### Bug Fix
+
+- fixed incorrect icon names
+- fixed incorrect types for `onChange` event
+
 ## 1.0.1 (2020-12-02)
 
 #### Bug Fix

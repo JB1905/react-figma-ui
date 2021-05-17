@@ -1,6 +1,6 @@
 {
   "name": "react-figma-ui",
-  "version": "1.1.0-beta.4",
+  "version": "1.1.0",
   "description": "React implementation for figma-plugin-ds",
   "author": "Jakub Biesiada",
   "license": "MIT",
