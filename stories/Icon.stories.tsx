@@ -4,6 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import { Icon } from '../src';
 
 import { iconNames } from '../src/constants/iconNames';
+import { colorNames } from '../src/constants/colorNames';
 
 import type { IconName, ColorName } from '../src/types';
 
@@ -24,9 +25,16 @@ export default {
         type: 'select',
       },
     },
+    colorName: {
+      options: colorNames,
+      control: {
+        type: 'select',
+      },
+    },
   },
   args: {
     iconName: 'blend',
+    colorName: 'black',
     spin: false,
     value: '',
   },
