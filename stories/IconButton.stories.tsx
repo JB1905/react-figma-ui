@@ -25,7 +25,7 @@ export default {
   args: {
     iconName: 'theme',
     selected: false,
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ iconName, ...args }) => (

@@ -19,7 +19,7 @@ export default {
     value: 'Initial Value',
     rows: 2,
     disabled: false,
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ value, ...args }) => {

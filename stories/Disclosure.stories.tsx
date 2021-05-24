@@ -15,7 +15,7 @@ interface Props {
 
 export default {
   title: 'Disclosure',
-  args: { tips },
+  args: { tips } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ tips }) => (

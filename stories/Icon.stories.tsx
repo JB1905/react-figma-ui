@@ -37,7 +37,7 @@ export default {
     colorName: 'black',
     spin: false,
     value: '',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ value, ...args }) => (
