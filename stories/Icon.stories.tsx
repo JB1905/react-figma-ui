@@ -10,7 +10,7 @@ import type { IconName, ColorName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;
-  readonly iconColor: ColorName;
+  readonly colorName: ColorName;
   readonly spin: boolean;
   readonly value: string;
 }
