@@ -8,7 +8,7 @@ export const parameters = {
     },
   },
   docs: { page: null },
-  layout: 'fullscreen',
+  // layout: 'fullscreen',
 };
 
 addDecorator((Story) => (

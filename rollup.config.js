@@ -2,12 +2,12 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+// import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 import pkg from './package.json';
 
 export default {
-  input: 'src/index.ts',
+  input: 'src', // TODO
   output: [
     {
       file: pkg.main,
@@ -22,7 +22,8 @@ export default {
   ],
   plugins: [
     resolve(),
-    peerDepsExternal(),
+    // peerDepsExternal(),
+    // TODO
     postcss({
       extract: false,
       modules: true,
