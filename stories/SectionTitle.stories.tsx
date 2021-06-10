@@ -12,7 +12,7 @@ export default {
   component: SectionTitle,
   args: {
     sectionTitle: 'Section Title',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ sectionTitle }) => (

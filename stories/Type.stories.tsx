@@ -37,7 +37,7 @@ export default {
     weight: 'medium',
     inverse: false,
     text: 'Hello World!',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ text, ...args }) => (

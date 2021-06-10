@@ -25,7 +25,7 @@ export default {
   args: {
     iconName: 'warning',
     message: 'Onboarding tip goes here.',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ iconName, message }) => (
