@@ -19,14 +19,11 @@ module.exports = {
     },
   },
   rules: {
-    // TODO
-    // 'react/jsx-uses-react': 'off',
-    // 'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/display-name': 'off',
-    'no-unused-vars': 'off', // TODO
+    'no-unused-vars': 'off',
   },
   settings: {
     react: {
