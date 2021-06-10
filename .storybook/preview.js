@@ -7,8 +7,10 @@ export const parameters = {
       hidden: true,
     },
   },
+  backgrounds: {
+    disable: true,
+  },
   docs: { page: null },
-  // layout: 'fullscreen',
 };
 
 addDecorator((Story) => (

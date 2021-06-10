@@ -38,6 +38,11 @@ export default {
     spin: false,
     value: '',
   } as Props,
+  parameters: {
+    backgrounds: {
+      disable: false,
+    },
+  },
 } as Meta;
 
 export const Normal: Story<Props> = ({ value, ...args }) => (
