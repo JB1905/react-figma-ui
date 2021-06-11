@@ -32,8 +32,8 @@ export default {
     terser(),
   ],
   external: [
-    ...Object.keys(pkg.dependencies),
-    ...Object.keys(pkg.peerDependencies),
+    ...Object.keys(pkg.dependencies || {}),
+    ...Object.keys(pkg.peerDependencies || {}),
     'figma-plugin-ds/dist/figma-plugin-ds.css',
   ],
 };
