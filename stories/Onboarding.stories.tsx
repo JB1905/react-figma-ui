@@ -14,6 +14,7 @@ interface Props {
 
 export default {
   title: 'Onboarding',
+  component: Onboarding,
   argTypes: {
     iconName: {
       options: iconNames,

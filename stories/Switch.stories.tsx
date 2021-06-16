@@ -12,6 +12,7 @@ interface Props {
 
 export default {
   title: 'Switch',
+  component: Switch,
   args: {
     checked: false,
     disabled: false,

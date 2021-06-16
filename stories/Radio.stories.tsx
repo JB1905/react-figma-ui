@@ -12,6 +12,7 @@ interface Props {
 
 export default {
   title: 'Radio',
+  component: Radio,
   args: {
     checked: false,
     disabled: false,
