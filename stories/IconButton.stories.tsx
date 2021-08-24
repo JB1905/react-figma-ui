@@ -14,6 +14,7 @@ interface Props {
 
 export default {
   title: 'IconButton',
+  component: IconButton,
   argTypes: {
     iconName: {
       options: iconNames,

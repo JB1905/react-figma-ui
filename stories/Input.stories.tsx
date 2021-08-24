@@ -17,6 +17,7 @@ interface Props {
 
 export default {
   title: 'Input',
+  component: Input,
   argTypes: {
     iconName: {
       options: iconNames,

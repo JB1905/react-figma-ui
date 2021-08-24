@@ -12,6 +12,7 @@ interface Props {
 
 export default {
   title: 'Checkbox',
+  component: Checkbox,
   args: {
     checked: false,
     disabled: false,

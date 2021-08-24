@@ -15,6 +15,8 @@ interface Props {
 
 export default {
   title: 'SelectMenu',
+  component: SelectMenu,
+  subcomponents: { SelectMenuOption },
   args: { options } as Props, // TODO fix error onChange
   decorators: [
     (Story) => (

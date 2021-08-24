@@ -15,6 +15,8 @@ interface Props {
 
 export default {
   title: 'Disclosure',
+  component: Disclosure,
+  subcomponents: { DisclosureTip },
   args: { tips } as Props,
 } as Meta;
 
