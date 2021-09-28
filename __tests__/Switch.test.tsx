@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import { Switch } from '../src';
 
 describe('Switch', () => {
+  // TODO onChange
   it('should render Switch', () => {
     const { container } = render(
       <Switch id="uniqueId" readOnly>
@@ -15,6 +16,7 @@ describe('Switch', () => {
   });
 
   it('should render checked Switch', () => {
+    // TODO onChange
     const { container } = render(
       <Switch id="uniqueId" readOnly checked>
         Label
@@ -25,6 +27,7 @@ describe('Switch', () => {
   });
 
   it('should render disabled Switch', () => {
+    // TODO onChange
     const { container } = render(
       <Switch id="uniqueId" readOnly disabled>
         Label

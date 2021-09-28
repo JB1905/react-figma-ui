@@ -25,6 +25,9 @@ describe('Onboarding', () => {
       </Onboarding>
     );
 
+    // TODO getByText
     expect(container).toMatchSnapshot();
   });
+
+  // TODO onClose
 });

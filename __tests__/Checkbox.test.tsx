@@ -25,6 +25,7 @@ describe('Checkbox', () => {
   });
 
   it('should render disabled Checkbox', () => {
+    // TODO onClick
     const { container } = render(
       <Checkbox id="uniqueId" readOnly disabled>
         Label

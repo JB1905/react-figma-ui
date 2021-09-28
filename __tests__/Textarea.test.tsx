@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import { Textarea } from '../src';
 
 describe('Textarea', () => {
+  // TODO onChange
   it('should render Textarea', () => {
     const { container } = render(
       <Textarea value="Initial value" rows={2} readOnly />
@@ -32,4 +33,6 @@ describe('Textarea', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // TODO disabled
 });
