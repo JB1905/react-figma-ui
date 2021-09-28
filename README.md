@@ -83,7 +83,10 @@ import { Button } from 'react-figma-ui';
 
 [HTML button element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) and dedicated params
 
-| Param         | Description                                                                            |
+<!-- TODO? extra columns -->
+<!-- TODO? ` -> ** -->
+
+| Name          | Description                                                                            |
 | ------------- | -------------------------------------------------------------------------------------- |
 | `tint`        | Display style for button: primary (filled), secondary (outlined), tertiary (hyperlink) |
 | `destructive` | Add red destructive variant for actions such as deleting something                     |
@@ -111,7 +114,7 @@ import { Checkbox } from 'react-figma-ui';
 
 [HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
-| Param                                                                                                             | Description                  |
+| Name                                                                                                              | Description                  |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for checkbox container |
 | [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element      |
@@ -154,7 +157,7 @@ const tips = [
 
 [HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param    | Description                    |
+| Name     | Description                    |
 | -------- | ------------------------------ |
 | `tips`   | Array with disclosure tips     |
 | `render` | Render props for DisclosureTip |
@@ -163,7 +166,7 @@ const tips = [
 
 [HTML li element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes) and dedicated params
 
-| Param                                                                                                           | Description                                   |
+| Name                                                                                                            | Description                                   |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | `heading`                                                                                                       | Heading text value                            |
 | `content`                                                                                                       | Content text value                            |
@@ -198,7 +201,7 @@ import { Icon } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param         | Description                                                                        |
+| Name          | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
 | `iconName`    | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
 | `spin`        | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon) |
@@ -228,7 +231,7 @@ import { IconButton } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param                               | Description                                       |
+| Name                                | Description                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | `selected`                          | Add this option to have selected style for button |
 | [`iconProps`](#available-options-3) | Props for icon component                          |
@@ -259,7 +262,7 @@ import { Input } from 'react-figma-ui';
 
 [HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
-| Param                                                                                                             | Description                |
+| Name                                                                                                              | Description                |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
 | [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
@@ -304,7 +307,7 @@ import { Onboarding } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param                                                                                                             | Description                |
+| Name                                                                                                              | Description                |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
 | [`iconProps`](#available-options-3)                                                                               | Props for icon component   |
@@ -332,7 +335,7 @@ import { Radio } from 'react-figma-ui';
 
 [HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
-| Param                                                                                                             | Description               |
+| Name                                                                                                              | Description               |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for radio container |
 | [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element   |
@@ -373,7 +376,7 @@ const options = [
 
 [HTML select element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param     | Description                       |
+| Name      | Description                       |
 | --------- | --------------------------------- |
 | `options` | Array with select menu options    |
 | `render`  | Render props for SelectMenuOption |
@@ -405,7 +408,7 @@ import { Switch } from 'react-figma-ui';
 
 [HTML input element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes) and dedicated params
 
-| Param                                                                                                             | Description                |
+| Name                                                                                                              | Description                |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [`containerProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) | Props for switch container |
 | [`labelProps`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attributes)                        | Props for label element    |
@@ -450,7 +453,7 @@ import { Type } from 'react-figma-ui';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param     | Description                                                                                         |
+| Name      | Description                                                                                         |
 | --------- | --------------------------------------------------------------------------------------------------- |
 | `size`    | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px                                    |
 | `weight`  | Font weight: medium, bold                                                                           |

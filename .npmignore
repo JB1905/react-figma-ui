@@ -5,11 +5,10 @@ storybook-static
 __tests__
 __mocks__
 coverage
-
+.husky
 tsconfig.json
 .travis.yml
 .prettierrc
-
 .eslintrc.js
 global.d.ts
 setupTests.ts
