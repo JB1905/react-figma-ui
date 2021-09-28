@@ -1,4 +1,4 @@
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps, useMemo } from 'react';
 import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
@@ -7,34 +7,37 @@ interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
-type CustomComponentProps = {
+interface OnboardingSideComponentProps {
   readonly sideComponent: React.ReactNode;
-};
+}
 
-type WithIcon = {
+interface OnboardingIconProps {
   readonly iconProps: IconProps;
-};
+}
 
 export const Onboarding = ({
   children,
   className = '',
   containerProps = {},
   ...props
-}: Props & (CustomComponentProps | WithIcon)) => {
+}: Props & (OnboardingSideComponentProps | OnboardingIconProps)) => {
   const { className: containerClassName = '', ...containerRest } =
     containerProps;
+
+  const sideComponent = useMemo(() => {
+    if ('sideComponent' in props) {
+      return props.sideComponent;
+    }
+
+    return <Icon {...props.iconProps} />;
+  }, [props]);
 
   return (
     <div
       {...containerRest}
       className={clsx('onboarding-tip', containerClassName)}
     >
-      {/* TODO refactor */}
-      {'sideComponent' in props ? (
-        props.sideComponent
-      ) : (
-        <Icon {...props.iconProps} />
-      )}
+      {sideComponent}
 
       <div {...props} className={clsx('onboarding-tip__msg', className)}>
         {children}
