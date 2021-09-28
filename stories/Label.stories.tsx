@@ -12,7 +12,7 @@ export default {
   component: Label,
   args: {
     label: 'Label',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ label }) => <Label>{label}</Label>;

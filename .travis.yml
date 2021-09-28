@@ -26,4 +26,4 @@ jobs:
           github_token: $GITHUB_TOKEN
           local_dir: storybook-static
           on:
-            branch: master
+            branch: main

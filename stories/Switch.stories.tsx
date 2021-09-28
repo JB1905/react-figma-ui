@@ -16,7 +16,7 @@ export default {
     checked: false,
     disabled: false,
     value: 'Label',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ checked, value, ...args }) => {
