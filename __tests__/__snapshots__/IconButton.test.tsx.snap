@@ -2,36 +2,36 @@
 
 exports[`IconButton should render Icon Button with a blend icon 1`] = `
 <div>
-  <button
+  <div
     class="icon-button"
   >
     <div
       class="icon icon--blend"
     />
-  </button>
+  </div>
 </div>
 `;
 
 exports[`IconButton should render Icon Button with selected option 1`] = `
 <div>
-  <button
+  <div
     class="icon-button icon-button--selected"
   >
     <div
       class="icon icon--blend"
     />
-  </button>
+  </div>
 </div>
 `;
 
 exports[`IconButton should render IconButton with custom className 1`] = `
 <div>
-  <button
+  <div
     class="icon-button custom-class-name"
   >
     <div
       class="icon icon--blend"
     />
-  </button>
+  </div>
 </div>
 `;
