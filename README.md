@@ -13,7 +13,7 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ### Demo
 
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+[**Playground – play with the library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ### Alternatives
 
@@ -200,7 +200,7 @@ import { Icon } from 'react-figma-ui';
 
 | Param         | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
-| `iconName`    | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
+| `iconName`    | Specify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
 | `spin`        | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon) |
 | `colorName`\* | Pass the name of any Figma color var to this prop (e.g.: `blue`, `black3`)         |
 
@@ -454,7 +454,7 @@ import { Type } from 'react-figma-ui';
 | --------- | --------------------------------------------------------------------------------------------------- |
 | `size`    | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px                                    |
 | `weight`  | Font weight: medium, bold                                                                           |
-| `inverse` | Inversed (negative) application where light text is on dark background with increased letterspacing |
+| `inverse` | Inverted (negative) application where light text is on dark background with increased letterspacing |
 
 _Defaults: Font size 11px, normal weight, positive application_
 
