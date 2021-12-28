@@ -22,7 +22,7 @@ jobs:
           script: yarn semantic-release
 
         - provider: pages
-          github_token: $GITHUB_TOKEN
+          github_token: $GH_TOKEN
           local_dir: storybook-static
           on:
             branch: main
