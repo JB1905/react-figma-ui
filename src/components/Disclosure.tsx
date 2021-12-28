@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
 interface DisclosureProps<T> extends Readonly<HTMLProps<HTMLUListElement>> {
   readonly tips: T[];
-  readonly render(...tipData: [T, number, T[]]): ReactElement;
+  render(...tipData: [T, number, T[]]): ReactElement;
 }
 
 interface DisclosureTipProps
