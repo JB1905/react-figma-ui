@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 interface SelectMenuProps<T> extends Readonly<HTMLProps<HTMLSelectElement>> {
   readonly options: T[];
-  readonly render(...optionData: [T, number, T[]]): ReactElement;
+  render(...optionData: [T, number, T[]]): ReactElement;
 }
 
 interface SelectMenuItemProps extends Readonly<HTMLProps<HTMLOptionElement>> {}
