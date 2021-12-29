@@ -10,7 +10,7 @@ script:
   - yarn install
   - yarn test
   - bash <(curl -s https://codecov.io/bash)
-  - yarn pack
+  - yarn build
   - yarn build-storybook
 
 jobs:
