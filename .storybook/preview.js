@@ -25,8 +25,6 @@ addDecorator((Story) => (
       padding: '1rem',
     }}
   >
-    {/* TODO remove temporary workaround - https://github.com/storybookjs/storybook/issues/11657 */}
-    {Story()}
-    {/* <Story /> */}
+    <Story />
   </div>
 ));
