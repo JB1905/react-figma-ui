@@ -6,7 +6,7 @@ import React, {
   LiHTMLAttributes,
 } from 'react';
 import { disclosure } from 'figma-plugin-ds';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
 interface DisclosureProps<T> extends Readonly<HTMLProps<HTMLUListElement>> {
   readonly items: T[];
@@ -38,7 +38,7 @@ export function Disclosure<T extends object>({
   }, []);
 
   return (
-    <ul {...props} className={sTrimmer(`disclosure ${className}`)}>
+    <ul {...props} className={clsx('disclosure', className)}>
       {items.map(render)}
     </ul>
   );
@@ -60,18 +60,18 @@ export const DisclosureItem = ({
   return (
     <li
       {...props}
-      className={sTrimmer(
-        `disclosure__item ${className} ${
-          expanded ? 'disclosure--expanded' : ''
-        }`
+      className={clsx(
+        'disclosure__item',
+        className,
+        expanded && 'disclosure--expanded'
       )}
     >
       <div
         {...labelRest}
-        className={sTrimmer(
-          `disclosure__label ${labelClassName} ${
-            section ? 'disclosure--section' : ''
-          }`
+        className={clsx(
+          'disclosure__label',
+          labelClassName,
+          section && 'disclosure--section'
         )}
       >
         {heading}
@@ -79,7 +79,7 @@ export const DisclosureItem = ({
 
       <div
         {...contentRest}
-        className={sTrimmer(`disclosure__content ${contentClassName}`)}
+        className={clsx('disclosure__content', contentClassName)}
       >
         {content}
       </div>

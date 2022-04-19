@@ -3,8 +3,19 @@ import { Meta, Story } from '@storybook/react';
 
 import { Disclosure, DisclosureItem } from '../src';
 
+const items = [
+  { heading: 'Heading 1', content: 'Content 1', id: 1 },
+  { heading: 'Heading 2', content: 'Content 2', id: 2 },
+  { heading: 'Heading 3', content: 'Content 3', id: 3 },
+];
+
+interface Props {
+  readonly items: typeof items;
+}
+
 export default {
   title: 'Disclosure',
+  args: { items },
   parameters: {
     controls: {
       disabled: true,
@@ -12,13 +23,7 @@ export default {
   },
 } as Meta;
 
-const items = [
-  { heading: 'Heading 1', content: 'Content 1', id: 1 },
-  { heading: 'Heading 2', content: 'Content 2', id: 2 },
-  { heading: 'Heading 3', content: 'Content 3', id: 3 },
-];
-
-export const Normal: Story = () => (
+export const Normal: Story<Props> = ({ items }) => (
   <Disclosure
     items={items}
     render={({ heading, content, id }) => (

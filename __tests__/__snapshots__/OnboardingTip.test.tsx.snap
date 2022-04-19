@@ -18,14 +18,14 @@ exports[`OnboardingTip should render OnboardingTip 1`] = `
 </div>
 `;
 
-exports[`OnboardingTip should render OnboardingTip with custom className 1`] = `
+exports[`OnboardingTip should render OnboardingTip with custom className and icon style 1`] = `
 <div>
   <div
     class="onboarding-tip custom-class-name"
   >
     <div
       class="icon icon--styles"
-      style="min-width: 32px;"
+      style="min-width: 32px; background-color: red;"
     />
     <div
       class="onboarding-tip__msg custom-class-name"

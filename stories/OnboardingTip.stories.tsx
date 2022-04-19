@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 
 import { OnboardingTip } from '../src';
 
+import { iconNames } from '../src/constants/iconNames';
+
 import type { IconName } from '../src/types';
 
 interface Props {
@@ -12,6 +14,14 @@ interface Props {
 
 export default {
   title: 'OnboardingTip',
+  argTypes: {
+    iconName: {
+      options: iconNames,
+      control: {
+        type: 'select',
+      },
+    },
+  },
   args: {
     iconName: 'warning',
     message: 'Onboarding tip goes here.',

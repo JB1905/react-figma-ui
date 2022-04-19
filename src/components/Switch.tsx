@@ -1,9 +1,11 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
-interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+interface Props
+  extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Switch = ({
@@ -21,21 +23,18 @@ export const Switch = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div
-      {...containerRest}
-      className={sTrimmer(`switch ${containerClassName}`)}
-    >
+    <div {...containerRest} className={clsx('switch', containerClassName)}>
       <input
         {...props}
         id={id}
         type="checkbox"
-        className={sTrimmer(`switch__toggle ${className}`)}
+        className={clsx('switch__toggle', className)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={sTrimmer(`switch__label ${labelClassName}`)}
+        className={clsx('switch__label', labelClassName)}
       >
         {children}
       </label>

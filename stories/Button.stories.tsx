@@ -3,6 +3,8 @@ import { Meta, Story } from '@storybook/react';
 
 import { Button } from '../src';
 
+import { tints } from '../src/constants/tints';
+
 import type { Tint } from '../src/types';
 
 interface Props {
@@ -15,6 +17,14 @@ interface Props {
 export default {
   title: 'Button',
   component: Button,
+  argTypes: {
+    tint: {
+      options: tints,
+      control: {
+        type: 'inline-radio',
+      },
+    },
+  },
   args: {
     tint: 'primary',
     destructive: false,

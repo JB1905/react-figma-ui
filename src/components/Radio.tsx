@@ -1,9 +1,11 @@
 import React, { HTMLProps } from 'react';
-import sTrimmer from 's-trimmer';
+import clsx from 'clsx';
 
-interface Props extends Readonly<HTMLProps<HTMLInputElement>> {
+interface Props
+  extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = ({
@@ -21,18 +23,18 @@ export const Radio = ({
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (
-    <div {...containerRest} className={sTrimmer(`radio ${containerClassName}`)}>
+    <div {...containerRest} className={clsx('radio', containerClassName)}>
       <input
         {...props}
         id={id}
         type="radio"
-        className={sTrimmer(`radio__button ${className}`)}
+        className={clsx('radio__button', className)}
       />
 
       <label
         {...labelRest}
         htmlFor={id}
-        className={sTrimmer(`radio__label ${labelClassName}`)}
+        className={clsx('radio__label', labelClassName)}
       >
         {children}
       </label>
