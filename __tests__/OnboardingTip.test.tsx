@@ -1,28 +1,28 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Onboarding } from '../src';
+import { OnboardingTip } from '../src';
 
-describe('Onboarding', () => {
-  it('should render Onboarding', () => {
+describe('OnboardingTip', () => {
+  it('should render OnboardingTip', () => {
     const { container } = render(
-      <Onboarding iconProps={{ iconName: 'styles' }}>
+      <OnboardingTip iconProps={{ iconName: 'styles' }}>
         Onboarding tip goes here.
-      </Onboarding>
+      </OnboardingTip>
     );
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should render Onboarding with custom className and icon style', () => {
+  it('should render OnboardingTip with custom className and icon style', () => {
     const { container } = render(
-      <Onboarding
+      <OnboardingTip
         iconProps={{ iconName: 'styles', style: { backgroundColor: 'red' } }}
         className="custom-class-name"
         containerProps={{ className: 'custom-class-name' }}
       >
         Onboarding tip goes here.
-      </Onboarding>
+      </OnboardingTip>
     );
 
     expect(container).toMatchSnapshot();

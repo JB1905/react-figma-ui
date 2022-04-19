@@ -9,11 +9,11 @@ import { disclosure } from 'figma-plugin-ds';
 import clsx from 'clsx';
 
 interface DisclosureProps<T> extends Readonly<HTMLProps<HTMLUListElement>> {
-  readonly tips: T[];
-  render(...tipData: [T, number, T[]]): ReactElement;
+  readonly items: T[];
+  render(...itemData: [T, number, T[]]): ReactElement;
 }
 
-interface DisclosureTipProps
+interface DisclosureItemProps
   extends Readonly<
     DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
   > {
@@ -26,7 +26,7 @@ interface DisclosureTipProps
 }
 
 export function Disclosure<T extends object>({
-  tips,
+  items,
   render,
   className = '',
   ...props
@@ -39,12 +39,12 @@ export function Disclosure<T extends object>({
 
   return (
     <ul {...props} className={clsx('disclosure', className)}>
-      {tips.map(render)}
+      {items.map(render)}
     </ul>
   );
 }
 
-export const DisclosureTip = ({
+export const DisclosureItem = ({
   section,
   expanded,
   heading,
@@ -53,7 +53,7 @@ export const DisclosureTip = ({
   labelProps = {},
   contentProps = {},
   ...props
-}: DisclosureTipProps) => {
+}: DisclosureItemProps) => {
   const { className: labelClassName = '', ...labelRest } = labelProps;
   const { className: contentClassName = '', ...contentRest } = contentProps;
 

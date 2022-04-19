@@ -1,28 +1,33 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Disclosure, DisclosureTip } from '../src';
+import { Disclosure, DisclosureItem } from '../src';
 
-const tips = [
+const items = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
 interface Props {
-  readonly tips: typeof tips;
+  readonly items: typeof items;
 }
 
 export default {
   title: 'Disclosure',
-  args: { tips } as Props,
+  args: { items } as Props,
+  parameters: {
+    controls: {
+      disabled: true,
+    },
+  },
 } as Meta;
 
-export const Normal: Story<Props> = ({ tips }) => (
+export const Normal: Story<Props> = ({ items }) => (
   <Disclosure
-    tips={tips}
+    items={items}
     render={({ heading, content, id }) => (
-      <DisclosureTip
+      <DisclosureItem
         heading={heading}
         content={content}
         section={id % 2 === 0}

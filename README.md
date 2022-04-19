@@ -123,29 +123,27 @@ import { Checkbox } from 'react-figma-ui';
 To use a disclosure panel, you must use the following component.
 
 ```jsx
-import { Disclosure, DisclosureTip } from 'react-figma-ui';
+import { Disclosure, DisclosureItem } from 'react-figma-ui';
 
-// Example tips
-const tips = [
+// Example items
+const items = [
   { heading: 'Heading 1', content: 'Content 1', id: 1 },
   { heading: 'Heading 2', content: 'Content 2', id: 2 },
   { heading: 'Heading 3', content: 'Content 3', id: 3 },
 ];
 
-() => (
-  <Disclosure
-    tips={tips}
-    render={({ heading, content, id }, index) => (
-      <DisclosureTip
-        heading={heading}
-        content={content}
-        section={index % 2 === 0}
-        expanded={index % 2 === 1}
-        key={id}
-      />
-    )}
-  />
-);
+<Disclosure
+  items={items}
+  render={({ heading, content, id }, index) => (
+    <DisclosureItem
+      heading={heading}
+      content={content}
+      section={index % 2 === 0}
+      expanded={index % 2 === 1}
+      key={id}
+    />
+  )}
+/>
 ```
 
 #### Available options
@@ -154,12 +152,12 @@ const tips = [
 
 [HTML ul element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#list_of_global_attributes) and dedicated params
 
-| Param    | Description                    |
-| -------- | ------------------------------ |
-| `tips`   | Array with disclosure tips     |
-| `render` | Render props for DisclosureTip |
+| Param    | Description                     |
+| -------- | ------------------------------- |
+| `items`  | Array with disclosure items     |
+| `render` | Render props for DisclosureItem |
 
-**DisclosureTip**
+**DisclosureItem**
 
 [HTML li element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes) and dedicated params
 
@@ -291,13 +289,11 @@ import { Label, SectionTitle } from 'react-figma-ui';
 To create an onboarding tip, use the following component.
 
 ```jsx
-import { Onboarding } from 'react-figma-ui';
+import { OnboardingTip } from 'react-figma-ui';
 
-() => (
-  <Onboarding iconProps={{ iconName: 'styles' }}>
-    Onboarding tip goes here.
-  </Onboarding>
-);
+<OnboardingTip iconProps={{ iconName: 'styles' }}>
+  Onboarding tip goes here.
+</OnboardingTip>
 ```
 
 #### Available options
