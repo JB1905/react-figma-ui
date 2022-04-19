@@ -7,7 +7,6 @@ exports[`OnboardingTip should render OnboardingTip 1`] = `
   >
     <div
       class="icon icon--styles"
-      style="min-width: 32px;"
     />
     <div
       class="onboarding-tip__msg"
@@ -25,7 +24,7 @@ exports[`OnboardingTip should render OnboardingTip with custom className and ico
   >
     <div
       class="icon icon--styles"
-      style="min-width: 32px; background-color: red;"
+      style="background-color: red;"
     />
     <div
       class="onboarding-tip__msg custom-class-name"

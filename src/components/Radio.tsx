@@ -5,7 +5,7 @@ interface Props
   extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = ({
@@ -16,10 +16,8 @@ export const Radio = ({
   labelProps = {},
   ...props
 }: Props) => {
-  const {
-    className: containerClassName = '',
-    ...containerRest
-  } = containerProps;
+  const { className: containerClassName = '', ...containerRest } =
+    containerProps;
   const { className: labelClassName = '', ...labelRest } = labelProps;
 
   return (

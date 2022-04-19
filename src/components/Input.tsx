@@ -15,10 +15,8 @@ export const Input = ({
   iconProps = {},
   ...props
 }: Props) => {
-  const {
-    className: containerClassName = '',
-    ...containerRest
-  } = containerProps;
+  const { className: containerClassName = '', ...containerRest } =
+    containerProps;
   const { iconName } = iconProps;
 
   return (

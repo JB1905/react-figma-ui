@@ -30,7 +30,7 @@ export default {
     destructive: false,
     disabled: false,
     label: 'Label',
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ label, ...args }) => (

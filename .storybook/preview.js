@@ -7,8 +7,10 @@ export const parameters = {
       hidden: true,
     },
   },
+  backgrounds: {
+    disable: true,
+  },
   docs: { page: null },
-  layout: 'fullscreen',
 };
 
 addDecorator((Story) => (
@@ -23,8 +25,6 @@ addDecorator((Story) => (
       padding: '1rem',
     }}
   >
-    {/* TODO remove temporary workaround - https://github.com/storybookjs/storybook/issues/11657 */}
-    {Story()}
-    {/* <Story /> */}
+    <Story />
   </div>
 ));

@@ -30,7 +30,7 @@ export default {
     placeholder: 'Placeholder',
     iconName: 'search',
     disabled: false,
-  },
+  } as Props,
 } as Meta;
 
 export const Normal: Story<Props> = ({ iconName, ...args }) => {

@@ -4,12 +4,13 @@ import { Meta, Story } from '@storybook/react';
 import { Icon } from '../src';
 
 import { iconNames } from '../src/constants/iconNames';
+import { colorNames } from '../src/constants/colorNames';
 
 import type { IconName, ColorName } from '../src/types';
 
 interface Props {
   readonly iconName: IconName;
-  readonly iconColor: ColorName;
+  readonly colorName: ColorName;
   readonly spin: boolean;
   readonly value: string;
 }
@@ -24,11 +25,23 @@ export default {
         type: 'select',
       },
     },
+    colorName: {
+      options: colorNames,
+      control: {
+        type: 'select',
+      },
+    },
   },
   args: {
     iconName: 'blend',
+    colorName: 'black',
     spin: false,
     value: '',
+  } as Props,
+  parameters: {
+    backgrounds: {
+      disable: false,
+    },
   },
 } as Meta;
 

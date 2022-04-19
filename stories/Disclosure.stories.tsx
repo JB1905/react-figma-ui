@@ -15,7 +15,7 @@ interface Props {
 
 export default {
   title: 'Disclosure',
-  args: { items },
+  args: { items } as Props,
   parameters: {
     controls: {
       disabled: true,

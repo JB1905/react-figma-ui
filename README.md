@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
 [![NPM license](https://img.shields.io/npm/l/react-figma-ui?style=flat-square)](https://www.npmjs.com/package/react-figma-ui)
 [![Codecov](https://img.shields.io/codecov/c/github/JB1905/react-figma-ui?style=flat-square)](https://codecov.io/gh/JB1905/react-figma-ui)
-[![Travis](https://img.shields.io/travis/JB1905/react-figma-ui/master?style=flat-square)](https://travis-ci.org/JB1905/react-figma-ui)
+[![Travis](https://img.shields.io/travis/com/JB1905/react-figma-ui/main?style=flat-square)](https://app.travis-ci.com/github/JB1905/react-figma-ui)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-figma-ui?style=flat-square)](https://bundlephobia.com/result?p=react-figma-ui)
 
 ## About
@@ -13,7 +13,7 @@ React implementation for [figma-plugin-ds](https://github.com/thomas-lowry/figma
 
 ### Demo
 
-[**Playground – play with library in Storybook**](https://jb1905.github.io/react-figma-ui/)
+[**Playground – play with the library in Storybook**](https://jb1905.github.io/react-figma-ui/)
 
 ### Alternatives
 
@@ -198,7 +198,7 @@ import { Icon } from 'react-figma-ui';
 
 | Param         | Description                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- |
-| `iconName`    | Sepcify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
+| `iconName`    | Specify which icon to use (e.g.: `alert`, `draft`, `settings`)                     |
 | `spin`        | Causes the icon to spin in an endless loop (e.g.: loader used with `spinner` icon) |
 | `colorName`\* | Pass the name of any Figma color var to this prop (e.g.: `blue`, `black3`)         |
 
@@ -450,7 +450,7 @@ import { Type } from 'react-figma-ui';
 | --------- | --------------------------------------------------------------------------------------------------- |
 | `size`    | Font size: **small** - 12px, **large** - 13px, **xlarge** - 14px                                    |
 | `weight`  | Font weight: medium, bold                                                                           |
-| `inverse` | Inversed (negative) application where light text is on dark background with increased letterspacing |
+| `inverse` | Inverted (negative) application where light text is on dark background with increased letterspacing |
 
 _Defaults: Font size 11px, normal weight, positive application_
 

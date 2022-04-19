@@ -15,18 +15,15 @@ export const OnboardingTip = ({
   iconProps,
   ...props
 }: Props) => {
-  const {
-    className: containerClassName = '',
-    ...containerRest
-  } = containerProps;
-  const { style: iconStyle = {}, ...iconRest } = iconProps;
+  const { className: containerClassName = '', ...containerRest } =
+    containerProps;
 
   return (
     <div
       {...containerRest}
       className={clsx('onboarding-tip', containerClassName)}
     >
-      <Icon {...iconRest} style={{ minWidth: 32, ...iconStyle }} />
+      <Icon {...iconProps} />
 
       <div {...props} className={clsx('onboarding-tip__msg', className)}>
         {children}
