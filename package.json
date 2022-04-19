@@ -8,13 +8,13 @@
   "module": "lib/react-figma-ui.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepack": "npm run prettier && npm run lint && npm run build",
+    "prepack": "yarn prettier && yarn lint && yarn build",
     "clean": "rimraf lib/*",
     "build": "rollup -c",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn clean",
     "test": "jest --coverage",
-    "watch": "npm run build -- --watch",
-    "watch:test": "npm run test -- --watch",
+    "watch": "yarn build -- --watch",
+    "watch:test": "yarn test -- --watch",
     "lint": "eslint 'src/**/*.{tsx,ts}' --fix",
     "prettier": "prettier --write 'src/**/*.{tsx,ts}'",
     "storybook": "start-storybook -p 6006",
@@ -108,8 +108,8 @@
   },
   "lint-staged": {
     "src/**/*.{tsx,ts}": [
-      "npm run prettier",
-      "npm run lint"
+      "yarn prettier",
+      "yarn lint"
     ]
   }
 }
