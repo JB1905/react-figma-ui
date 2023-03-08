@@ -15,7 +15,7 @@ interface Props {
 
 export default {
   title: 'SelectMenu',
-  args: { options } as Props, // TODO fix error onChange
+  args: { options } as Props,
   decorators: [
     (Story) => (
       <div style={{ minWidth: 200 }}>
