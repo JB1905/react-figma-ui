@@ -3,8 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Type } from '../src';
 
-import { sizes } from '../src/constants/sizes';
-import { weights } from '../src/constants/weights';
+import { sizes, weights } from '../src/constants';
 
 import type { Size, Weight } from '../src/types';
 

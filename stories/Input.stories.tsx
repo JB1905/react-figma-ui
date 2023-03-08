@@ -4,7 +4,7 @@ import { useArgs } from '@storybook/addons';
 
 import { Input } from '../src';
 
-import { iconNames } from '../src/constants/iconNames';
+import { iconNames } from '../src/constants';
 
 import type { IconName } from '../src/types';
 

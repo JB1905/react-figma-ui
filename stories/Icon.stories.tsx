@@ -3,8 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Icon } from '../src';
 
-import { iconNames } from '../src/constants/iconNames';
-import { colorNames } from '../src/constants/colorNames';
+import { iconNames, colorNames } from '../src/constants';
 
 import type { IconName, ColorName } from '../src/types';
 

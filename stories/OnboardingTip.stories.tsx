@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { OnboardingTip } from '../src';
 
-import { iconNames } from '../src/constants/iconNames';
+import { iconNames } from '../src/constants';
 
 import type { IconName } from '../src/types';
 

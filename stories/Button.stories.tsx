@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Button } from '../src';
 
-import { tints } from '../src/constants/tints';
+import { tints } from '../src/constants';
 
 import type { Tint } from '../src/types';
 
