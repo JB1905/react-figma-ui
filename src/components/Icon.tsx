@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import type { IconName, ColorName } from '../types';
 
-export interface Props extends HTMLProps<HTMLDivElement> {
+export interface Props extends Readonly<HTMLProps<HTMLDivElement>> {
   readonly iconName?: Readonly<IconName>;
   readonly spin?: boolean;
   readonly colorName?: Readonly<ColorName>;

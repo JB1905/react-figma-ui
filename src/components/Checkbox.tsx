@@ -2,7 +2,7 @@ import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
 interface Props
-  extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
+  extends Readonly<Omit<HTMLProps<HTMLInputElement>, 'onChange'>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
   readonly onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
