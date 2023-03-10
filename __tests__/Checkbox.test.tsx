@@ -4,6 +4,8 @@ import { render } from '@testing-library/react';
 import { Checkbox } from '../src';
 
 describe('Checkbox', () => {
+  // TODO: check, uncheck
+
   it('should render unchecked Checkbox', () => {
     const { container } = render(
       <Checkbox id="uniqueId" readOnly>
@@ -12,6 +14,9 @@ describe('Checkbox', () => {
     );
 
     expect(container).toMatchSnapshot();
+
+    // TODO: onClick to have been called
+    // TODO: not to be checked
   });
 
   it('should render checked Checkbox', () => {
@@ -22,6 +27,9 @@ describe('Checkbox', () => {
     );
 
     expect(container).toMatchSnapshot();
+
+    // TODO: onClick not to have been called
+    // TODO: to be checked
   });
 
   it('should render disabled Checkbox', () => {

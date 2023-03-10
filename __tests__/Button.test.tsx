@@ -8,6 +8,8 @@ describe('Button', () => {
     const { container } = render(<Button tint="primary">Label</Button>);
 
     expect(container).toMatchSnapshot();
+
+    // TODO: onClick to have been called
   });
 
   it('should render secondary Button with destructive style', () => {
@@ -28,6 +30,8 @@ describe('Button', () => {
     );
 
     expect(container).toMatchSnapshot();
+
+    // TODO: onClick not to have been called
   });
 
   it('should render Button with custom className', () => {
