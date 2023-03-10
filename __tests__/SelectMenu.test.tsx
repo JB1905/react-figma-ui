@@ -11,6 +11,8 @@ describe('SelectMenu', () => {
   ];
 
   it('should render SelectMenu', () => {
+    // TODO onSelect
+    // TODO default selected
     const { container } = render(
       <SelectMenu
         options={options}
