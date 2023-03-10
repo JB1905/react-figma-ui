@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import type { Size, Weight } from '../types';
 
 interface Props
-  extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'size' | 'ref'>> {
+  extends Omit<Readonly<HTMLProps<HTMLDivElement>>, 'ref' | 'size'> {
   readonly size?: Size;
   readonly weight?: Weight;
   readonly inverse?: boolean;

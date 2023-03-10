@@ -1,7 +1,7 @@
 import React, { forwardRef, HTMLProps } from 'react';
 import clsx from 'clsx';
 
-interface Props extends Readonly<Omit<HTMLProps<HTMLTextAreaElement>, 'ref'>> {}
+interface Props extends Omit<Readonly<HTMLProps<HTMLTextAreaElement>>, 'ref'> {}
 
 export const Textarea = forwardRef<HTMLTextAreaElement, Props>(
   ({ className = '', ...props }, ref) => (

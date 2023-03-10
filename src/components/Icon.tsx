@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import type { IconName, ColorName } from '../types';
 
 export interface Props
-  extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'ref'>> {
+  extends Omit<Readonly<HTMLProps<HTMLDivElement>>, 'ref'> {
   readonly iconName?: Readonly<IconName>;
   readonly spin?: boolean;
   readonly colorName?: Readonly<ColorName>;

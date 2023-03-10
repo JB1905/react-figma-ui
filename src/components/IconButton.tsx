@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { Icon, Props as IconProps } from './Icon';
 
-interface Props extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'ref'>> {
+interface Props extends Omit<Readonly<HTMLProps<HTMLDivElement>>, 'ref'> {
   readonly selected?: boolean;
   readonly iconProps: IconProps;
 }

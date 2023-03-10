@@ -8,15 +8,14 @@ import clsx from 'clsx';
 import type { Tint } from '../types';
 
 interface Props
-  // TODO
-  extends Readonly<
-    Omit<
+  extends Omit<
+    Readonly<
       DetailedHTMLProps<
         ButtonHTMLAttributes<HTMLButtonElement>,
         HTMLButtonElement
-      >,
-      'ref'
-    >
+      >
+    >,
+    'ref'
   > {
   readonly tint?: Tint;
   readonly destructive?: boolean;

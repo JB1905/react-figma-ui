@@ -10,7 +10,7 @@ import { disclosure } from 'figma-plugin-ds';
 import clsx from 'clsx';
 
 interface DisclosureProps<T>
-  extends Readonly<Omit<HTMLProps<HTMLUListElement>, 'ref'>> {
+  extends Omit<Readonly<HTMLProps<HTMLUListElement>>, 'ref'> {
   readonly items: T[];
   render(...itemData: [T, number, T[]]): ReactElement;
 }
