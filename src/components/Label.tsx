@@ -1,10 +1,12 @@
-import React, { HTMLProps } from 'react';
+import React, { forwardRef, HTMLProps } from 'react';
 import clsx from 'clsx';
 
-interface Props extends Readonly<HTMLProps<HTMLDivElement>> {}
+interface Props extends Readonly<Omit<HTMLProps<HTMLDivElement>, 'ref'>> {}
 
-export const Label = ({ children, className = '', ...props }: Props) => (
-  <div {...props} className={clsx('label', className)}>
-    {children}
-  </div>
+export const Label = forwardRef<HTMLDivElement, Props>(
+  ({ children, className = '', ...props }, ref) => (
+    <div {...props} className={clsx('label', className)} ref={ref}>
+      {children}
+    </div>
+  )
 );

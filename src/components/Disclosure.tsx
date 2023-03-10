@@ -4,18 +4,23 @@ import React, {
   ReactElement,
   DetailedHTMLProps,
   LiHTMLAttributes,
+  forwardRef,
 } from 'react';
 import { disclosure } from 'figma-plugin-ds';
 import clsx from 'clsx';
 
-interface DisclosureProps<T> extends Readonly<HTMLProps<HTMLUListElement>> {
+interface DisclosureProps<T>
+  extends Readonly<Omit<HTMLProps<HTMLUListElement>, 'ref'>> {
   readonly items: T[];
   render(...itemData: [T, number, T[]]): ReactElement;
 }
 
 interface DisclosureItemProps
   extends Readonly<
-    DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
+    Omit<
+      DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>,
+      'ref'
+    >
   > {
   readonly heading: string;
   readonly content: string;
@@ -25,6 +30,7 @@ interface DisclosureItemProps
   readonly contentProps?: Readonly<HTMLProps<HTMLDivElement>>;
 }
 
+// TODO: forward ref
 export function Disclosure<T extends object>({
   items,
   render,
@@ -44,45 +50,51 @@ export function Disclosure<T extends object>({
   );
 }
 
-export const DisclosureItem = ({
-  section,
-  expanded,
-  heading,
-  content,
-  className = '',
-  labelProps = {},
-  contentProps = {},
-  ...props
-}: DisclosureItemProps) => {
-  const { className: labelClassName = '', ...labelRest } = labelProps;
-  const { className: contentClassName = '', ...contentRest } = contentProps;
+export const DisclosureItem = forwardRef<HTMLLIElement, DisclosureItemProps>(
+  (
+    {
+      section,
+      expanded,
+      heading,
+      content,
+      className = '',
+      labelProps = {},
+      contentProps = {},
+      ...props
+    },
+    ref
+  ) => {
+    const { className: labelClassName = '', ...labelRest } = labelProps;
+    const { className: contentClassName = '', ...contentRest } = contentProps;
 
-  return (
-    <li
-      {...props}
-      className={clsx(
-        'disclosure__item',
-        className,
-        expanded && 'disclosure--expanded'
-      )}
-    >
-      <div
-        {...labelRest}
+    return (
+      <li
+        {...props}
         className={clsx(
-          'disclosure__label',
-          labelClassName,
-          section && 'disclosure--section'
+          'disclosure__item',
+          className,
+          expanded && 'disclosure--expanded'
         )}
+        ref={ref}
       >
-        {heading}
-      </div>
+        <div
+          {...labelRest}
+          className={clsx(
+            'disclosure__label',
+            labelClassName,
+            section && 'disclosure--section'
+          )}
+        >
+          {heading}
+        </div>
 
-      <div
-        {...contentRest}
-        className={clsx('disclosure__content', contentClassName)}
-      >
-        {content}
-      </div>
-    </li>
-  );
-};
+        <div
+          {...contentRest}
+          className={clsx('disclosure__content', contentClassName)}
+        >
+          {content}
+        </div>
+      </li>
+    );
+  }
+);

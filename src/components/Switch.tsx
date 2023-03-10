@@ -1,41 +1,47 @@
-import React, { HTMLProps } from 'react';
+import React, { forwardRef, HTMLProps } from 'react';
 import clsx from 'clsx';
 
 interface Props
-  extends Readonly<HTMLProps<Omit<HTMLInputElement, 'onChange'>>> {
+  extends Readonly<Omit<HTMLProps<HTMLInputElement>, 'onChange' | 'ref'>> {
   readonly containerProps?: Readonly<HTMLProps<HTMLDivElement>>;
   readonly labelProps?: Readonly<HTMLProps<HTMLLabelElement>>;
   readonly onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Switch = ({
-  children,
-  id,
-  className = '',
-  containerProps = {},
-  labelProps = {},
-  ...props
-}: Props) => {
-  const { className: containerClassName = '', ...containerRest } =
-    containerProps;
-  const { className: labelClassName = '', ...labelRest } = labelProps;
+export const Switch = forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      children,
+      id,
+      className = '',
+      containerProps = {},
+      labelProps = {},
+      ...props
+    },
+    ref
+  ) => {
+    const { className: containerClassName = '', ...containerRest } =
+      containerProps;
+    const { className: labelClassName = '', ...labelRest } = labelProps;
 
-  return (
-    <div {...containerRest} className={clsx('switch', containerClassName)}>
-      <input
-        {...props}
-        id={id}
-        type="checkbox"
-        className={clsx('switch__toggle', className)}
-      />
+    return (
+      <div {...containerRest} className={clsx('switch', containerClassName)}>
+        <input
+          {...props}
+          id={id}
+          type="checkbox"
+          className={clsx('switch__toggle', className)}
+          ref={ref}
+        />
 
-      <label
-        {...labelRest}
-        htmlFor={id}
-        className={clsx('switch__label', labelClassName)}
-      >
-        {children}
-      </label>
-    </div>
-  );
-};
+        <label
+          {...labelRest}
+          htmlFor={id}
+          className={clsx('switch__label', labelClassName)}
+        >
+          {children}
+        </label>
+      </div>
+    );
+  }
+);
