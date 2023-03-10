@@ -5,6 +5,7 @@ import { Switch } from '../src';
 
 describe('Switch', () => {
   it('should render Switch', () => {
+    // TODO onChange
     const { container } = render(
       <Switch id="uniqueId" readOnly>
         Label
@@ -15,6 +16,7 @@ describe('Switch', () => {
   });
 
   it('should render checked Switch', () => {
+    // TODO onChange
     const { container } = render(
       <Switch id="uniqueId" readOnly checked>
         Label
@@ -25,6 +27,7 @@ describe('Switch', () => {
   });
 
   it('should render disabled Switch', () => {
+    // TODO onChange
     const { container } = render(
       <Switch id="uniqueId" readOnly disabled>
         Label

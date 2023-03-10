@@ -5,6 +5,7 @@ import { Textarea } from '../src';
 
 describe('Textarea', () => {
   it('should render Textarea', () => {
+    // TODO onChange
     const { container } = render(
       <Textarea value="Initial value" rows={2} readOnly />
     );
@@ -32,4 +33,6 @@ describe('Textarea', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // TODO disabled
 });

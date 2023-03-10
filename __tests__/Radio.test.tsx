@@ -5,6 +5,7 @@ import { Radio } from '../src';
 
 describe('Radio', () => {
   it('should render Radio button', () => {
+    // TODO onChange
     const { container } = render(
       <Radio value="Value" id="radioButton1" name="radioGroup" readOnly>
         Radio button
@@ -25,6 +26,7 @@ describe('Radio', () => {
   });
 
   it('should render disabled Radio button', () => {
+    // TODO onChange
     const { container } = render(
       <Radio
         value="Value"
