@@ -7,7 +7,7 @@ describe('Textarea', () => {
   it('should render Textarea', () => {
     // TODO onChange
     const { container } = render(
-      <Textarea value="Initial value" rows={2} readOnly />
+      <Textarea value="Initial value" rows={2} readOnly onChange={() => {}} />
     );
 
     expect(container).toMatchSnapshot();
@@ -35,4 +35,11 @@ describe('Textarea', () => {
   });
 
   // TODO disabled
+  it('', () => {
+    const { container } = render(
+      <Textarea value="Initial value" rows={2} disabled />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

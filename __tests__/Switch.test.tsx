@@ -7,7 +7,7 @@ describe('Switch', () => {
   it('should render Switch', () => {
     // TODO onChange
     const { container } = render(
-      <Switch id="uniqueId" readOnly>
+      <Switch id="uniqueId" readOnly onChange={() => {}}>
         Label
       </Switch>
     );
@@ -18,7 +18,7 @@ describe('Switch', () => {
   it('should render checked Switch', () => {
     // TODO onChange
     const { container } = render(
-      <Switch id="uniqueId" readOnly checked>
+      <Switch id="uniqueId" readOnly checked onChange={() => {}}>
         Label
       </Switch>
     );
@@ -29,7 +29,7 @@ describe('Switch', () => {
   it('should render disabled Switch', () => {
     // TODO onChange
     const { container } = render(
-      <Switch id="uniqueId" readOnly disabled>
+      <Switch id="uniqueId" readOnly disabled onChange={() => {}}>
         Label
       </Switch>
     );
