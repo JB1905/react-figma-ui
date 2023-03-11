@@ -41,6 +41,7 @@ export const Normal: Story<Props> = ({ iconName, ...args }) => {
       {...args}
       iconProps={{ iconName }}
       onChange={(e) =>
+        // TODO
         updateArgs({ value: (e.target as HTMLInputElement).value })
       }
     />

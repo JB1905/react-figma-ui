@@ -34,5 +34,8 @@ export default {
 } as Meta;
 
 export const Normal: Story<Props> = ({ label, ...args }) => (
-  <Button {...args}>{label}</Button>
+  // TODO
+  <Button {...args} onClick={() => null}>
+    {label}
+  </Button>
 );
