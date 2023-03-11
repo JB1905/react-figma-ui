@@ -29,5 +29,6 @@ export default {
 } as Meta;
 
 export const Normal: Story<Props> = ({ iconName, ...args }) => (
-  <IconButton {...args} iconProps={{ iconName }} />
+  // TODO
+  <IconButton {...args} iconProps={{ iconName }} onClick={() => null} />
 );

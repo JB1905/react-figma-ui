@@ -28,6 +28,7 @@ export default {
 export const Normal: Story<Props> = ({ options }) => (
   <SelectMenu
     options={options}
+    onChange={() => null} // TODO
     render={({ value, label }) => (
       <SelectMenuOption value={value} key={value}>
         {label}

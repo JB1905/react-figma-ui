@@ -30,6 +30,7 @@ export const Normal: Story<Props> = ({ value, ...args }) => {
       {...args}
       value={value}
       onChange={(e) =>
+        // TODO
         updateArgs({ value: (e.target as HTMLTextAreaElement).value })
       }
     />

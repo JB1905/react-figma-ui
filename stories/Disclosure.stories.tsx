@@ -33,6 +33,7 @@ export const Normal: Story<Props> = ({ items }) => (
         section={id % 2 === 0}
         expanded={id === 1}
         key={id}
+        onClick={() => null} // TODO
       />
     )}
   />
