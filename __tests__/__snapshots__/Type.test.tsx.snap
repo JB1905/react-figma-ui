@@ -23,7 +23,7 @@ exports[`Type should render Type with default values 1`] = `
 exports[`Type should render Type with large size, bold weight and inverse option 1`] = `
 <div>
   <div
-    class="type type--large type--weight type--inverse"
+    class="type type--large type--bold type--inverse"
   >
     Lorem ipsum dolor sit
   </div>

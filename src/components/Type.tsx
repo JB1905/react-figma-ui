@@ -23,7 +23,7 @@ export const Type = ({
       'type',
       className,
       size && `type--${size}`,
-      weight && 'type--weight',
+      weight && `type--${weight}`,
       inverse && 'type--inverse'
     )}
   >
